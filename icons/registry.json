@@ -1,0 +1,28 @@
+{
+  "icons": [
+    {
+      "name": "ai-model",
+      "category": "ai",
+      "tags": ["model", "network", "brain", "ai", "machine-learning"],
+      "author": "Iconary Team"
+    },
+    {
+      "name": "data-pipeline",
+      "category": "data",
+      "tags": ["pipeline", "flow", "data", "processing"],
+      "author": "Iconary Team"
+    },
+    {
+      "name": "vector-database",
+      "category": "data",
+      "tags": ["vector", "database", "storage", "embeddings"],
+      "author": "Iconary Team"
+    },
+    {
+      "name": "agent",
+      "category": "ai",
+      "tags": ["agent", "bot", "assistant", "ai"],
+      "author": "Iconary Team"
+    }
+  ]
+}
