@@ -9,7 +9,7 @@ import { Browse } from './pages/Browse';
 
 export default function App() {
   return (
-    <BrowserRouter>
+    <BrowserRouter basename={import.meta.env.BASE_URL}>
       <div className="min-h-full bg-[#1a1a1a] text-white">
         <Routes>
           <Route element={<Layout />}>
