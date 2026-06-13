@@ -90,3 +90,76 @@ jobs:
               --label "good first issue"
             sleep 2
           fi
+
+          if ! gh issue list --search "in:title Authentication Lock" | grep -q "Authentication Lock"; then
+            gh issue create \
+              --title "Add an icon for Authentication Lock" \
+              --body "We need a standard lock icon for authentication and security UI.
+
+              ## Requirements
+              - Must have outline, filled, and duotone variants.
+              - Follow the style guide in \`STYLE_GUIDE.md\`.
+              - Include a 1-2 line concept explainer.
+
+              See \`CONTRIBUTING.md\` to get started!" \
+              --label "good first issue"
+            sleep 2
+          fi
+
+          if ! gh issue list --search "in:title TailwindCSS" | grep -q "TailwindCSS"; then
+            gh issue create \
+              --title "Add an icon for TailwindCSS" \
+              --body "We need a technology icon representing the TailwindCSS framework.
+
+              ## Requirements
+              - Must have outline, filled, and duotone variants.
+              - Follow the style guide in \`STYLE_GUIDE.md\`.
+              - Include a 1-2 line concept explainer.
+
+              See \`CONTRIBUTING.md\` to get started!" \
+              --label "good first issue"
+            sleep 2
+          fi
+
+          if ! gh issue list --search "in:title Figma Community File" | grep -q "Figma Community File"; then
+            gh issue create \
+              --title "Create a Figma Community File" \
+              --body "To make Iconary easier for designers to use, we should publish an official Figma community file.
+
+              ## Requirements
+              - Create a Figma file with all current icons.
+              - Organize by category.
+              - Include variants (Outline, Filled, Duotone) as components." \
+              --label "help wanted"
+            sleep 2
+          fi
+
+          if ! gh issue list --search "in:title Dark Mode Toggle" | grep -q "Dark Mode Toggle"; then
+            gh issue create \
+              --title "Add Dark Mode Toggle icon" \
+              --body "We need a sun/moon hybrid icon or standard toggle for switching to Dark Mode.
+
+              ## Requirements
+              - Must have outline, filled, and duotone variants.
+              - Follow the style guide in \`STYLE_GUIDE.md\`.
+              - Include a 1-2 line concept explainer.
+
+              See \`CONTRIBUTING.md\` to get started!" \
+              --label "good first issue"
+            sleep 2
+          fi
+
+          if ! gh issue list --search "in:title Next.js" | grep -q "Next.js"; then
+            gh issue create \
+              --title "Add an icon for Next.js" \
+              --body "We need an icon representing the Next.js framework.
+
+              ## Requirements
+              - Must have outline, filled, and duotone variants.
+              - Follow the style guide in \`STYLE_GUIDE.md\`.
+              - Include a 1-2 line concept explainer.
+
+              See \`CONTRIBUTING.md\` to get started!" \
+              --label "good first issue"
+            sleep 2
+          fi
