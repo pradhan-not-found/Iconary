@@ -1,0 +1,345 @@
+# Iconary Backlog
+
+This is the master list of icons that need to be designed and added to the library. Contributors can pick any of these icons to work on.
+
+## Tech & AI
+
+- [ ] **Neural Network** - Needs Outline, Filled, and Duotone variants.
+- [ ] **Vector Database** - Needs Outline, Filled, and Duotone variants.
+- [ ] **Large Language Model** - Needs Outline, Filled, and Duotone variants.
+- [ ] **RAG Architecture** - Needs Outline, Filled, and Duotone variants.
+- [ ] **Machine Learning** - Needs Outline, Filled, and Duotone variants.
+- [ ] **Deep Learning** - Needs Outline, Filled, and Duotone variants.
+- [ ] **Computer Vision** - Needs Outline, Filled, and Duotone variants.
+- [ ] **Natural Language Processing** - Needs Outline, Filled, and Duotone variants.
+- [ ] **Generative AI** - Needs Outline, Filled, and Duotone variants.
+- [ ] **Transformer Model** - Needs Outline, Filled, and Duotone variants.
+- [ ] **Algorithm** - Needs Outline, Filled, and Duotone variants.
+- [ ] **Data Pipeline** - Needs Outline, Filled, and Duotone variants.
+- [ ] **API Integration** - Needs Outline, Filled, and Duotone variants.
+- [ ] **Cloud Computing** - Needs Outline, Filled, and Duotone variants.
+- [ ] **Serverless** - Needs Outline, Filled, and Duotone variants.
+- [ ] **Microservices** - Needs Outline, Filled, and Duotone variants.
+- [ ] **Containerization** - Needs Outline, Filled, and Duotone variants.
+- [ ] **Kubernetes** - Needs Outline, Filled, and Duotone variants.
+- [ ] **Docker** - Needs Outline, Filled, and Duotone variants.
+- [ ] **WebAssembly** - Needs Outline, Filled, and Duotone variants.
+- [ ] **Blockchain** - Needs Outline, Filled, and Duotone variants.
+- [ ] **Smart Contract** - Needs Outline, Filled, and Duotone variants.
+- [ ] **Cryptocurrency** - Needs Outline, Filled, and Duotone variants.
+- [ ] **Quantum Computing** - Needs Outline, Filled, and Duotone variants.
+- [ ] **Edge Computing** - Needs Outline, Filled, and Duotone variants.
+- [ ] **IoT Device** - Needs Outline, Filled, and Duotone variants.
+- [ ] **Digital Twin** - Needs Outline, Filled, and Duotone variants.
+- [ ] **Augmented Reality** - Needs Outline, Filled, and Duotone variants.
+- [ ] **Virtual Reality** - Needs Outline, Filled, and Duotone variants.
+- [ ] **Metaverse** - Needs Outline, Filled, and Duotone variants.
+- [ ] **3D Modeling** - Needs Outline, Filled, and Duotone variants.
+- [ ] **Render Engine** - Needs Outline, Filled, and Duotone variants.
+- [ ] **Game Engine** - Needs Outline, Filled, and Duotone variants.
+- [ ] **Physics Simulation** - Needs Outline, Filled, and Duotone variants.
+- [ ] **Ray Tracing** - Needs Outline, Filled, and Duotone variants.
+- [ ] **Database** - Needs Outline, Filled, and Duotone variants.
+- [ ] **Graph Database** - Needs Outline, Filled, and Duotone variants.
+- [ ] **Time Series Database** - Needs Outline, Filled, and Duotone variants.
+- [ ] **Relational Database** - Needs Outline, Filled, and Duotone variants.
+- [ ] **NoSQL Database** - Needs Outline, Filled, and Duotone variants.
+- [ ] **Cache** - Needs Outline, Filled, and Duotone variants.
+- [ ] **Message Queue** - Needs Outline, Filled, and Duotone variants.
+- [ ] **Event Stream** - Needs Outline, Filled, and Duotone variants.
+- [ ] **Webhook** - Needs Outline, Filled, and Duotone variants.
+- [ ] **WebSocket** - Needs Outline, Filled, and Duotone variants.
+- [ ] **GraphQL** - Needs Outline, Filled, and Duotone variants.
+- [ ] **REST API** - Needs Outline, Filled, and Duotone variants.
+- [ ] **gRPC** - Needs Outline, Filled, and Duotone variants.
+- [ ] **SOAP** - Needs Outline, Filled, and Duotone variants.
+- [ ] **Authentication** - Needs Outline, Filled, and Duotone variants.
+- [ ] **Authorization** - Needs Outline, Filled, and Duotone variants.
+- [ ] **OAuth** - Needs Outline, Filled, and Duotone variants.
+- [ ] **JWT Token** - Needs Outline, Filled, and Duotone variants.
+- [ ] **Biometric Scan** - Needs Outline, Filled, and Duotone variants.
+- [ ] **Face ID** - Needs Outline, Filled, and Duotone variants.
+- [ ] **Fingerprint** - Needs Outline, Filled, and Duotone variants.
+- [ ] **Cybersecurity** - Needs Outline, Filled, and Duotone variants.
+- [ ] **Firewall** - Needs Outline, Filled, and Duotone variants.
+- [ ] **VPN** - Needs Outline, Filled, and Duotone variants.
+- [ ] **Encryption** - Needs Outline, Filled, and Duotone variants.
+- [ ] **Decryption** - Needs Outline, Filled, and Duotone variants.
+- [ ] **Public Key** - Needs Outline, Filled, and Duotone variants.
+- [ ] **Private Key** - Needs Outline, Filled, and Duotone variants.
+- [ ] **SSL Certificate** - Needs Outline, Filled, and Duotone variants.
+- [ ] **Antivirus** - Needs Outline, Filled, and Duotone variants.
+- [ ] **Malware** - Needs Outline, Filled, and Duotone variants.
+- [ ] **Ransomware** - Needs Outline, Filled, and Duotone variants.
+- [ ] **Phishing** - Needs Outline, Filled, and Duotone variants.
+- [ ] **DDoS Attack** - Needs Outline, Filled, and Duotone variants.
+- [ ] **Penetration Testing** - Needs Outline, Filled, and Duotone variants.
+- [ ] **Vulnerability** - Needs Outline, Filled, and Duotone variants.
+- [ ] **Bug Bounty** - Needs Outline, Filled, and Duotone variants.
+- [ ] **Zero Day** - Needs Outline, Filled, and Duotone variants.
+- [ ] **Exploit** - Needs Outline, Filled, and Duotone variants.
+- [ ] **Patch** - Needs Outline, Filled, and Duotone variants.
+- [ ] **Update** - Needs Outline, Filled, and Duotone variants.
+- [ ] **Version Control** - Needs Outline, Filled, and Duotone variants.
+- [ ] **Git** - Needs Outline, Filled, and Duotone variants.
+- [ ] **SVN** - Needs Outline, Filled, and Duotone variants.
+- [ ] **Mercurial** - Needs Outline, Filled, and Duotone variants.
+- [ ] **Continuous Integration** - Needs Outline, Filled, and Duotone variants.
+- [ ] **Continuous Deployment** - Needs Outline, Filled, and Duotone variants.
+- [ ] **DevOps** - Needs Outline, Filled, and Duotone variants.
+- [ ] **Agile** - Needs Outline, Filled, and Duotone variants.
+- [ ] **Scrum** - Needs Outline, Filled, and Duotone variants.
+- [ ] **Kanban** - Needs Outline, Filled, and Duotone variants.
+- [ ] **Sprint** - Needs Outline, Filled, and Duotone variants.
+- [ ] **Code Review** - Needs Outline, Filled, and Duotone variants.
+- [ ] **Pull Request** - Needs Outline, Filled, and Duotone variants.
+- [ ] **Merge Conflict** - Needs Outline, Filled, and Duotone variants.
+- [ ] **Commit** - Needs Outline, Filled, and Duotone variants.
+- [ ] **Push** - Needs Outline, Filled, and Duotone variants.
+- [ ] **Pull** - Needs Outline, Filled, and Duotone variants.
+- [ ] **Fetch** - Needs Outline, Filled, and Duotone variants.
+- [ ] **Rebase** - Needs Outline, Filled, and Duotone variants.
+- [ ] **Cherry Pick** - Needs Outline, Filled, and Duotone variants.
+
+## Business & Finance
+
+- [ ] **Startup** - Needs Outline, Filled, and Duotone variants.
+- [ ] **Enterprise** - Needs Outline, Filled, and Duotone variants.
+- [ ] **B2B** - Needs Outline, Filled, and Duotone variants.
+- [ ] **B2C** - Needs Outline, Filled, and Duotone variants.
+- [ ] **E-commerce** - Needs Outline, Filled, and Duotone variants.
+- [ ] **Point of Sale** - Needs Outline, Filled, and Duotone variants.
+- [ ] **Shopping Cart** - Needs Outline, Filled, and Duotone variants.
+- [ ] **Checkout** - Needs Outline, Filled, and Duotone variants.
+- [ ] **Payment Gateway** - Needs Outline, Filled, and Duotone variants.
+- [ ] **Credit Card** - Needs Outline, Filled, and Duotone variants.
+- [ ] **Debit Card** - Needs Outline, Filled, and Duotone variants.
+- [ ] **Bank Transfer** - Needs Outline, Filled, and Duotone variants.
+- [ ] **Wire Transfer** - Needs Outline, Filled, and Duotone variants.
+- [ ] **Invoice** - Needs Outline, Filled, and Duotone variants.
+- [ ] **Receipt** - Needs Outline, Filled, and Duotone variants.
+- [ ] **Tax** - Needs Outline, Filled, and Duotone variants.
+- [ ] **Audit** - Needs Outline, Filled, and Duotone variants.
+- [ ] **Accounting** - Needs Outline, Filled, and Duotone variants.
+- [ ] **Ledger** - Needs Outline, Filled, and Duotone variants.
+- [ ] **Balance Sheet** - Needs Outline, Filled, and Duotone variants.
+- [ ] **Income Statement** - Needs Outline, Filled, and Duotone variants.
+- [ ] **Cash Flow** - Needs Outline, Filled, and Duotone variants.
+- [ ] **Profit** - Needs Outline, Filled, and Duotone variants.
+- [ ] **Loss** - Needs Outline, Filled, and Duotone variants.
+- [ ] **Revenue** - Needs Outline, Filled, and Duotone variants.
+- [ ] **Expense** - Needs Outline, Filled, and Duotone variants.
+- [ ] **Budget** - Needs Outline, Filled, and Duotone variants.
+- [ ] **Forecast** - Needs Outline, Filled, and Duotone variants.
+- [ ] **Investment** - Needs Outline, Filled, and Duotone variants.
+- [ ] **Stock Market** - Needs Outline, Filled, and Duotone variants.
+- [ ] **Bonds** - Needs Outline, Filled, and Duotone variants.
+- [ ] **Mutual Fund** - Needs Outline, Filled, and Duotone variants.
+- [ ] **ETF** - Needs Outline, Filled, and Duotone variants.
+- [ ] **Commodity** - Needs Outline, Filled, and Duotone variants.
+- [ ] **Real Estate** - Needs Outline, Filled, and Duotone variants.
+- [ ] **Mortgage** - Needs Outline, Filled, and Duotone variants.
+- [ ] **Loan** - Needs Outline, Filled, and Duotone variants.
+- [ ] **Interest Rate** - Needs Outline, Filled, and Duotone variants.
+- [ ] **Credit Score** - Needs Outline, Filled, and Duotone variants.
+- [ ] **Debt** - Needs Outline, Filled, and Duotone variants.
+- [ ] **Bankruptcy** - Needs Outline, Filled, and Duotone variants.
+- [ ] **Insurance** - Needs Outline, Filled, and Duotone variants.
+- [ ] **Policy** - Needs Outline, Filled, and Duotone variants.
+- [ ] **Claim** - Needs Outline, Filled, and Duotone variants.
+- [ ] **Premium** - Needs Outline, Filled, and Duotone variants.
+- [ ] **Deductible** - Needs Outline, Filled, and Duotone variants.
+- [ ] **Coverage** - Needs Outline, Filled, and Duotone variants.
+- [ ] **Risk Management** - Needs Outline, Filled, and Duotone variants.
+- [ ] **Compliance** - Needs Outline, Filled, and Duotone variants.
+- [ ] **Regulation** - Needs Outline, Filled, and Duotone variants.
+- [ ] **GDPR** - Needs Outline, Filled, and Duotone variants.
+- [ ] **CCPA** - Needs Outline, Filled, and Duotone variants.
+- [ ] **HIPAA** - Needs Outline, Filled, and Duotone variants.
+- [ ] **Data Privacy** - Needs Outline, Filled, and Duotone variants.
+- [ ] **Terms of Service** - Needs Outline, Filled, and Duotone variants.
+- [ ] **Privacy Policy** - Needs Outline, Filled, and Duotone variants.
+- [ ] **Contract** - Needs Outline, Filled, and Duotone variants.
+- [ ] **Agreement** - Needs Outline, Filled, and Duotone variants.
+- [ ] **Signature** - Needs Outline, Filled, and Duotone variants.
+- [ ] **Notary** - Needs Outline, Filled, and Duotone variants.
+- [ ] **Legal** - Needs Outline, Filled, and Duotone variants.
+- [ ] **Lawsuit** - Needs Outline, Filled, and Duotone variants.
+- [ ] **Patent** - Needs Outline, Filled, and Duotone variants.
+- [ ] **Trademark** - Needs Outline, Filled, and Duotone variants.
+- [ ] **Copyright** - Needs Outline, Filled, and Duotone variants.
+
+## Design & Creative
+
+- [ ] **Vector Graphic** - Needs Outline, Filled, and Duotone variants.
+- [ ] **Raster Graphic** - Needs Outline, Filled, and Duotone variants.
+- [ ] **Pixel Art** - Needs Outline, Filled, and Duotone variants.
+- [ ] **Typography** - Needs Outline, Filled, and Duotone variants.
+- [ ] **Font** - Needs Outline, Filled, and Duotone variants.
+- [ ] **Color Palette** - Needs Outline, Filled, and Duotone variants.
+- [ ] **Gradient** - Needs Outline, Filled, and Duotone variants.
+- [ ] **Opacity** - Needs Outline, Filled, and Duotone variants.
+- [ ] **Blend Mode** - Needs Outline, Filled, and Duotone variants.
+- [ ] **Drop Shadow** - Needs Outline, Filled, and Duotone variants.
+- [ ] **Inner Shadow** - Needs Outline, Filled, and Duotone variants.
+- [ ] **Stroke** - Needs Outline, Filled, and Duotone variants.
+- [ ] **Fill** - Needs Outline, Filled, and Duotone variants.
+- [ ] **Path** - Needs Outline, Filled, and Duotone variants.
+- [ ] **Anchor Point** - Needs Outline, Filled, and Duotone variants.
+- [ ] **Bezier Curve** - Needs Outline, Filled, and Duotone variants.
+- [ ] **Pen Tool** - Needs Outline, Filled, and Duotone variants.
+- [ ] **Brush Tool** - Needs Outline, Filled, and Duotone variants.
+- [ ] **Eraser Tool** - Needs Outline, Filled, and Duotone variants.
+- [ ] **Paint Bucket** - Needs Outline, Filled, and Duotone variants.
+- [ ] **Magic Wand** - Needs Outline, Filled, and Duotone variants.
+- [ ] **Lasso Tool** - Needs Outline, Filled, and Duotone variants.
+- [ ] **Crop Tool** - Needs Outline, Filled, and Duotone variants.
+- [ ] **Slice Tool** - Needs Outline, Filled, and Duotone variants.
+- [ ] **Eyedropper** - Needs Outline, Filled, and Duotone variants.
+- [ ] **Zoom Tool** - Needs Outline, Filled, and Duotone variants.
+- [ ] **Hand Tool** - Needs Outline, Filled, and Duotone variants.
+- [ ] **Move Tool** - Needs Outline, Filled, and Duotone variants.
+- [ ] **Transform** - Needs Outline, Filled, and Duotone variants.
+- [ ] **Rotate** - Needs Outline, Filled, and Duotone variants.
+- [ ] **Scale** - Needs Outline, Filled, and Duotone variants.
+- [ ] **Skew** - Needs Outline, Filled, and Duotone variants.
+- [ ] **Distort** - Needs Outline, Filled, and Duotone variants.
+- [ ] **Perspective** - Needs Outline, Filled, and Duotone variants.
+- [ ] **Warp** - Needs Outline, Filled, and Duotone variants.
+- [ ] **Align** - Needs Outline, Filled, and Duotone variants.
+- [ ] **Distribute** - Needs Outline, Filled, and Duotone variants.
+- [ ] **Group** - Needs Outline, Filled, and Duotone variants.
+- [ ] **Ungroup** - Needs Outline, Filled, and Duotone variants.
+- [ ] **Lock** - Needs Outline, Filled, and Duotone variants.
+- [ ] **Unlock** - Needs Outline, Filled, and Duotone variants.
+- [ ] **Hide** - Needs Outline, Filled, and Duotone variants.
+- [ ] **Show** - Needs Outline, Filled, and Duotone variants.
+- [ ] **Layer** - Needs Outline, Filled, and Duotone variants.
+- [ ] **Mask** - Needs Outline, Filled, and Duotone variants.
+- [ ] **Clipping Mask** - Needs Outline, Filled, and Duotone variants.
+- [ ] **Alpha Channel** - Needs Outline, Filled, and Duotone variants.
+- [ ] **Resolution** - Needs Outline, Filled, and Duotone variants.
+- [ ] **DPI** - Needs Outline, Filled, and Duotone variants.
+- [ ] **PPI** - Needs Outline, Filled, and Duotone variants.
+- [ ] **CMYK** - Needs Outline, Filled, and Duotone variants.
+- [ ] **RGB** - Needs Outline, Filled, and Duotone variants.
+- [ ] **HEX** - Needs Outline, Filled, and Duotone variants.
+- [ ] **HSL** - Needs Outline, Filled, and Duotone variants.
+- [ ] **Pantone** - Needs Outline, Filled, and Duotone variants.
+- [ ] **Export** - Needs Outline, Filled, and Duotone variants.
+- [ ] **Import** - Needs Outline, Filled, and Duotone variants.
+- [ ] **Save** - Needs Outline, Filled, and Duotone variants.
+- [ ] **Save As** - Needs Outline, Filled, and Duotone variants.
+- [ ] **Print** - Needs Outline, Filled, and Duotone variants.
+- [ ] **Share** - Needs Outline, Filled, and Duotone variants.
+
+## Health & Wellness
+
+- [ ] **Hospital** - Needs Outline, Filled, and Duotone variants.
+- [ ] **Clinic** - Needs Outline, Filled, and Duotone variants.
+- [ ] **Pharmacy** - Needs Outline, Filled, and Duotone variants.
+- [ ] **Ambulance** - Needs Outline, Filled, and Duotone variants.
+- [ ] **Stethoscope** - Needs Outline, Filled, and Duotone variants.
+- [ ] **Syringe** - Needs Outline, Filled, and Duotone variants.
+- [ ] **Pill** - Needs Outline, Filled, and Duotone variants.
+- [ ] **Capsule** - Needs Outline, Filled, and Duotone variants.
+- [ ] **Tablet** - Needs Outline, Filled, and Duotone variants.
+- [ ] **Prescription** - Needs Outline, Filled, and Duotone variants.
+- [ ] **Medical Record** - Needs Outline, Filled, and Duotone variants.
+- [ ] **X-Ray** - Needs Outline, Filled, and Duotone variants.
+- [ ] **MRI** - Needs Outline, Filled, and Duotone variants.
+- [ ] **Ultrasound** - Needs Outline, Filled, and Duotone variants.
+- [ ] **Blood Test** - Needs Outline, Filled, and Duotone variants.
+- [ ] **DNA** - Needs Outline, Filled, and Duotone variants.
+- [ ] **Virus** - Needs Outline, Filled, and Duotone variants.
+- [ ] **Bacteria** - Needs Outline, Filled, and Duotone variants.
+- [ ] **Vaccine** - Needs Outline, Filled, and Duotone variants.
+- [ ] **Immunity** - Needs Outline, Filled, and Duotone variants.
+- [ ] **Heart Rate** - Needs Outline, Filled, and Duotone variants.
+- [ ] **Blood Pressure** - Needs Outline, Filled, and Duotone variants.
+- [ ] **Temperature** - Needs Outline, Filled, and Duotone variants.
+- [ ] **Weight** - Needs Outline, Filled, and Duotone variants.
+- [ ] **Height** - Needs Outline, Filled, and Duotone variants.
+- [ ] **BMI** - Needs Outline, Filled, and Duotone variants.
+- [ ] **Diet** - Needs Outline, Filled, and Duotone variants.
+- [ ] **Nutrition** - Needs Outline, Filled, and Duotone variants.
+- [ ] **Calories** - Needs Outline, Filled, and Duotone variants.
+- [ ] **Protein** - Needs Outline, Filled, and Duotone variants.
+- [ ] **Carbohydrates** - Needs Outline, Filled, and Duotone variants.
+- [ ] **Fat** - Needs Outline, Filled, and Duotone variants.
+- [ ] **Vitamins** - Needs Outline, Filled, and Duotone variants.
+- [ ] **Minerals** - Needs Outline, Filled, and Duotone variants.
+- [ ] **Water** - Needs Outline, Filled, and Duotone variants.
+- [ ] **Exercise** - Needs Outline, Filled, and Duotone variants.
+- [ ] **Fitness** - Needs Outline, Filled, and Duotone variants.
+- [ ] **Gym** - Needs Outline, Filled, and Duotone variants.
+- [ ] **Yoga** - Needs Outline, Filled, and Duotone variants.
+- [ ] **Meditation** - Needs Outline, Filled, and Duotone variants.
+- [ ] **Sleep** - Needs Outline, Filled, and Duotone variants.
+- [ ] **Stress** - Needs Outline, Filled, and Duotone variants.
+- [ ] **Mental Health** - Needs Outline, Filled, and Duotone variants.
+- [ ] **Therapy** - Needs Outline, Filled, and Duotone variants.
+- [ ] **Counseling** - Needs Outline, Filled, and Duotone variants.
+- [ ] **Rehabilitation** - Needs Outline, Filled, and Duotone variants.
+- [ ] **Physical Therapy** - Needs Outline, Filled, and Duotone variants.
+- [ ] **Occupational Therapy** - Needs Outline, Filled, and Duotone variants.
+- [ ] **Speech Therapy** - Needs Outline, Filled, and Duotone variants.
+- [ ] **Massage** - Needs Outline, Filled, and Duotone variants.
+
+## Education & Science
+
+- [ ] **School** - Needs Outline, Filled, and Duotone variants.
+- [ ] **University** - Needs Outline, Filled, and Duotone variants.
+- [ ] **College** - Needs Outline, Filled, and Duotone variants.
+- [ ] **Classroom** - Needs Outline, Filled, and Duotone variants.
+- [ ] **Teacher** - Needs Outline, Filled, and Duotone variants.
+- [ ] **Student** - Needs Outline, Filled, and Duotone variants.
+- [ ] **Graduation** - Needs Outline, Filled, and Duotone variants.
+- [ ] **Diploma** - Needs Outline, Filled, and Duotone variants.
+- [ ] **Degree** - Needs Outline, Filled, and Duotone variants.
+- [ ] **Course** - Needs Outline, Filled, and Duotone variants.
+- [ ] **Curriculum** - Needs Outline, Filled, and Duotone variants.
+- [ ] **Syllabus** - Needs Outline, Filled, and Duotone variants.
+- [ ] **Textbook** - Needs Outline, Filled, and Duotone variants.
+- [ ] **Notebook** - Needs Outline, Filled, and Duotone variants.
+- [ ] **Pen** - Needs Outline, Filled, and Duotone variants.
+- [ ] **Pencil** - Needs Outline, Filled, and Duotone variants.
+- [ ] **Eraser** - Needs Outline, Filled, and Duotone variants.
+- [ ] **Ruler** - Needs Outline, Filled, and Duotone variants.
+- [ ] **Calculator** - Needs Outline, Filled, and Duotone variants.
+- [ ] **Microscope** - Needs Outline, Filled, and Duotone variants.
+- [ ] **Telescope** - Needs Outline, Filled, and Duotone variants.
+- [ ] **Beaker** - Needs Outline, Filled, and Duotone variants.
+- [ ] **Test Tube** - Needs Outline, Filled, and Duotone variants.
+- [ ] **Flask** - Needs Outline, Filled, and Duotone variants.
+- [ ] **Bunsen Burner** - Needs Outline, Filled, and Duotone variants.
+- [ ] **Atom** - Needs Outline, Filled, and Duotone variants.
+- [ ] **Molecule** - Needs Outline, Filled, and Duotone variants.
+- [ ] **Cell** - Needs Outline, Filled, and Duotone variants.
+- [ ] **DNA Helix** - Needs Outline, Filled, and Duotone variants.
+- [ ] **Planet** - Needs Outline, Filled, and Duotone variants.
+- [ ] **Star** - Needs Outline, Filled, and Duotone variants.
+- [ ] **Galaxy** - Needs Outline, Filled, and Duotone variants.
+- [ ] **Universe** - Needs Outline, Filled, and Duotone variants.
+- [ ] **Gravity** - Needs Outline, Filled, and Duotone variants.
+- [ ] **Magnetism** - Needs Outline, Filled, and Duotone variants.
+- [ ] **Electricity** - Needs Outline, Filled, and Duotone variants.
+- [ ] **Energy** - Needs Outline, Filled, and Duotone variants.
+- [ ] **Force** - Needs Outline, Filled, and Duotone variants.
+- [ ] **Motion** - Needs Outline, Filled, and Duotone variants.
+- [ ] **Velocity** - Needs Outline, Filled, and Duotone variants.
+- [ ] **Acceleration** - Needs Outline, Filled, and Duotone variants.
+- [ ] **Mass** - Needs Outline, Filled, and Duotone variants.
+- [ ] **Volume** - Needs Outline, Filled, and Duotone variants.
+- [ ] **Density** - Needs Outline, Filled, and Duotone variants.
+- [ ] **Temperature** - Needs Outline, Filled, and Duotone variants.
+- [ ] **Pressure** - Needs Outline, Filled, and Duotone variants.
+- [ ] **Evolution** - Needs Outline, Filled, and Duotone variants.
+- [ ] **Genetics** - Needs Outline, Filled, and Duotone variants.
+- [ ] **Ecology** - Needs Outline, Filled, and Duotone variants.
+- [ ] **Botany** - Needs Outline, Filled, and Duotone variants.
+- [ ] **Zoology** - Needs Outline, Filled, and Duotone variants.
+- [ ] **Anatomy** - Needs Outline, Filled, and Duotone variants.
+- [ ] **Physiology** - Needs Outline, Filled, and Duotone variants.
+- [ ] **Neuroscience** - Needs Outline, Filled, and Duotone variants.
+
