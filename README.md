@@ -1,6 +1,5 @@
 <div align="center">
-  <img src="public/iconary.png" alt="Iconary Logo" width="150" />
-  <h1>Iconary</h1>
+  <img src="public/iconary.png" alt="Iconary Logo" width="400" />
   <p><strong>Open Source Icon Library for AI/ML & Data Tooling</strong></p>
   
   <p>
