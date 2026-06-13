@@ -173,15 +173,15 @@ export function Home() {
             <div className="flex items-center gap-3 mb-8">
               <div className="flex items-center justify-center w-10 h-10 bg-gradient-to-b from-white/10 to-white/5 border border-white/10 rounded-lg backdrop-blur-md shadow-lg relative overflow-hidden group">
                 <div className="absolute inset-0 bg-white/5 opacity-0 group-hover:opacity-100 transition-opacity"></div>
-                <img src="/logo/react.png" alt="React" className="w-5 h-5 object-contain drop-shadow-md" />
+                <img src={`${import.meta.env.BASE_URL}logo/react.png`} alt="React" className="w-5 h-5 object-contain drop-shadow-md" />
               </div>
               <div className="flex items-center justify-center w-10 h-10 bg-gradient-to-b from-white/10 to-white/5 border border-white/10 rounded-lg backdrop-blur-md shadow-lg relative overflow-hidden group">
                 <div className="absolute inset-0 bg-white/5 opacity-0 group-hover:opacity-100 transition-opacity"></div>
-                <img src="/logo/vue.png" alt="Vue" className="w-5 h-5 object-contain drop-shadow-md" />
+                <img src={`${import.meta.env.BASE_URL}logo/vue.png`} alt="Vue" className="w-5 h-5 object-contain drop-shadow-md" />
               </div>
               <div className="flex items-center justify-center w-10 h-10 bg-gradient-to-b from-white/10 to-white/5 border border-white/10 rounded-lg backdrop-blur-md shadow-lg relative overflow-hidden group">
                 <div className="absolute inset-0 bg-white/5 opacity-0 group-hover:opacity-100 transition-opacity"></div>
-                <img src="/logo/Svelte.png" alt="Svelte" className="w-5 h-5 object-contain drop-shadow-md" />
+                <img src={`${import.meta.env.BASE_URL}logo/Svelte.png`} alt="Svelte" className="w-5 h-5 object-contain drop-shadow-md" />
               </div>
             </div>
             <span className="text-[#606060] uppercase tracking-widest text-xs font-normal font-display block mb-2">FRAMEWORK READY</span>
@@ -272,7 +272,7 @@ export function Home() {
             </div>
             <div className="flex flex-wrap gap-2 mb-4">
               {[
-                "/contributors/founder.jpeg",
+                "contributors/founder.jpeg",
                 "https://avatars.githubusercontent.com/u/9919?v=4",
                 "https://avatars.githubusercontent.com/u/810438?v=4",
                 "https://avatars.githubusercontent.com/u/6820?v=4",
@@ -286,7 +286,7 @@ export function Home() {
               ].map((src, i) => (
                 <img 
                   key={i} 
-                  src={src} 
+                  src={src.startsWith('http') ? src : `${import.meta.env.BASE_URL}${src}`} 
                   alt={`Contributor ${i + 1}`} 
                   className="w-8 h-8 rounded-full border border-[#444] object-cover hover:scale-110 transition-transform duration-200 cursor-pointer" 
                 />
