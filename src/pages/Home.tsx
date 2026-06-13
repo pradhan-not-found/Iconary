@@ -354,6 +354,33 @@ export function Home() {
                 <p className="pb-5 text-[0.95rem] leading-relaxed max-w-2xl text-[#a3a3a3]">Each icon starts as a single source file. A build script generates the outline, filled, and duotone variants automatically, following the project's style guide.</p>
               </details>
             </div>
+            <div className="border-t border-[#333]">
+              <details className="group">
+                <summary className="cursor-pointer list-none flex items-center justify-between py-5 text-left [&::-webkit-details-marker]:hidden">
+                  <span className="text-lg tracking-wide font-display text-white">Can I use Iconary with plain HTML/CSS?</span>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="h-4 w-4 text-[#a3a3a3] transition-transform duration-200 group-open:rotate-180" aria-hidden="true"><path d="m6 9 6 6 6-6"></path></svg>
+                </summary>
+                <p className="pb-5 text-[0.95rem] leading-relaxed max-w-2xl text-[#a3a3a3]">Yes! You can download the raw SVGs directly, or use our upcoming CDN link to include them in your vanilla HTML and CSS projects without needing a JavaScript framework.</p>
+              </details>
+            </div>
+            <div className="border-t border-[#333]">
+              <details className="group">
+                <summary className="cursor-pointer list-none flex items-center justify-between py-5 text-left [&::-webkit-details-marker]:hidden">
+                  <span className="text-lg tracking-wide font-display text-white">Are these icons optimized for performance?</span>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="h-4 w-4 text-[#a3a3a3] transition-transform duration-200 group-open:rotate-180" aria-hidden="true"><path d="m6 9 6 6 6-6"></path></svg>
+                </summary>
+                <p className="pb-5 text-[0.95rem] leading-relaxed max-w-2xl text-[#a3a3a3]">Absolutely. Every single SVG is heavily minified via SVGO to remove unnecessary metadata and paths, ensuring lightning-fast load times and a tiny bundle footprint.</p>
+              </details>
+            </div>
+            <div className="border-t border-[#333]">
+              <details className="group">
+                <summary className="cursor-pointer list-none flex items-center justify-between py-5 text-left [&::-webkit-details-marker]:hidden">
+                  <span className="text-lg tracking-wide font-display text-white">How do I customize the colors of duotone icons?</span>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="h-4 w-4 text-[#a3a3a3] transition-transform duration-200 group-open:rotate-180" aria-hidden="true"><path d="m6 9 6 6 6-6"></path></svg>
+                </summary>
+                <p className="pb-5 text-[0.95rem] leading-relaxed max-w-2xl text-[#a3a3a3]">Duotone icons automatically inherit your current text color for their primary shapes. You can easily override the secondary muted color by targeting standard CSS variables attached to the SVG elements.</p>
+              </details>
+            </div>
           </div>
         </div>
       </section>
