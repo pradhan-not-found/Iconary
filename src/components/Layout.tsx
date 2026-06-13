@@ -72,8 +72,8 @@ export function Layout() {
             <p className="text-[0.9rem] font-display font-normal text-[#555]">
               © 2026 Iconary
             </p>
-            <div className="flex items-center gap-2 text-[0.9rem] font-display font-normal text-[#555]">
-              Made by <img src="/contributors/sp.png" alt="Souradeep" className="w-5 h-5 rounded-full object-cover grayscale opacity-70 hover:grayscale-0 hover:opacity-100 transition-all" /> <a href="https://souradeep.me" target="_blank" rel="noreferrer" className="hover:text-white transition-colors">souradeep.me</a>
+            <div className="flex items-center gap-1.5 text-[0.9rem] font-display font-normal text-[#555]">
+              Made by <a href="https://souradeep.me" target="_blank" rel="noreferrer" className="hover:text-white transition-colors">souradeep.me</a>
             </div>
           </div>
         </div>
