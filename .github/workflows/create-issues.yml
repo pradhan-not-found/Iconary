@@ -1,0 +1,92 @@
+name: Create Initial Issues
+
+on:
+  workflow_dispatch:
+
+permissions:
+  issues: write
+
+jobs:
+  create_issues:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Create Issues
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          # Check if issue already exists to avoid duplicates
+          if ! gh issue list --search "in:title Neural Networks" | grep -q "Neural Networks"; then
+            gh issue create \
+              --title "Add an icon for Neural Networks" \
+              --body "We need a new icon representing a Neural Network. 
+
+              ## Requirements
+              - Must have outline, filled, and duotone variants.
+              - Follow the style guide in \`STYLE_GUIDE.md\`.
+              - Include a 1-2 line concept explainer.
+
+              See \`CONTRIBUTING.md\` to get started!" \
+              --label "good first issue"
+            sleep 2
+          fi
+
+          if ! gh issue list --search "in:title Vector Database" | grep -q "Vector Database"; then
+            gh issue create \
+              --title "Add an icon for Vector Database" \
+              --body "We need a new icon representing a Vector Database.
+
+              ## Requirements
+              - Must have outline, filled, and duotone variants.
+              - Follow the style guide in \`STYLE_GUIDE.md\`.
+              - Include a 1-2 line concept explainer.
+
+              See \`CONTRIBUTING.md\` to get started!" \
+              --label "good first issue"
+            sleep 2
+          fi
+
+          if ! gh issue list --search "in:title Vue.js Support" | grep -q "Vue.js Support"; then
+            gh issue create \
+              --title "Add Vue.js Support" \
+              --body "We currently support React, but we want to make the Iconary library available for Vue.js developers as well!
+
+              ## Requirements
+              - Create a new Vue package in the repository.
+              - Ensure the build pipeline exports Vue components correctly.
+              - Update the README with Vue installation instructions." \
+              --label "help wanted"
+            sleep 2
+          fi
+
+          if ! gh issue list --search "in:title Large Language Model (LLM)" | grep -q "Large Language Model (LLM)"; then
+            gh issue create \
+              --title "Add an icon for Large Language Model (LLM)" \
+              --body "We need a core icon representing a Large Language Model.
+
+              ## Requirements
+              - Must have outline, filled, and duotone variants.
+              - Follow the style guide in \`STYLE_GUIDE.md\`.
+              - Include a 1-2 line concept explainer.
+
+              See \`CONTRIBUTING.md\` to get started!" \
+              --label "good first issue"
+            sleep 2
+          fi
+
+          if ! gh issue list --search "in:title RAG Architecture" | grep -q "RAG Architecture"; then
+            gh issue create \
+              --title "Add an icon for RAG Architecture" \
+              --body "We need an icon representing Retrieval-Augmented Generation (RAG).
+
+              ## Requirements
+              - Must have outline, filled, and duotone variants.
+              - Follow the style guide in \`STYLE_GUIDE.md\`.
+              - Include a 1-2 line concept explainer.
+
+              See \`CONTRIBUTING.md\` to get started!" \
+              --label "good first issue"
+            sleep 2
+          fi
