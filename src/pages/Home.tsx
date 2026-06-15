@@ -99,8 +99,8 @@ export function Home() {
               <div className="text-xl font-medium text-white mb-4 font-display">Usage</div>
               <div className="border border-[#333] rounded-xl bg-[#0a0a0a] p-1.5 overflow-hidden">
                 <div className="flex items-center justify-between pl-4 pr-3 py-3.5 bg-[#111] rounded-lg border border-[#333]">
-                  <code className="text-[0.9rem] text-[#e5e5e5] font-mono tracking-wide">npm install @iconary/react</code>
-                  <button onClick={() => navigator.clipboard.writeText('npm install @iconary/react')} className="text-[#606060] hover:text-white transition-colors ml-4 p-1.5 rounded-md hover:bg-[#222]" aria-label="Copy command">
+                  <code className="text-[0.9rem] text-[#e5e5e5] font-mono tracking-wide">npx iconary-react</code>
+                  <button onClick={() => navigator.clipboard.writeText('npx iconary-react')} className="text-[#606060] hover:text-white transition-colors ml-4 p-1.5 rounded-md hover:bg-[#222]" aria-label="Copy command">
                     <svg viewBox="0 0 24 24" width="16" height="16" stroke="currentColor" strokeWidth="2" fill="none" strokeLinecap="round" strokeLinejoin="round"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
                   </button>
                 </div>
@@ -237,7 +237,7 @@ export function Home() {
             <span className="text-[#606060] uppercase tracking-[0.2em] text-[0.8rem] block font-display font-normal mb-3">01 — INSTALL</span>
           <h3 className="text-[1.1rem] font-normal font-display text-white mb-2">Add the package</h3>
           <p className="text-[0.9rem] leading-relaxed text-[#a3a3a3]">Pick your framework and install the matching package.</p>
-          <pre className="mt-3 bg-[#111] border border-[#333] px-3 py-2 text-[0.75rem] text-[#a3a3a3] overflow-x-auto">npm install @iconary/react</pre>
+          <pre className="mt-3 bg-[#111] border border-[#333] px-3 py-2 text-[0.75rem] text-[#a3a3a3] overflow-x-auto">npx iconary-react</pre>
         </div>
         <div className="px-6 md:px-12 py-16">
           <span className="text-[#606060] uppercase tracking-[0.2em] text-[0.8rem] block font-display font-normal mb-3">02 — IMPORT</span>

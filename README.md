@@ -34,17 +34,17 @@ Install the Iconary package for your preferred framework:
 
 ### React
 ```bash
-npm install @iconary/react
+npx iconary-react
 ```
 
-### Vue
+### Vue (Coming Soon)
 ```bash
-npm install @iconary/vue
+npx iconary-vue
 ```
 
-### Svelte
+### Svelte (Coming Soon)
 ```bash
-npm install @iconary/svelte
+npx iconary-svelte
 ```
 
 ---

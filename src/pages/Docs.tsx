@@ -37,7 +37,7 @@ export function Docs() {
               Install the package via npm, pnpm, or yarn. The React package includes full TypeScript definitions.
             </p>
             <pre className="mt-4 overflow-x-auto border border-[#333] bg-[#111] p-4 text-xs text-[#a3a3a3] font-mono leading-relaxed rounded-md">
-              npm install iconary-react
+              npx iconary-react
             </pre>
           </ScrollReveal>
 

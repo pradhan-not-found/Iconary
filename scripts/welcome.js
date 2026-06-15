@@ -30,5 +30,5 @@ console.log("");
 console.log(`${bold}Documentation:${reset}  https://iconary.vercel.app/docs`);
 console.log(`${bold}GitHub:${reset}         https://github.com/pradhan-not-found/Iconary`);
 console.log("");
-console.log(`${dim}Made by pradhan-not-found. Thank you for building with us!${reset}`);
+console.log(`${dim}Made by souradeep.me. Thank you for building with us!${reset}`);
 console.log("");

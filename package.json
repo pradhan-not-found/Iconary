@@ -14,6 +14,7 @@
     "@hugeicons/core-free-icons": "^3.1.1",
     "@hugeicons/react": "^1.1.4",
     "framer-motion": "^12.40.0",
+    "iconary-react": "^1.0.0",
     "react": "19.2.3",
     "react-dom": "19.2.3",
     "react-router-dom": "^7.17.0",
