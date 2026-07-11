@@ -1,5 +1,4 @@
 import React, { useState, useEffect, useCallback, useRef } from 'react';
-import { renderToStaticMarkup } from 'react-dom/server';
 import { HugeiconsIcon } from '@hugeicons/react';
 import { toast } from 'sonner';
 
@@ -323,6 +322,7 @@ export function IconModal({ icon, initialVariant, onClose }: IconModalProps) {
   const [activeTab, setActiveTab] = useState<Framework>('React');
   const [visible, setVisible] = useState(false);
   const [copied, setCopied] = useState(false);
+  const svgWrapperRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     if (icon) {
@@ -357,20 +357,24 @@ export function IconModal({ icon, initialVariant, onClose }: IconModalProps) {
   };
 
   const generateSvgString = () => {
-    const element = (
-      <HugeiconsIcon
-        icon={icon.icon}
-        size={size}
-        variant={variant as any}
-        style={{ color: color === 'currentColor' ? '#ffffff' : color }}
-        strokeWidth={stroke}
-      />
-    );
-    let str = renderToStaticMarkup(element);
-    if (!str.includes('xmlns="')) {
-      str = str.replace('<svg', '<svg xmlns="http://www.w3.org/2000/svg"');
+    if (!svgWrapperRef.current) return '';
+    let svgString = svgWrapperRef.current.innerHTML;
+    
+    // Resize
+    svgString = svgString.replace(/width="[0-9]+"/, `width="${size}"`);
+    svgString = svgString.replace(/height="[0-9]+"/, `height="${size}"`);
+    
+    // Inject exact variant styles directly into the SVG so the downloaded file matches the preview exactly
+    if (variant === 'solid') {
+      svgString = svgString.replace(/fill="none"/g, 'fill="currentColor"').replace(/stroke="currentColor"/g, 'stroke="none"');
+    } else if (variant === 'duotone') {
+      svgString = svgString.replace(/fill="none"/g, 'fill="currentColor" fill-opacity="0.2"');
     }
-    return str.replace('</svg>', `<!-- ${icon.name} from Iconary (https://iconary.ai) --></svg>`);
+    
+    if (!svgString.includes('xmlns="')) {
+      svgString = svgString.replace('<svg', '<svg xmlns="http://www.w3.org/2000/svg"');
+    }
+    return svgString.replace('</svg>', `<!-- ${icon.name} from Iconary (https://iconary.ai) --></svg>`);
   };
 
   const handleDownloadSVG = () => {
@@ -438,11 +442,25 @@ export function IconModal({ icon, initialVariant, onClose }: IconModalProps) {
           </button>
         </div>
 
+        {/* Global Styles for Variant Preview */}
+        <style>{`
+          .icon-variant-solid svg path, .icon-variant-solid svg rect, .icon-variant-solid svg circle, .icon-variant-solid svg polygon {
+            fill: currentColor !important;
+            stroke: none !important;
+          }
+          .icon-variant-duotone svg path, .icon-variant-duotone svg rect, .icon-variant-duotone svg circle, .icon-variant-duotone svg polygon {
+            fill: currentColor !important;
+            fill-opacity: 0.2 !important;
+            stroke: currentColor !important;
+          }
+        `}</style>
+
         {/* Body */}
         <div style={{ display: 'flex', flexDirection: 'row' }}>
           {/* Left preview */}
           <div style={{ flexShrink: 0, width: '240px', padding: '28px', borderRight: '1px solid #1f1f1f', display: 'flex', flexDirection: 'column', gap: '16px', alignItems: 'center' }}>
             <div
+              className={`icon-variant-${variant}`}
               style={{
                 width: '100%', aspectRatio: '1',
                 background: '#0a0a0a', border: '1px solid #1f1f1f', borderRadius: '14px',
@@ -451,13 +469,14 @@ export function IconModal({ icon, initialVariant, onClose }: IconModalProps) {
               }}
             >
               <div style={{ position: 'absolute', inset: 0, backgroundImage: 'linear-gradient(rgba(255,255,255,0.02) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.02) 1px, transparent 1px)', backgroundSize: '24px 24px' }} />
-              <HugeiconsIcon
-                icon={icon.icon}
-                size={80}
-                variant={variant as any}
-                strokeWidth={stroke}
-                style={{ color: color === 'currentColor' ? '#fff' : color, position: 'relative', zIndex: 1 }}
-              />
+              <div ref={svgWrapperRef} style={{ display: 'flex' }}>
+                <HugeiconsIcon
+                  icon={icon.icon}
+                  size={80}
+                  strokeWidth={stroke}
+                  style={{ color: color === 'currentColor' ? '#fff' : color, position: 'relative', zIndex: 1 }}
+                />
+              </div>
             </div>
             <p style={{ margin: 0, fontSize: '0.7rem', color: '#444', letterSpacing: '0.06em', textAlign: 'center', textTransform: 'uppercase' as const, fontWeight: 600 }}>
               {icon.name}
