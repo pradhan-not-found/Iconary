@@ -193,13 +193,31 @@ export function Browse() {
                 </div>
 
                 <div className="flex items-center gap-3 mb-6">
-                  <button onClick={() => handleCopy(selectedIcon.id)} className="flex items-center justify-center gap-2 flex-1 border border-[#333] rounded-lg bg-[#111] hover:bg-[#222] transition-colors py-2.5 text-[0.8rem] font-bold text-[#e5e5e5]">
+                  <button 
+                    onClick={() => {
+                      const svgString = `<svg width="${size.replace('px', '')}" height="${size.replace('px', '')}" viewBox="0 0 24 24" fill="none" stroke="${color}" stroke-width="${stroke}" stroke-linecap="round" stroke-linejoin="round">\n  <!-- paths... -->\n</svg>`;
+                      const blob = new Blob([svgString], { type: 'image/svg+xml' });
+                      const url = URL.createObjectURL(blob);
+                      const a = document.createElement('a');
+                      a.href = url;
+                      a.download = `${selectedIcon.id}.svg`;
+                      document.body.appendChild(a);
+                      a.click();
+                      document.body.removeChild(a);
+                      URL.revokeObjectURL(url);
+                      toast.success(`Downloaded ${selectedIcon.id}.svg`);
+                    }} 
+                    className="flex items-center justify-center gap-2 flex-1 border border-[#333] rounded-lg bg-[#111] hover:bg-[#222] transition-colors py-2.5 text-[0.8rem] font-bold text-[#e5e5e5]"
+                  >
                     <svg viewBox="0 0 24 24" width="14" height="14" stroke="currentColor" strokeWidth="2" fill="none"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
-                    SVG STROKED
+                    Download SVG
                   </button>
-                  <button onClick={() => handleCopy(selectedIcon.id)} className="flex items-center justify-center gap-2 flex-1 border border-[#333] rounded-lg bg-[#111] hover:bg-[#222] transition-colors py-2.5 text-[0.8rem] font-bold text-[#e5e5e5]">
+                  <button 
+                    onClick={() => handleCopy(selectedIcon.id)} 
+                    className="flex items-center justify-center gap-2 flex-1 border border-[#333] rounded-lg bg-[#111] hover:bg-[#222] transition-colors py-2.5 text-[0.8rem] font-bold text-[#e5e5e5]"
+                  >
                     <svg viewBox="0 0 24 24" width="14" height="14" stroke="currentColor" strokeWidth="2" fill="none"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
-                    SVG STROKED
+                    Copy SVG
                   </button>
                 </div>
                 

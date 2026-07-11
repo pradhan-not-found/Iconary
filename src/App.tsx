@@ -8,6 +8,7 @@ import { Changelog } from './pages/Changelog';
 import { Browse } from './pages/Browse';
 import { Privacy } from './pages/Privacy';
 import { Terms } from './pages/Terms';
+import { NotFound } from './pages/NotFound';
 import { ScrollToTop } from './components/ScrollToTop';
 
 export default function App() {
@@ -23,6 +24,7 @@ export default function App() {
             <Route path="/changelog" element={<Changelog />} />
             <Route path="/privacy" element={<Privacy />} />
             <Route path="/terms" element={<Terms />} />
+            <Route path="*" element={<NotFound />} />
           </Route>
         </Routes>
         <Toaster position="bottom-right" theme="dark" />
