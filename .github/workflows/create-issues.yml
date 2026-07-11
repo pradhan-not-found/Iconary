@@ -163,3 +163,79 @@ jobs:
               --label "good first issue"
             sleep 2
           fi
+
+          if ! gh issue list --search "in:title Dataset" | grep -q "Dataset"; then
+            gh issue create \
+              --title "Add an icon for Dataset" \
+              --body "We need an icon representing a Dataset used in ML training or evaluation.
+
+              ## Requirements
+              - Must have outline, filled, and duotone variants.
+              - Follow the style guide in \`STYLE_GUIDE.md\`.
+              - Include a 1-2 line concept explainer.
+
+              See \`CONTRIBUTING.md\` to get started!" \
+              --label "good first issue"
+            sleep 2
+          fi
+
+          if ! gh issue list --search "in:title Prompt Engineering" | grep -q "Prompt Engineering"; then
+            gh issue create \
+              --title "Add an icon for Prompt Engineering" \
+              --body "We need an icon representing the concept of Prompt Engineering for LLMs.
+
+              ## Requirements
+              - Must have outline, filled, and duotone variants.
+              - Follow the style guide in \`STYLE_GUIDE.md\`.
+              - Include a 1-2 line concept explainer.
+
+              See \`CONTRIBUTING.md\` to get started!" \
+              --label "good first issue"
+            sleep 2
+          fi
+
+          if ! gh issue list --search "in:title GPU Accelerator" | grep -q "GPU Accelerator"; then
+            gh issue create \
+              --title "Add an icon for GPU Accelerator" \
+              --body "We need an icon representing a GPU or hardware accelerator used for AI workloads.
+
+              ## Requirements
+              - Must have outline, filled, and duotone variants.
+              - Follow the style guide in \`STYLE_GUIDE.md\`.
+              - Include a 1-2 line concept explainer.
+
+              See \`CONTRIBUTING.md\` to get started!" \
+              --label "good first issue"
+            sleep 2
+          fi
+
+          if ! gh issue list --search "in:title Knowledge Graph" | grep -q "Knowledge Graph"; then
+            gh issue create \
+              --title "Add an icon for Knowledge Graph" \
+              --body "We need an icon representing a Knowledge Graph, often used with RAG architectures.
+
+              ## Requirements
+              - Must have outline, filled, and duotone variants.
+              - Follow the style guide in \`STYLE_GUIDE.md\`.
+              - Include a 1-2 line concept explainer.
+
+              See \`CONTRIBUTING.md\` to get started!" \
+              --label "good first issue"
+            sleep 2
+          fi
+
+          if ! gh issue list --search "in:title Tokenization" | grep -q "Tokenization"; then
+            gh issue create \
+              --title "Add an icon for Tokenization" \
+              --body "We need an icon representing the concept of Tokenization (splitting text into tokens).
+
+              ## Requirements
+              - Must have outline, filled, and duotone variants.
+              - Follow the style guide in \`STYLE_GUIDE.md\`.
+              - Include a 1-2 line concept explainer.
+
+              See \`CONTRIBUTING.md\` to get started!" \
+              --label "good first issue"
+            sleep 2
+          fi
+
