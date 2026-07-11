@@ -134,7 +134,7 @@ export function Browse() {
         </div>
       </div>
 
-      <IconModal icon={selectedIcon} onClose={() => setSelectedIcon(null)} />
+      <IconModal icon={selectedIcon} initialVariant={iconStyle} onClose={() => setSelectedIcon(null)} />
     </div>
   );
 }

@@ -1,4 +1,5 @@
 import React, { useState, useEffect, useCallback, useRef } from 'react';
+import { renderToStaticMarkup } from 'react-dom/server';
 import { HugeiconsIcon } from '@hugeicons/react';
 import { toast } from 'sonner';
 
@@ -14,6 +15,7 @@ type Framework = 'Web' | 'React' | 'React Native' | 'Vue' | 'Svelte' | 'Flutter'
 
 interface IconModalProps {
   icon: IconDef | null;
+  initialVariant?: 'stroke' | 'solid' | 'duotone';
   onClose: () => void;
 }
 
@@ -22,6 +24,7 @@ interface IconModalProps {
 const FRAMEWORKS: Framework[] = ['Web', 'React', 'React Native', 'Vue', 'Svelte', 'Flutter', 'Angular'];
 
 const STROKE_OPTIONS = ['1', '1.5', '2', '2.5'];
+const VARIANT_OPTIONS = ['stroke', 'solid', 'duotone'];
 const SIZE_OPTIONS = ['16', '20', '24', '32', '48', '64'];
 const COLOR_OPTIONS = [
   { label: 'currentColor', value: 'currentColor', swatch: '#ffffff' },
@@ -34,23 +37,27 @@ const COLOR_OPTIONS = [
 
 // ─── Code Generators ──────────────────────────────────────────────────────────
 
-function getCode(framework: Framework, iconId: string, size: string, color: string): string {
+function getCode(framework: Framework, iconId: string, size: string, color: string, variant: string, stroke: string): string {
   const colorProp = color === 'currentColor' ? '' : ` color="${color}"`;
+  const variantProp = variant === 'stroke' ? '' : ` variant="${variant}"`;
+  const strokeProp = stroke === '1.5' ? '' : ` strokeWidth={${stroke}}`;
+  const strokePropStr = stroke === '1.5' ? '' : ` strokeWidth="${stroke}"`;
+  
   switch (framework) {
     case 'React':
-      return `import { ${iconId} } from "@iconary/react";\n\n<${iconId} size={${size}}${colorProp} />`;
+      return `import { ${iconId} } from "iconary-react";\n\n<${iconId} size={${size}}${colorProp}${variantProp}${strokeProp} />`;
     case 'React Native':
-      return `import { ${iconId} } from "@iconary/react-native";\n\n<${iconId} size={${size}}${colorProp} />`;
+      return `import { ${iconId} } from "iconary-react-native";\n\n<${iconId} size={${size}}${colorProp}${variantProp}${strokeProp} />`;
     case 'Vue':
-      return `import { ${iconId} } from "iconary-vue";\n\n<${iconId} :size="${size}"${colorProp} />`;
+      return `import { ${iconId} } from "iconary-vue";\n\n<${iconId} :size="${size}"${colorProp}${variantProp}${strokePropStr} />`;
     case 'Svelte':
-      return `<script>\n  import { ${iconId} } from "iconary-svelte";\n</script>\n\n<${iconId} size={${size}}${colorProp} />`;
+      return `<script>\n  import { ${iconId} } from "iconary-svelte";\n</script>\n\n<${iconId} size={${size}}${colorProp}${variantProp}${strokeProp} />`;
     case 'Flutter':
-      return `Iconary(\n  Iconary.${iconId},\n  size: ${size},\n  color: Colors.white,\n)`;
+      return `Iconary(\n  Iconary.${iconId},\n  size: ${size},\n  color: Colors.white,\n  variant: IconaryVariant.${variant},\n)`;
     case 'Angular':
-      return `import { ${iconId} } from "@iconary/angular";\n\n<iconary-${iconId.toLowerCase()} size="${size}"></iconary-${iconId.toLowerCase()}>`;
+      return `import { ${iconId} } from "@iconary/angular";\n\n<iconary-${iconId.toLowerCase()} size="${size}"${variantProp}${strokePropStr}></iconary-${iconId.toLowerCase()}>`;
     case 'Web':
-      return `<script src="https://cdn.iconary.ai/web.js"></script>\n\n<i class="iconary-${iconId.toLowerCase()}"\n   data-size="${size}">\n</i>`;
+      return `<script src="https://cdn.iconary.ai/web.js"></script>\n\n<i class="iconary-${iconId.toLowerCase()}"\n   data-size="${size}"\n   data-variant="${variant}">\n</i>`;
     default:
       return '';
   }
@@ -308,18 +315,22 @@ function ActionButton({ onClick, icon, label, variant }: ActionButtonProps) {
 
 // ─── Main Component ───────────────────────────────────────────────────────────
 
-export function IconModal({ icon, onClose }: IconModalProps) {
+export function IconModal({ icon, initialVariant, onClose }: IconModalProps) {
   const [size, setSize] = useState('24');
   const [stroke, setStroke] = useState('1.5');
+  const [variant, setVariant] = useState(initialVariant || 'stroke');
   const [color, setColor] = useState('currentColor');
   const [activeTab, setActiveTab] = useState<Framework>('React');
   const [visible, setVisible] = useState(false);
   const [copied, setCopied] = useState(false);
 
   useEffect(() => {
-    if (icon) requestAnimationFrame(() => setVisible(true));
+    if (icon) {
+      requestAnimationFrame(() => setVisible(true));
+      if (initialVariant) setVariant(initialVariant);
+    }
     else setVisible(false);
-  }, [icon]);
+  }, [icon, initialVariant]);
 
   const handleClose = useCallback(() => {
     setVisible(false);
@@ -334,7 +345,7 @@ export function IconModal({ icon, onClose }: IconModalProps) {
 
   if (!icon) return null;
 
-  const code = getCode(activeTab, icon.id, size, color);
+  const code = getCode(activeTab, icon.id, size, color, variant, stroke);
   const selectedColorOption = COLOR_OPTIONS.find((c) => c.value === color) ?? COLOR_OPTIONS[0];
 
   const handleCopyCode = () => {
@@ -345,19 +356,36 @@ export function IconModal({ icon, onClose }: IconModalProps) {
     });
   };
 
+  const generateSvgString = () => {
+    const element = (
+      <HugeiconsIcon
+        icon={icon.icon}
+        size={size}
+        variant={variant as any}
+        style={{ color: color === 'currentColor' ? '#ffffff' : color }}
+        strokeWidth={stroke}
+      />
+    );
+    let str = renderToStaticMarkup(element);
+    if (!str.includes('xmlns="')) {
+      str = str.replace('<svg', '<svg xmlns="http://www.w3.org/2000/svg"');
+    }
+    return str.replace('</svg>', `<!-- ${icon.name} from Iconary (https://iconary.ai) --></svg>`);
+  };
+
   const handleDownloadSVG = () => {
-    const svgString = `<svg xmlns="http://www.w3.org/2000/svg" width="${size}" height="${size}" viewBox="0 0 24 24" fill="none" stroke="${color === 'currentColor' ? '#ffffff' : color}" stroke-width="${stroke}" stroke-linecap="round" stroke-linejoin="round"><!-- ${icon.id} from Iconary --></svg>`;
+    const svgString = generateSvgString();
     const blob = new Blob([svgString], { type: 'image/svg+xml' });
     const url = URL.createObjectURL(blob);
     const a = document.createElement('a');
-    a.href = url; a.download = `${icon.id}.svg`;
+    a.href = url; a.download = `${icon.id}-${variant}.svg`;
     document.body.appendChild(a); a.click();
     document.body.removeChild(a); URL.revokeObjectURL(url);
-    toast.success(`Downloaded ${icon.id}.svg`);
+    toast.success(`Downloaded ${icon.id}-${variant}.svg`);
   };
 
   const handleCopySVG = () => {
-    const svgString = `<svg xmlns="http://www.w3.org/2000/svg" width="${size}" height="${size}" viewBox="0 0 24 24" fill="none" stroke="${color === 'currentColor' ? '#ffffff' : color}" stroke-width="${stroke}" stroke-linecap="round" stroke-linejoin="round"><!-- ${icon.id} --></svg>`;
+    const svgString = generateSvgString();
     navigator.clipboard.writeText(svgString).then(() => toast.success('SVG copied to clipboard!'));
   };
 
@@ -426,6 +454,8 @@ export function IconModal({ icon, onClose }: IconModalProps) {
               <HugeiconsIcon
                 icon={icon.icon}
                 size={80}
+                variant={variant as any}
+                strokeWidth={stroke}
                 style={{ color: color === 'currentColor' ? '#fff' : color, position: 'relative', zIndex: 1 }}
               />
             </div>
@@ -439,8 +469,9 @@ export function IconModal({ icon, onClose }: IconModalProps) {
 
             {/* Controls row */}
             <div style={{ display: 'flex', alignItems: 'center', gap: '8px', flexWrap: 'wrap' as const }}>
-              <SelectDropdown label="Stroke width" value={stroke} options={STROKE_OPTIONS} onChange={setStroke} prefix={<StrokeIcon />} />
-              <SelectDropdown label="Icon size" value={`${size}px`} options={SIZE_OPTIONS.map((s) => `${s}px`)} onChange={(v) => setSize(v.replace('px', ''))} />
+              <SelectDropdown label="Variant" value={variant} options={VARIANT_OPTIONS} onChange={setVariant} prefix={<StrokeIcon />} />
+              <SelectDropdown label="Stroke" value={stroke} options={STROKE_OPTIONS} onChange={setStroke} prefix={<StrokeIcon />} />
+              <SelectDropdown label="Size" value={`${size}px`} options={SIZE_OPTIONS.map((s) => `${s}px`)} onChange={(v) => setSize(v.replace('px', ''))} />
               <SelectDropdown
                 label="Icon color"
                 value={selectedColorOption.label}
@@ -449,7 +480,7 @@ export function IconModal({ icon, onClose }: IconModalProps) {
                 prefix={<span style={{ display: 'inline-block', width: '12px', height: '12px', borderRadius: '3px', background: selectedColorOption.swatch, border: '1px solid #3a3a3a', flexShrink: 0 }} />}
               />
               <button
-                onClick={() => { setSize('24'); setStroke('1.5'); setColor('currentColor'); }}
+                onClick={() => { setSize('24'); setStroke('1.5'); setColor('currentColor'); setVariant(initialVariant || 'stroke'); }}
                 aria-label="Reset defaults"
                 title="Reset to defaults"
                 style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', padding: '6px 10px', background: '#0d0d0d', border: '1px solid #2a2a2a', borderRadius: '8px', color: '#666', cursor: 'pointer' }}
