@@ -1673,3 +1673,133 @@ jobs:
               --label "icon-request" --label "design" --label "hard"
             sleep 2
           fi
+
+          if ! gh issue list --search "in:title Design a 'Knowledge Distillation' Icon" | grep -q "Design a 'Knowledge Distillation' Icon"; then
+            gh issue create \
+              --title "Design a 'Knowledge Distillation' Icon" \
+              --body "Knowledge Distillation is compressing a large 'teacher' model into a smaller 'student' model. Design an icon showing a large network transferring data to a smaller one.
+
+              Check out \\`STYLE_GUIDE.md\\` before you start designing!" \
+              --label "icon-request" --label "design" --label "hard"
+            sleep 2
+          fi
+
+          if ! gh issue list --search "in:title Design a 'Few-Shot Prompting' Icon" | grep -q "Design a 'Few-Shot Prompting' Icon"; then
+            gh issue create \
+              --title "Design a 'Few-Shot Prompting' Icon" \
+              --body "Design an icon for Few-Shot Prompting (providing a model with a small number of examples before asking it to perform a task).
+
+              Check out \\`STYLE_GUIDE.md\\` before you start designing!" \
+              --label "icon-request" --label "design" --label "easy"
+            sleep 2
+          fi
+
+          if ! gh issue list --search "in:title Design a 'Feature Extraction' Icon" | grep -q "Design a 'Feature Extraction' Icon"; then
+            gh issue create \
+              --title "Design a 'Feature Extraction' Icon" \
+              --body "Design an icon representing Feature Extraction (pulling useful features out of raw data, like extracting edges from an image).
+
+              Check out \\`STYLE_GUIDE.md\\` before you start designing!" \
+              --label "icon-request" --label "design" --label "medium"
+            sleep 2
+          fi
+
+          if ! gh issue list --search "in:title Design an 'Outlier Detection' Icon" | grep -q "Design an 'Outlier Detection' Icon"; then
+            gh issue create \
+              --title "Design an 'Outlier Detection / Anomaly' Icon" \
+              --body "We need an icon for detecting anomalies or outliers in a dataset. A scatterplot with one glowing/highlighted point outside the main cluster.
+
+              Check out \\`STYLE_GUIDE.md\\` before you start designing!" \
+              --label "icon-request" --label "design" --label "easy"
+            sleep 2
+          fi
+
+          if ! gh issue list --search "in:title Design a 'Recommendation System' Icon" | grep -q "Design a 'Recommendation System' Icon"; then
+            gh issue create \
+              --title "Design a 'Recommendation System' Icon" \
+              --body "Design an icon representing an AI Recommendation Engine (matching a user with personalized content, like movies or products).
+
+              Check out \\`STYLE_GUIDE.md\\` before you start designing!" \
+              --label "icon-request" --label "design" --label "medium"
+            sleep 2
+          fi
+
+          if ! gh issue list --search "in:title Design a 'Graph Neural Network' Icon" | grep -q "Design a 'Graph Neural Network' Icon"; then
+            gh issue create \
+              --title "Design a 'Graph Neural Network (GNN)' Icon" \
+              --body "GNNs process graph-structured data. We need an icon representing a neural network overlaid on a complex node-edge graph.
+
+              Check out \\`STYLE_GUIDE.md\\` before you start designing!" \
+              --label "icon-request" --label "design" --label "hard"
+            sleep 2
+          fi
+
+          if ! gh issue list --search "in:title Design a 'Federated Learning' Icon" | grep -q "Design a 'Federated Learning' Icon"; then
+            gh issue create \
+              --title "Design a 'Federated Learning' Icon" \
+              --body "Federated Learning involves training a model across multiple decentralized edge devices without exchanging raw data. Design an icon showing edge devices feeding into a central model.
+
+              Check out \\`STYLE_GUIDE.md\\` before you start designing!" \
+              --label "icon-request" --label "design" --label "hard"
+            sleep 2
+          fi
+
+          if ! gh issue list --search "in:title Design an 'Explainable AI' Icon" | grep -q "Design an 'Explainable AI' Icon"; then
+            gh issue create \
+              --title "Design an 'Explainable AI (XAI)' Icon" \
+              --body "XAI is about looking inside the 'black box' of neural networks. Design an icon representing transparency (like a magnifying glass over a brain/network).
+
+              Check out \\`STYLE_GUIDE.md\\` before you start designing!" \
+              --label "icon-request" --label "design" --label "medium"
+            sleep 2
+          fi
+
+          if ! gh issue list --search "in:title Design a 'Swarm Intelligence' Icon" | grep -q "Design a 'Swarm Intelligence' Icon"; then
+            gh issue create \
+              --title "Design a 'Swarm Intelligence' Icon" \
+              --body "Design an icon for Swarm Intelligence (AI systems inspired by the collective behavior of ants, bees, or birds).
+
+              Check out \\`STYLE_GUIDE.md\\` before you start designing!" \
+              --label "icon-request" --label "design" --label "hard"
+            sleep 2
+          fi
+
+          if ! gh issue list --search "in:title Design a 'Computer Vision Segmentation' Icon" | grep -q "Design a 'Computer Vision Segmentation' Icon"; then
+            gh issue create \
+              --title "Design a 'Computer Vision Segmentation' Icon" \
+              --body "Image segmentation involves pixel-perfect boundary tracing around objects. Design an icon showing a precise lasso or mask over an object.
+
+              Check out \\`STYLE_GUIDE.md\\` before you start designing!" \
+              --label "icon-request" --label "design" --label "medium"
+            sleep 2
+          fi
+
+          if ! gh issue list --search "in:title Design a 'Batch Processing' Icon" | grep -q "Design a 'Batch Processing' Icon"; then
+            gh issue create \
+              --title "Design a 'Batch Processing' Icon" \
+              --body "Design an icon for Batch Processing (processing data in distinct groups rather than continuously).
+
+              Check out \\`STYLE_GUIDE.md\\` before you start designing!" \
+              --label "icon-request" --label "design" --label "easy"
+            sleep 2
+          fi
+
+          if ! gh issue list --search "in:title Design a 'Supervised Learning' Icon" | grep -q "Design a 'Supervised Learning' Icon"; then
+            gh issue create \
+              --title "Design a 'Supervised Learning' Icon" \
+              --body "Supervised learning uses labeled data. Design an icon representing a 'teacher' or 'labels' guiding the algorithm.
+
+              Check out \\`STYLE_GUIDE.md\\` before you start designing!" \
+              --label "icon-request" --label "design" --label "medium"
+            sleep 2
+          fi
+
+          if ! gh issue list --search "in:title Design an 'Unsupervised Learning' Icon" | grep -q "Design an 'Unsupervised Learning' Icon"; then
+            gh issue create \
+              --title "Design an 'Unsupervised Learning' Icon" \
+              --body "Unsupervised learning finds hidden patterns without labels. Design an icon representing discovering structure in chaos (like clustering unorganized dots).
+
+              Check out \\`STYLE_GUIDE.md\\` before you start designing!" \
+              --label "icon-request" --label "design" --label "medium"
+            sleep 2
+          fi
