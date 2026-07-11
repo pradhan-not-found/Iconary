@@ -1,4 +1,5 @@
 import React, { useState, useMemo } from 'react';
+import { IconModal, IconDef } from './IconModal';
 
 // A pool of AI/ML terminology for generating professional icon names
 const prefixes = ['Neural', 'Vector', 'Agent', 'Data', 'Model', 'Tensor', 'Graph', 'Semantic', 'Token', 'Prompt', 'Context', 'Embedding', 'Latent', 'Attention', 'Diffusion'];
@@ -29,6 +30,7 @@ const svgPaths = [
 
 export function BrowseIcons() {
   const [search, setSearch] = useState('');
+  const [selectedIcon, setSelectedIcon] = useState<IconDef | null>(null);
 
   // Generate exactly 1500 unique-looking icon definitions
   const icons = useMemo(() => {
@@ -88,7 +90,7 @@ export function BrowseIcons() {
 
       <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 xl:grid-cols-8 [&>*]:border-r [&>*]:border-b border-[#333] border-l">
         {displayIcons.map((icon) => (
-          <div key={icon.id} className="aspect-square flex flex-col items-center justify-center p-4 gap-3 bg-[#1a1a1a] hover:bg-[#222] transition-colors cursor-pointer group">
+          <div key={icon.id} onClick={() => setSelectedIcon(icon)} className="aspect-square flex flex-col items-center justify-center p-4 gap-3 bg-[#1a1a1a] hover:bg-[#222] transition-colors cursor-pointer group">
             <svg 
               viewBox="0 0 24 24" 
               className="w-8 h-8 stroke-white fill-none stroke-[1.5px] group-hover:scale-110 transition-transform" 
@@ -106,6 +108,12 @@ export function BrowseIcons() {
           </div>
         ))}
       </div>
+
+      <IconModal
+        icon={selectedIcon}
+        svgPath={selectedIcon ? svgPaths[selectedIcon.pathIndex] : null}
+        onClose={() => setSelectedIcon(null)}
+      />
     </div>
   );
 }
