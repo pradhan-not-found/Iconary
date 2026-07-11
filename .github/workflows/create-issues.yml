@@ -21,14 +21,20 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
 
-          gh label create "google summer of code" || true
-          gh label create "gsoc" || true
+          gh label create "mentorship-available" || true
+          gh label create "hacktoberfest" || true
           gh label create "open source" || true
           gh label create "machine learning" || true
           gh label create "contribution" || true
           gh label create "UI" || true
           gh label create "good first issue" || true
           gh label create "help wanted" || true
+          gh label create "hard" || true
+          gh label create "optimization" || true
+          gh label create "architecture" || true
+          gh label create "tooling" || true
+          gh label create "testing" || true
+          gh label create "up-for-grabs" || true
 
           # Check if issue already exists to avoid duplicates
           if ! gh issue list --search "in:title Neural Networks" | grep -q "Neural Networks"; then
@@ -42,7 +48,7 @@ jobs:
               - Include a 1-2 line concept explainer.
 
               See \`CONTRIBUTING.md\` to get started!" \
-              --label "google summer of code" --label "contribution"
+              --label "mentorship-available" --label "contribution"
             sleep 2
           fi
 
@@ -158,7 +164,7 @@ jobs:
               - Include a 1-2 line concept explainer.
 
               See \`CONTRIBUTING.md\` to get started!" \
-              --label "gsoc" --label "machine learning"
+              --label "hacktoberfest" --label "machine learning"
             sleep 2
           fi
 
@@ -173,7 +179,7 @@ jobs:
               - Include a 1-2 line concept explainer.
 
               See \`CONTRIBUTING.md\` to get started!" \
-              --label "gsoc" --label "open source"
+              --label "hacktoberfest" --label "open source"
             sleep 2
           fi
 
@@ -278,7 +284,7 @@ jobs:
               - Include a 1-2 line concept explainer.
 
               See \`CONTRIBUTING.md\` to get started!" \
-              --label "gsoc" --label "machine learning"
+              --label "hacktoberfest" --label "machine learning"
             sleep 2
           fi
 
@@ -353,7 +359,7 @@ jobs:
               - Include a 1-2 line concept explainer.
 
               See \`CONTRIBUTING.md\` to get started!" \
-              --label "gsoc" --label "machine learning"
+              --label "hacktoberfest" --label "machine learning"
             sleep 2
           fi
 
@@ -428,7 +434,7 @@ jobs:
               - Include a 1-2 line concept explainer.
 
               See \`CONTRIBUTING.md\` to get started!" \
-              --label "google summer of code" --label "contribution"
+              --label "mentorship-available" --label "contribution"
             sleep 2
           fi
 
@@ -458,7 +464,7 @@ jobs:
               - Include a 1-2 line concept explainer.
 
               See \`CONTRIBUTING.md\` to get started!" \
-              --label "gsoc" --label "machine learning"
+              --label "hacktoberfest" --label "machine learning"
             sleep 2
           fi
 
@@ -488,7 +494,7 @@ jobs:
               - Include a 1-2 line concept explainer.
 
               See \`CONTRIBUTING.md\` to get started!" \
-              --label "google summer of code" --label "contribution"
+              --label "mentorship-available" --label "contribution"
             sleep 2
           fi
 
@@ -533,7 +539,7 @@ jobs:
               - Include a 1-2 line concept explainer.
 
               See \`CONTRIBUTING.md\` to get started!" \
-              --label "gsoc" --label "machine learning" --label "open source"
+              --label "hacktoberfest" --label "machine learning" --label "open source"
             sleep 2
           fi
 
@@ -563,6 +569,106 @@ jobs:
               - Include a 1-2 line concept explainer.
 
               See \`CONTRIBUTING.md\` to get started!" \
-              --label "google summer of code" --label "open source"
+              --label "mentorship-available" --label "open source"
+            sleep 2
+          fi
+
+          if ! gh issue list --search "in:title Implement WebGL Renderer" | grep -q "Implement WebGL Renderer"; then
+            gh issue create \
+              --title "Implement WebGL Renderer for Icon Gallery" \
+              --body "The current icon gallery can get slow when rendering thousands of SVG nodes. We need a WebGL-based renderer (e.g., using PixiJS or Three.js) to virtualize and render icons at 60fps. This is a complex architecture task.
+
+              See \\`CONTRIBUTING.md\\` to get started!" \
+              --label "hard" --label "optimization" --label "architecture"
+            sleep 2
+          fi
+
+          if ! gh issue list --search "in:title CLI tool for bulk SVG optimization" | grep -q "CLI tool for bulk SVG optimization"; then
+            gh issue create \
+              --title "Add a CLI tool for bulk SVG optimization" \
+              --body "We need a Node.js CLI tool that runs SVGO with custom plugins to optimize all icons in the \\`icons/\\` directory, ensuring consistent stroke widths and removing redundant paths. Must include unit tests.
+
+              See \\`CONTRIBUTING.md\\` to get started!" \
+              --label "hard" --label "tooling" --label "hacktoberfest"
+            sleep 2
+          fi
+
+          if ! gh issue list --search "in:title Implement Figma Plugin" | grep -q "Implement Figma Plugin"; then
+            gh issue create \
+              --title "Implement Figma Plugin for Iconary" \
+              --body "Designers need a way to drag and drop Iconary icons directly into their Figma files. Create a Figma Plugin using their API that fetches icons from our repository and inserts them as vector nodes.
+
+              See \\`CONTRIBUTING.md\\` to get started!" \
+              --label "hard" --label "UI" --label "open source"
+            sleep 2
+          fi
+
+          if ! gh issue list --search "in:title Create a VS Code Extension" | grep -q "Create a VS Code Extension"; then
+            gh issue create \
+              --title "Create a VS Code Extension for Iconary" \
+              --body "Build a VS Code extension that provides autocomplete for Iconary icon names and renders a preview of the icon on hover. This requires deep knowledge of the VS Code Extension API.
+
+              See \\`CONTRIBUTING.md\\` to get started!" \
+              --label "hard" --label "tooling" --label "mentorship-available"
+            sleep 2
+          fi
+
+          if ! gh issue list --search "in:title animated SVG variants" | grep -q "animated SVG variants"; then
+            gh issue create \
+              --title "Add support for animated SVG variants" \
+              --body "We want to introduce a new 'animated' variant for core icons (e.g., a spinning loader, a pulsing heart). Define the animation standards and implement the first 10 animated icons using CSS/SMIL.
+
+              See \\`CONTRIBUTING.md\\` to get started!" \
+              --label "hard" --label "UI" --label "architecture"
+            sleep 2
+          fi
+
+          if ! gh issue list --search "in:title Migrate documentation to Next.js App Router" | grep -q "Migrate documentation to Next.js App Router"; then
+            gh issue create \
+              --title "Migrate documentation to Next.js App Router" \
+              --body "Our current documentation site needs to be migrated to the Next.js App Router to take advantage of React Server Components and improved routing patterns. This is a major refactor.
+
+              See \\`CONTRIBUTING.md\\` to get started!" \
+              --label "hard" --label "architecture" --label "hacktoberfest"
+            sleep 2
+          fi
+
+          if ! gh issue list --search "in:title Implement an Icon Font generator" | grep -q "Implement an Icon Font generator"; then
+            gh issue create \
+              --title "Implement an Icon Font generator" \
+              --body "While SVGs are preferred, many users still want an icon font (.woff2). Implement a build step that automatically generates an icon font and corresponding CSS classes from our SVG assets.
+
+              See \\`CONTRIBUTING.md\\` to get started!" \
+              --label "hard" --label "tooling" --label "mentorship-available"
+            sleep 2
+          fi
+
+          if ! gh issue list --search "in:title robust E2E testing with Playwright" | grep -q "robust E2E testing with Playwright"; then
+            gh issue create \
+              --title "Add robust E2E testing with Playwright" \
+              --body "Set up a full End-to-End testing suite using Playwright for the Iconary web platform. Cover all critical user flows: browsing, searching, modal interactions, and downloading.
+
+              See \\`CONTRIBUTING.md\\` to get started!" \
+              --label "hard" --label "testing" --label "open source"
+            sleep 2
+          fi
+
+          if ! gh issue list --search "in:title semantic search with vector embeddings" | grep -q "semantic search with vector embeddings"; then
+            gh issue create \
+              --title "Implement semantic search with vector embeddings" \
+              --body "Instead of just keyword search, we want semantic search for icons (e.g., searching 'robot' should return the 'AI' icon). Use a lightweight embeddings model and a vector store to power the search.
+
+              See \\`CONTRIBUTING.md\\` to get started!" \
+              --label "hard" --label "machine learning" --label "architecture"
+            sleep 2
+          fi
+
+          if ! gh issue list --search "in:title automated Accessibility" | grep -q "automated Accessibility"; then
+            gh issue create \
+              --title "Build an automated Accessibility (a11y) linter" \
+              --body "Write a custom script that validates all SVG files in the repository to ensure they have proper \\`<title>\\` tags, \\`aria-hidden\\` attributes where appropriate, and pass standard accessibility checks.
+
+              See \\`CONTRIBUTING.md\\` to get started!" \
+              --label "hard" --label "tooling" --label "up-for-grabs"
             sleep 2
           fi
