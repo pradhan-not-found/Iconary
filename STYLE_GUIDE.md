@@ -8,7 +8,7 @@ Consistency is what makes an icon set feel professional. Please follow these rul
 - Icons should be optically centered, not just mathematically centered
 
 ## Stroke (Outline Style)
-- **Stroke width:** 1.5px
+- **Stroke width:** 2px
 - **Stroke caps:** round
 - **Stroke joins:** round
 - No filled shapes in outline style — strokes only
@@ -56,7 +56,7 @@ Each icon needs an entry in `icons/registry.json`:
 
 ## Checklist Before Submitting
 - [ ] SVG uses 24x24 viewBox
-- [ ] Stroke width is 1.5px (outline) or appropriate fill (filled/duotone)
+- [ ] Stroke width is 2px (outline) or appropriate fill (filled/duotone)
 - [ ] Uses `currentColor`
 - [ ] Run through SVGO / cleaned of unnecessary code
 - [ ] Registry entry added with name, category, tags, description, author

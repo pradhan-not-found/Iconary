@@ -2,20 +2,18 @@
 
 ## Supported Versions
 
-Use this section to tell people about which versions of your project are
-currently being supported with security updates.
+Iconary is currently in active development. Only the latest release on the `main` branch and the latest published NPM packages (`@iconary/react`, `iconary-vue`) receive security updates.
 
 | Version | Supported          |
 | ------- | ------------------ |
-| 5.1.x   | :white_check_mark: |
-| 5.0.x   | :x:                |
-| 4.0.x   | :white_check_mark: |
-| < 4.0   | :x:                |
+| v0.1.x  | :white_check_mark: |
 
 ## Reporting a Vulnerability
 
-Use this section to tell people how to report a vulnerability.
+Security is a priority for Iconary. Since this is primarily a static asset and UI component library, the attack surface is relatively small. However, if you discover a vulnerability in our tooling, website build process, or packages, please let us know.
 
-Tell them where to go, how often they can expect to get an update on a
-reported vulnerability, what to expect if the vulnerability is accepted or
-declined, etc.
+**Do not open a public issue.** 
+
+Instead, please report the vulnerability privately by navigating to the [Security Advisory section](https://github.com/pradhan-not-found/Iconary/security/advisories) of our repository and clicking "Report a vulnerability".
+
+We will acknowledge your report within 48 hours, and you can expect a timeline for a fix based on the severity of the issue. We deeply appreciate responsible disclosure.

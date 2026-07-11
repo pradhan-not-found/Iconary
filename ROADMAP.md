@@ -13,7 +13,7 @@ Here is what we are currently working on and what we plan to build next. If you 
 - [x] Set up CI/CD for automated linting and building (Completed)
 - [ ] **Figma Plugin**: Build a Figma plugin so designers can drag and drop Iconary icons directly into their designs.
 - [ ] **SVG Optimizer CLI**: A script to automatically run all new SVGs through SVGO to ensure maximum performance before they are merged.
-- [ ] **Website Redesign**: A dedicated documentation site with a searchable icon gallery and live playground.
+- [x] **Website Redesign**: A dedicated documentation site with a searchable icon gallery and live playground. (Completed)
 
 ## 🌟 Phase 3: Community & Education
 - [ ] **Concept Explainers**: Complete the "1-2 line plain-English explanations" for every single icon.

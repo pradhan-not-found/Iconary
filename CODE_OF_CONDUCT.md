@@ -19,7 +19,7 @@ Iconary is a welcoming space for contributors of all backgrounds and experience 
 
 ## Reporting
 
-If you experience or witness unacceptable behavior, please open a confidential report by contacting the maintainers directly (add contact method here, e.g., a dedicated email).
+If you experience or witness unacceptable behavior, please open a confidential report by contacting the maintainers directly by opening a private Security Advisory or reaching out via GitHub Discussions.
 
 ## Enforcement
 
