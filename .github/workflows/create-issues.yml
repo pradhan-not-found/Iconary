@@ -392,3 +392,77 @@ jobs:
             sleep 2
           fi
 
+          if ! gh issue list --search "in:title Zero-Shot Learning" | grep -q "Zero-Shot Learning"; then
+            gh issue create \
+              --title "Add an icon for Zero-Shot Learning" \
+              --body "We need an icon representing Zero-Shot Learning for AI models.
+
+              ## Requirements
+              - Must have outline, filled, and duotone variants.
+              - Follow the style guide in \`STYLE_GUIDE.md\`.
+              - Include a 1-2 line concept explainer.
+
+              See \`CONTRIBUTING.md\` to get started!" \
+              --label "good first issue"
+            sleep 2
+          fi
+
+          if ! gh issue list --search "in:title Transfer Learning" | grep -q "Transfer Learning"; then
+            gh issue create \
+              --title "Add an icon for Transfer Learning" \
+              --body "We need an icon representing the concept of Transfer Learning (transferring weights from one model to another).
+
+              ## Requirements
+              - Must have outline, filled, and duotone variants.
+              - Follow the style guide in \`STYLE_GUIDE.md\`.
+              - Include a 1-2 line concept explainer.
+
+              See \`CONTRIBUTING.md\` to get started!" \
+              --label "good first issue"
+            sleep 2
+          fi
+
+          if ! gh issue list --search "in:title Computer Vision" | grep -q "Computer Vision"; then
+            gh issue create \
+              --title "Add an icon for Computer Vision" \
+              --body "We need an icon representing Computer Vision tasks or CNN architectures.
+
+              ## Requirements
+              - Must have outline, filled, and duotone variants.
+              - Follow the style guide in \`STYLE_GUIDE.md\`.
+              - Include a 1-2 line concept explainer.
+
+              See \`CONTRIBUTING.md\` to get started!" \
+              --label "good first issue"
+            sleep 2
+          fi
+
+          if ! gh issue list --search "in:title NLP" | grep -q "NLP"; then
+            gh issue create \
+              --title "Add an icon for NLP (Natural Language Processing)" \
+              --body "We need an icon representing NLP tasks (Natural Language Processing).
+
+              ## Requirements
+              - Must have outline, filled, and duotone variants.
+              - Follow the style guide in \`STYLE_GUIDE.md\`.
+              - Include a 1-2 line concept explainer.
+
+              See \`CONTRIBUTING.md\` to get started!" \
+              --label "good first issue"
+            sleep 2
+          fi
+
+          if ! gh issue list --search "in:title Model Weights" | grep -q "Model Weights"; then
+            gh issue create \
+              --title "Add an icon for Model Weights" \
+              --body "We need an icon representing Model Weights or Parameters.
+
+              ## Requirements
+              - Must have outline, filled, and duotone variants.
+              - Follow the style guide in \`STYLE_GUIDE.md\`.
+              - Include a 1-2 line concept explainer.
+
+              See \`CONTRIBUTING.md\` to get started!" \
+              --label "good first issue"
+            sleep 2
+          fi
