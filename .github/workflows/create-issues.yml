@@ -45,6 +45,7 @@ jobs:
           gh label create "refactoring" || true
           gh label create "community" || true
           gh label create "documentation" || true
+          gh label create "icon-request" || true
 
           # Check if issue already exists to avoid duplicates
           if ! gh issue list --search "in:title Neural Networks" | grep -q "Neural Networks"; then
@@ -1170,5 +1171,125 @@ jobs:
 
               See \`CONTRIBUTING.md\` to get started!" \
               --label "tooling" --label "medium"
+            sleep 2
+          fi
+
+          if ! gh issue list --search "in:title Design a 'Transformer Model' Icon" | grep -q "Design a 'Transformer Model' Icon"; then
+            gh issue create \
+              --title "Design a 'Transformer Model' Icon" \
+              --body "We need an icon that represents a Transformer architecture (e.g. self-attention mechanism, multi-headed network). This should be a clean, geometric SVG following our 24x24 grid.
+
+              Check out \\`STYLE_GUIDE.md\\` before you start designing!" \
+              --label "icon-request" --label "design" --label "good first issue"
+            sleep 2
+          fi
+
+          if ! gh issue list --search "in:title Design a 'GPU / TPU' Icon" | grep -q "Design a 'GPU / TPU' Icon"; then
+            gh issue create \
+              --title "Design a 'GPU / TPU' Icon" \
+              --body "AI requires massive compute. We need a 'GPU' or 'TPU' hardware icon to represent processing power. 
+
+              Check out \\`STYLE_GUIDE.md\\` before you start designing!" \
+              --label "icon-request" --label "design" --label "good first issue"
+            sleep 2
+          fi
+
+          if ! gh issue list --search "in:title Design an 'API Endpoint' Icon" | grep -q "Design an 'API Endpoint' Icon"; then
+            gh issue create \
+              --title "Design an 'API Endpoint' Icon" \
+              --body "We need an icon representing an API endpoint or API integration (common for connecting LLM services). 
+
+              Check out \\`STYLE_GUIDE.md\\` before you start designing!" \
+              --label "icon-request" --label "design" --label "easy"
+            sleep 2
+          fi
+
+          if ! gh issue list --search "in:title Design a 'Data Pipeline' Icon" | grep -q "Design a 'Data Pipeline' Icon"; then
+            gh issue create \
+              --title "Design a 'Data Pipeline' Icon" \
+              --body "Create an icon that visually represents data flowing through a pipeline (ETL process, data streams).
+
+              Check out \\`STYLE_GUIDE.md\\` before you start designing!" \
+              --label "icon-request" --label "design" --label "good first issue"
+            sleep 2
+          fi
+
+          if ! gh issue list --search "in:title Design a 'Knowledge Graph' Icon" | grep -q "Design a 'Knowledge Graph' Icon"; then
+            gh issue create \
+              --title "Design a 'Knowledge Graph' Icon" \
+              --body "Design an icon for Knowledge Graphs (nodes and connected edges) often used in semantic AI architectures.
+
+              Check out \\`STYLE_GUIDE.md\\` before you start designing!" \
+              --label "icon-request" --label "design" --label "medium"
+            sleep 2
+          fi
+
+          if ! gh issue list --search "in:title Design a 'Computer Vision' Icon" | grep -q "Design a 'Computer Vision' Icon"; then
+            gh issue create \
+              --title "Design a 'Computer Vision' Icon" \
+              --body "We need an icon for Computer Vision/Image Recognition (perhaps an eye combined with a bounding box or scanner).
+
+              Check out \\`STYLE_GUIDE.md\\` before you start designing!" \
+              --label "icon-request" --label "design" --label "good first issue"
+            sleep 2
+          fi
+
+          if ! gh issue list --search "in:title Design a 'Natural Language Processing' Icon" | grep -q "Design a 'Natural Language Processing' Icon"; then
+            gh issue create \
+              --title "Design a 'Natural Language Processing' Icon" \
+              --body "Create an icon for NLP (Natural Language Processing). A speech bubble combined with waveforms or text nodes might work well.
+
+              Check out \\`STYLE_GUIDE.md\\` before you start designing!" \
+              --label "icon-request" --label "design" --label "easy"
+            sleep 2
+          fi
+
+          if ! gh issue list --search "in:title Design a 'Decision Tree' Icon" | grep -q "Design a 'Decision Tree' Icon"; then
+            gh issue create \
+              --title "Design a 'Decision Tree' Icon" \
+              --body "We need an icon for a Decision Tree or Random Forest machine learning algorithm.
+
+              Check out \\`STYLE_GUIDE.md\\` before you start designing!" \
+              --label "icon-request" --label "design" --label "easy"
+            sleep 2
+          fi
+
+          if ! gh issue list --search "in:title Design a 'Model Training' Icon" | grep -q "Design a 'Model Training' Icon"; then
+            gh issue create \
+              --title "Design a 'Model Training' Icon" \
+              --body "Design an icon that represents the process of training an AI model (e.g., a barbell, a brain with a loading symbol, or iterative loops).
+
+              Check out \\`STYLE_GUIDE.md\\` before you start designing!" \
+              --label "icon-request" --label "design" --label "good first issue"
+            sleep 2
+          fi
+
+          if ! gh issue list --search "in:title Design an 'Overfitting' Icon" | grep -q "Design an 'Overfitting' Icon"; then
+            gh issue create \
+              --title "Design an 'Overfitting' Icon" \
+              --body "We need a conceptual icon for 'Overfitting' in machine learning (a model fitting data too closely, e.g. a jagged line perfectly hitting points).
+
+              Check out \\`STYLE_GUIDE.md\\` before you start designing!" \
+              --label "icon-request" --label "design" --label "medium"
+            sleep 2
+          fi
+
+          if ! gh issue list --search "in:title Design a 'Data Cleaning' Icon" | grep -q "Design a 'Data Cleaning' Icon"; then
+            gh issue create \
+              --title "Design a 'Data Cleaning' Icon" \
+              --body "Design an icon for Data Cleaning / Scrubbing. A combination of a database/table and a broom or sparkles is a common metaphor.
+
+              Check out \\`STYLE_GUIDE.md\\` before you start designing!" \
+              --label "icon-request" --label "design" --label "good first issue"
+            sleep 2
+          fi
+
+          if ! gh issue list --search "in:title Design a 'Jupyter Notebook' Icon" | grep -q "Design a 'Jupyter Notebook' Icon"; then
+            gh issue create \
+              --title "Design a 'Jupyter Notebook' Icon" \
+              --body "Create a generic icon representing a code/data notebook environment (similar to Jupyter Notebooks).
+
+              Check out \\`STYLE_GUIDE.md\\` before you start designing!" \
+              --label "icon-request" --label "design" --label "easy"
             sleep 2
           fi
