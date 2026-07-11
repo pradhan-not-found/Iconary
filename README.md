@@ -37,9 +37,9 @@ Install the Iconary package for your preferred framework:
 npx iconary-react
 ```
 
-### Vue (Coming Soon)
+### Vue
 ```bash
-npx iconary-vue
+pnpm add iconary-vue
 ```
 
 ### Svelte (Coming Soon)
@@ -70,6 +70,22 @@ export default function App() {
     </div>
   );
 }
+```
+
+For Vue projects, import the same icon names from `iconary-vue`:
+
+```vue
+<script setup lang="ts">
+import { Agent, Model, FineTuning } from "iconary-vue";
+</script>
+
+<template>
+  <div style="display: flex; gap: 1rem">
+    <Agent :size="24" />
+    <Model icon-style="duotone" :size="24" />
+    <FineTuning icon-style="filled" :size="24" color="#2f81f7" />
+  </div>
+</template>
 ```
 
 *Note: Duotone icons automatically inherit your current text color for their primary shapes. You can override the secondary muted color using standard CSS targeting.*

@@ -1,0 +1,38 @@
+{
+  "name": "iconary-vue",
+  "version": "1.0.0",
+  "description": "Open source icons for AI, ML & data tooling",
+  "main": "./dist/index.js",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.mjs",
+      "require": "./dist/index.js"
+    }
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsup src/index.ts --format cjs,esm --dts",
+    "prepublishOnly": "pnpm run build"
+  },
+  "keywords": [
+    "vue",
+    "icons",
+    "ai",
+    "ml"
+  ],
+  "author": "",
+  "license": "MIT",
+  "peerDependencies": {
+    "vue": "^3.0.0"
+  },
+  "devDependencies": {
+    "tsup": "^8.0.2",
+    "typescript": "^5.0.0",
+    "vue": "^3.5.0"
+  }
+}
