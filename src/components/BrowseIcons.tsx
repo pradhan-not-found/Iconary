@@ -31,6 +31,7 @@ const svgPaths = [
 export function BrowseIcons() {
   const [search, setSearch] = useState('');
   const [selectedIcon, setSelectedIcon] = useState<IconDef | null>(null);
+  const [iconStyle, setIconStyle] = useState<'outline' | 'filled' | 'duotone'>('outline');
 
   // Generate exactly 1500 unique-looking icon definitions
   const icons = useMemo(() => {
@@ -75,14 +76,28 @@ export function BrowseIcons() {
   return (
     <div className="w-full">
       <div className="border-b border-[#333] px-6 py-6 md:px-12 bg-[#1a1a1a] sticky top-[64px] z-40">
-        <input 
-          type="text" 
-          placeholder="Search 1,500+ AI & ML icons..." 
-          value={search}
-          onChange={(e) => setSearch(e.target.value)}
-          className="w-full max-w-md bg-transparent border border-[#333] px-4 py-3 text-white placeholder-[#606060] focus:outline-none focus:border-[#a3a3a3] text-sm"
-          style={{ fontFamily: "'Intrade', sans-serif" }}
-        />
+        <div className="flex flex-col md:flex-row md:items-center gap-4">
+          <input 
+            type="text" 
+            placeholder="Search 1,500+ AI & ML icons..." 
+            value={search}
+            onChange={(e) => setSearch(e.target.value)}
+            className="w-full max-w-md bg-transparent border border-[#333] px-4 py-3 text-white placeholder-[#606060] focus:outline-none focus:border-[#a3a3a3] text-sm"
+            style={{ fontFamily: "'Intrade', sans-serif" }}
+          />
+          <div className="flex bg-[#111] p-1 border border-[#333] rounded-md">
+            {['outline', 'filled', 'duotone'].map((style) => (
+              <button
+                key={style}
+                onClick={() => setIconStyle(style as any)}
+                className={`px-4 py-2 text-xs tracking-wider uppercase transition-colors rounded-sm ${iconStyle === style ? 'bg-[#333] text-white' : 'text-[#606060] hover:text-white'}`}
+                style={{ fontFamily: "'Intrade', sans-serif" }}
+              >
+                {style}
+              </button>
+            ))}
+          </div>
+        </div>
         <div className="mt-4 text-xs text-[#606060] tracking-widest uppercase" style={{ fontFamily: "'Intrade', sans-serif" }}>
           Showing {displayIcons.length} of {icons.length} icons
         </div>
@@ -93,7 +108,11 @@ export function BrowseIcons() {
           <div key={icon.id} onClick={() => setSelectedIcon(icon)} className="aspect-square flex flex-col items-center justify-center p-4 gap-3 bg-[#1a1a1a] hover:bg-[#222] transition-colors cursor-pointer group">
             <svg 
               viewBox="0 0 24 24" 
-              className="w-8 h-8 stroke-white fill-none stroke-[1.5px] group-hover:scale-110 transition-transform" 
+              className={`w-8 h-8 group-hover:scale-110 transition-all ${
+                iconStyle === 'outline' ? 'stroke-white fill-none stroke-[2px]' : 
+                iconStyle === 'filled' ? 'fill-white stroke-white stroke-[1px]' : 
+                'stroke-white fill-white/20 stroke-[1.5px]'
+              }`} 
               strokeLinecap="round" 
               strokeLinejoin="round"
             >
