@@ -108,6 +108,42 @@ Here is how you can help:
 
 <br />
 
+### <img src="https://api.iconify.design/lucide/sprout.svg?color=white" width="20" style="vertical-align: text-bottom;" /> First-Time Contributor?
+
+If you are new to open-source or Git, don't worry! Follow this simple flowchart to make your first contribution:
+
+<br />
+
+1️⃣ **<img src="https://api.iconify.design/lucide/git-fork.svg?color=white" width="16" style="vertical-align: middle;" /> Fork it**  
+Click the "Fork" button at the top right of this page to copy the repository to your own account.
+
+↓
+
+2️⃣ **<img src="https://api.iconify.design/lucide/download-cloud.svg?color=white" width="16" style="vertical-align: middle;" /> Clone & Install**  
+Clone your forked repository to your computer (`git clone https://github.com/YOUR_NAME/Iconary.git`), open the folder, and run `npm install`.
+
+↓
+
+3️⃣ **<img src="https://api.iconify.design/lucide/git-branch.svg?color=white" width="16" style="vertical-align: middle;" /> Create a Branch**  
+Create a new branch for your work (`git checkout -b feature/my-new-icon`).
+
+↓
+
+4️⃣ **<img src="https://api.iconify.design/lucide/code.svg?color=white" width="16" style="vertical-align: middle;" /> Make Changes**  
+Write your code, design your icon, or fix a typo! You can test it locally by running `npm run dev`.
+
+↓
+
+5️⃣ **<img src="https://api.iconify.design/lucide/upload-cloud.svg?color=white" width="16" style="vertical-align: middle;" /> Commit & Push**  
+Save your changes (`git commit -m "add my new icon"`) and push them back to your fork (`git push origin feature/my-new-icon`).
+
+↓
+
+6️⃣ **<img src="https://api.iconify.design/lucide/git-pull-request.svg?color=white" width="16" style="vertical-align: middle;" /> Open a Pull Request**  
+Come back to this repository and click "New Pull Request". We will review your code and merge it!
+
+<br />
+
 ## <img src="https://api.iconify.design/lucide/scale.svg?color=white" width="24" style="vertical-align: text-bottom;" /> License
 
 Iconary is proudly open-source and released under the [MIT License](./LICENSE). It is entirely free for both personal and commercial use.
