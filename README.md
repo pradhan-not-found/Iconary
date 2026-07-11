@@ -15,7 +15,7 @@
 
 Iconary is the ultimate open-source icon library for Artificial Intelligence (AI), Machine Learning (ML), and Data Science. Whether you are building an LLM dashboard, a generative AI product, or visualizing data pipelines, Iconary provides highly scalable, semantic vector icons designed exclusively for complex tech concepts.
 
-Available natively for **React**, **Vue**, and plain **HTML/CSS**, every icon ships with **outline**, **filled**, and **duotone** variants. Furthermore, we include short plain-English concept explainers with every icon, making this library perfect for frontend engineers, UI/UX designers, and anyone looking to learn AI terminology.
+Available natively for **React**, **Vue**, and plain **HTML/CSS**, every icon ships with **outline**, **filled**, and **duotone** variants. We also include short plain-English concept explainers with every icon, making this library perfect for frontend engineers, UI/UX designers, and anyone looking to learn AI terminology.
 
 <br />
 
@@ -25,7 +25,7 @@ Available natively for **React**, **Vue**, and plain **HTML/CSS**, every icon sh
 | :--- | :--- |
 | <img src="https://api.iconify.design/lucide/crosshair.svg?color=white" width="16" style="vertical-align: middle;" /> **Purpose-Built for AI** | Hand-crafted visuals for concepts like *RAG Architecture*, *Embeddings*, *Vector Databases*, and *Intelligent Agents*. |
 | <img src="https://api.iconify.design/lucide/paintbrush.svg?color=white" width="16" style="vertical-align: middle;" /> **Three distinct styles** | Instantly switch between `outline`, `filled`, and dynamic `duotone` variants from a single source. |
-| <img src="https://api.iconify.design/lucide/package.svg?color=white" width="16" style="vertical-align: middle;" /> **Framework Ready** | Native, tree-shakeable packages for React and Vue, with Svelte and a Figma Plugin coming soon. |
+| <img src="https://api.iconify.design/lucide/package.svg?color=white" width="16" style="vertical-align: middle;" /> **Framework Ready** | Native, tree-shakable packages for React and Vue, with Svelte and a Figma plugin coming soon. |
 | <img src="https://api.iconify.design/lucide/zap.svg?color=white" width="16" style="vertical-align: middle;" /> **Performance First** | Heavily minified via SVGO for zero-bloat, lightning-fast load times. |
 | <img src="https://api.iconify.design/lucide/book.svg?color=white" width="16" style="vertical-align: middle;" /> **Built-in Explainers** | Demystify the tech—every icon is paired with a clear, 1-2 sentence concept explanation. |
 
@@ -96,7 +96,7 @@ Not using a JS framework? You can browse and copy raw SVGs directly from our [Ga
 
 ## <img src="https://api.iconify.design/lucide/users.svg?color=white" width="24" style="vertical-align: text-bottom;" /> Open Source & Contributing
 
-Iconary is built by the community, for the community. If you are a developer or designer searching for a **high-impact open source project to contribute to**, or looking for **good first issues**, we'd absolutely love to have you onboard!
+Iconary is built by the community, for the community. If you are a developer or designer searching for a **high-impact open source project to contribute to**, or looking for **good first issues**, we'd absolutely love to have you on board!
 
 Here is how you can help:
 * <img src="https://api.iconify.design/lucide/pen-tool.svg?color=white" width="16" style="vertical-align: middle;" /> **Draw:** Follow the style guide, create an SVG, add it to the registry, and open a PR.
