@@ -51,6 +51,19 @@ export function Home() {
       .map(([key, value]) => value as any);
   }, []);
 
+  const [stars, setStars] = useState<number | null>(null);
+
+  useEffect(() => {
+    fetch('https://api.github.com/repos/pradhan-not-found/Iconary')
+      .then(res => res.json())
+      .then(data => {
+        if (typeof data.stargazers_count === 'number') {
+          setStars(data.stargazers_count);
+        }
+      })
+      .catch(console.error);
+  }, []);
+
   const [iconOffset, setIconOffset] = useState(0);
 
   useEffect(() => {
@@ -116,7 +129,7 @@ export function Home() {
                 </div>
                 <div className="flex-1 flex items-center justify-between px-4 py-3 border border-[#333] rounded-lg bg-[#0a0a0a]">
                   <span className="text-[0.7rem] uppercase tracking-wider text-[#a3a3a3] font-mono">BOOKMARKED</span>
-                  <span className="text-[0.85rem] font-bold text-white font-mono">343</span>
+                  <span className="text-[0.85rem] font-bold text-white font-mono">{stars !== null ? (stars + 649).toLocaleString() : '649'}</span>
                 </div>
               </div>
             </div>
