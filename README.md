@@ -1,78 +1,70 @@
 <div align="center">
-  <img src="./public/iconary.png" alt="Iconary Banner" width="100%" />
-  <p align="center">
-    <strong>Open source icons for AI, ML & data tooling — with built-in concept explanations.</strong>
-  </p>
-  <p align="center">
-    <a href="https://github.com/pradhan-not-found/Iconary/stargazers"><img src="https://img.shields.io/github/stars/pradhan-not-found/Iconary?style=flat-square&logo=github" alt="Stars" /></a>
-    <a href="https://www.npmjs.com/package/@iconary/react"><img src="https://img.shields.io/npm/v/@iconary/react?style=flat-square&logo=npm" alt="NPM Version" /></a>
-    <a href="./LICENSE"><img src="https://img.shields.io/badge/license-MIT-blue.svg?style=flat-square" alt="License" /></a>
-    <a href="https://github.com/pradhan-not-found/Iconary/pulls"><img src="https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square" alt="PRs Welcome" /></a>
-  </p>
+  <img src="./public/github_header.png" alt="Iconary — The Open Source AI & ML Icon Library" width="100%" />
+  
+  <br />
+  
+  [![Stars](https://img.shields.io/github/stars/pradhan-not-found/Iconary?style=for-the-badge&color=000000&labelColor=333333&logo=github)](https://github.com/pradhan-not-found/Iconary/stargazers)
+  [![NPM](https://img.shields.io/npm/v/@iconary/react?style=for-the-badge&color=CB3837&labelColor=333333&logo=npm)](https://www.npmjs.com/package/@iconary/react)
+  [![License](https://img.shields.io/badge/license-MIT-blue.svg?style=for-the-badge&color=000000&labelColor=333333)](./LICENSE)
+  [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=for-the-badge&color=00796B&labelColor=333333)](https://github.com/pradhan-not-found/Iconary/pulls)
+
+  <h3>Beautiful, open-source vector icons meticulously crafted for Artificial Intelligence, Machine Learning, and Data Science.</h3>
 </div>
 
-<br />
+---
 
-Iconary is a meticulously crafted collection of icons designed specifically for AI/ML products, dashboards, and developer tools. Every icon comes in **outline**, **filled**, and **duotone** styles, and includes a short explanation of the concept it represents — making it equally useful for designers, developers, and anyone learning AI/ML terminology.
+Iconary is the ultimate **UI toolkit for the AI era**. Whether you are designing an LLM dashboard, building a generative AI product, or visualizing data pipelines, Iconary provides highly scalable, semantic vector icons designed exclusively for complex tech concepts.
+
+Available natively for **React**, **Vue**, and plain **HTML/CSS**, every icon ships with **outline**, **filled**, and **duotone** variants. Furthermore, we include short plain-English concept explainers with every icon, making this library perfect for frontend engineers, UI/UX designers, and anyone looking to learn AI terminology.
 
 ---
 
-## ⚡ Why Iconary?
+## <img src="https://raw.githubusercontent.com/primer/octicons/main/icons/star-24.svg" width="24" /> The Iconary Advantage
 
-- 🎯 **Built for AI/ML** — Beautifully designed icons for complex concepts like intelligent agents, embeddings, fine-tuning, RAG architecture, vector databases, and more.
-- 🎨 **3 Styles from 1 Source** — Outline, filled, and duotone variants are generated automatically to fit perfectly into your UI.
-- 📖 **Concept Explainers** — Demystify AI terminology. Each icon includes a 1-2 line plain-English explanation of what it represents.
-- 📦 **Framework-ready** — Plug-and-play packages available for React, Vue, and Svelte (Figma plugin coming soon).
-- 🚀 **Performance Optimized** — Heavily minified via SVGO for lightning-fast load times and a tiny bundle footprint.
-- 🌱 **Always Growing** — As the AI landscape evolves, so do our icons. Request a new term or contribute your own design!
+| Feature | Description |
+| :--- | :--- |
+| <img src="https://raw.githubusercontent.com/primer/octicons/main/icons/crosshairs-16.svg" width="16" /> **Purpose-Built for AI** | Hand-crafted visuals for concepts like *RAG Architecture*, *Embeddings*, *Vector Databases*, and *Intelligent Agents*. |
+| <img src="https://raw.githubusercontent.com/primer/octicons/main/icons/paintbrush-16.svg" width="16" /> **Three distinct styles** | Instantly switch between `outline`, `filled`, and dynamic `duotone` variants from a single source. |
+| <img src="https://raw.githubusercontent.com/primer/octicons/main/icons/package-16.svg" width="16" /> **Framework Ready** | Native, tree-shakeable packages for React and Vue, with Svelte and a Figma Plugin coming soon. |
+| <img src="https://raw.githubusercontent.com/primer/octicons/main/icons/zap-16.svg" width="16" /> **Performance First** | Heavily minified via SVGO for zero-bloat, lightning-fast load times. |
+| <img src="https://raw.githubusercontent.com/primer/octicons/main/icons/book-16.svg" width="16" /> **Built-in Explainers** | Demystify the tech—every icon is paired with a clear, 1-2 sentence concept explanation. |
 
 ---
 
-## 📦 Installation
+## <img src="https://raw.githubusercontent.com/primer/octicons/main/icons/rocket-24.svg" width="24" /> Quick Start
 
-Install the Iconary package for your preferred framework:
+Get up and running in seconds. Choose your preferred framework below:
 
-### React
+<details open>
+<summary><b><img src="https://raw.githubusercontent.com/simple-icons/simple-icons/develop/icons/react.svg" width="16" /> React</b></summary>
+<br/>
+
 ```bash
 npx iconary-react
 ```
 
-### Vue
-```bash
-pnpm add iconary-vue
-```
-
-### Svelte (Coming Soon)
-```bash
-npx iconary-svelte
-```
-
----
-
-## 💻 Usage
-
-Using Iconary is incredibly straightforward. Simply import the desired icon and pass your preferred styling props.
-
-```jsx
+```tsx
 import { Agent, VectorDatabase, FineTuning } from "@iconary/react";
 
 export default function App() {
   return (
-    <div style={{ display: "flex", gap: "1rem" }}>
-      {/* Default Outline Style */}
-      <Agent size={24} />
-
-      {/* Duotone Style */}
-      <VectorDatabase style="duotone" size={24} />
-
-      {/* Filled Style with custom color */}
-      <FineTuning style="filled" size={24} color="#2f81f7" />
+    <div style={{ display: "flex", gap: "1.5rem" }}>
+      <Agent size={28} />
+      <VectorDatabase style="duotone" size={28} />
+      <FineTuning style="filled" size={28} color="#2f81f7" />
     </div>
   );
 }
 ```
+</details>
 
-For Vue projects, import the same icon names from `iconary-vue`:
+<details>
+<summary><b><img src="https://raw.githubusercontent.com/simple-icons/simple-icons/develop/icons/vuedotjs.svg" width="16" /> Vue</b></summary>
+<br/>
+
+```bash
+pnpm add iconary-vue
+```
 
 ```vue
 <script setup lang="ts">
@@ -80,47 +72,47 @@ import { Agent, Model, FineTuning } from "iconary-vue";
 </script>
 
 <template>
-  <div style="display: flex; gap: 1rem">
-    <Agent :size="24" />
-    <Model icon-style="duotone" :size="24" />
-    <FineTuning icon-style="filled" :size="24" color="#2f81f7" />
+  <div style="display: flex; gap: 1.5rem">
+    <Agent :size="28" />
+    <Model icon-style="duotone" :size="28" />
+    <FineTuning icon-style="filled" :size="28" color="#2f81f7" />
   </div>
 </template>
 ```
+</details>
 
-*Note: Duotone icons automatically inherit your current text color for their primary shapes. You can override the secondary muted color using standard CSS targeting.*
+<details>
+<summary><b><img src="https://raw.githubusercontent.com/primer/octicons/main/icons/globe-16.svg" width="16" /> Plain HTML/SVG</b></summary>
+<br/>
 
----
+Not using a JS framework? You can browse and copy raw SVGs directly from our [Gallery Website](#), or load them via our CDN.
+</details>
 
-## 🌐 Plain HTML / CSS
+<br/>
 
-Not using a JavaScript framework? No problem! You can download the raw SVGs directly from our [gallery](#), or use our CDN link to include them in your vanilla HTML/CSS projects.
-
----
-
-## 🎨 Browse Icons
-
-Visit the **[Iconary Gallery](#)** to visually search, preview, and instantly copy icons in your preferred style and framework format.
+> **Note:** Duotone icons automatically inherit your current text color for their primary shapes. You can easily override the secondary muted color using standard CSS variables or class targeting.
 
 ---
 
-## 🤝 Contributing
+## <img src="https://raw.githubusercontent.com/primer/octicons/main/icons/people-24.svg" width="24" /> Open Source & Contributing
 
-Iconary is built by the community, for the community. We'd absolutely love your help! Whether you can draw an SVG, write a clear explanation of an AI concept, translate docs, or build a framework integration — there's a place for you here.
+Iconary is built by the community, for the community. If you are a developer or designer searching for a **high-impact open source project to contribute to**, or looking for **good first issues**, we'd absolutely love to have you onboard!
 
-1. **Draw:** Follow the style guide, add your SVG and a registry entry, and open a PR.
-2. **Explain:** Help write or refine the plain-English explanations attached to each icon.
-3. **Build:** Improve our build pipeline or add support for new frameworks.
+Here is how you can help:
+1. <img src="https://raw.githubusercontent.com/primer/octicons/main/icons/pencil-16.svg" width="16" /> **Draw:** Follow the style guide, create an SVG, add it to the registry, and open a PR.
+2. <img src="https://raw.githubusercontent.com/primer/octicons/main/icons/note-16.svg" width="16" /> **Explain:** Refine or translate the plain-English explanations attached to each icon concept.
+3. <img src="https://raw.githubusercontent.com/primer/octicons/main/icons/tools-16.svg" width="16" /> **Build:** Enhance our build pipeline, improve TypeScript typings, or expand framework support.
 
-See [CONTRIBUTING.md](./CONTRIBUTING.md) to get started, and check out open issues labeled [`good first issue`](https://github.com/pradhan-not-found/Iconary/issues?q=is%3Aissue+is%3Aopen+label%3A%22good+first+issue%22).
+<img src="https://raw.githubusercontent.com/primer/octicons/main/icons/repo-16.svg" width="16" /> **Get Started:** Read our [Contribution Guidelines (CONTRIBUTING.md)](./CONTRIBUTING.md).  
+<img src="https://raw.githubusercontent.com/primer/octicons/main/icons/issue-opened-16.svg" width="16" /> **Find an Issue:** Check out issues labeled [`good first issue`](https://github.com/pradhan-not-found/Iconary/issues?q=is%3Aissue+is%3Aopen+label%3A%22good+first+issue%22) or [`help wanted`](https://github.com/pradhan-not-found/Iconary/issues?q=is%3Aissue+is%3Aopen+label%3A%22help+wanted%22).
 
 ---
 
-## 📄 License
+## <img src="https://raw.githubusercontent.com/primer/octicons/main/icons/law-24.svg" width="24" /> License
 
 Iconary is proudly open-source and released under the [MIT License](./LICENSE). It is entirely free for both personal and commercial use.
 
 <div align="center">
   <br/>
-  Made with ❤️ by contributors
+  Made with <img src="https://raw.githubusercontent.com/primer/octicons/main/icons/heart-fill-16.svg" width="16" /> by the Open Source Community
 </div>

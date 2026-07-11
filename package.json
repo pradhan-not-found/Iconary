@@ -1,6 +1,32 @@
 {
   "name": "iconary",
   "version": "0.1.0",
+  "description": "Open source icons for Artificial Intelligence (AI), Machine Learning (ML), and Data Tooling. Available for React, Vue, and vanilla HTML.",
+  "keywords": [
+    "icons",
+    "ai icons",
+    "ml icons",
+    "machine learning icons",
+    "artificial intelligence",
+    "react icons",
+    "vue icons",
+    "svg icons",
+    "ui toolkit",
+    "open source",
+    "data science",
+    "llm",
+    "generative ai"
+  ],
+  "author": "Pradhan Not Found & Contributors",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/pradhan-not-found/Iconary.git"
+  },
+  "bugs": {
+    "url": "https://github.com/pradhan-not-found/Iconary/issues"
+  },
+  "homepage": "https://github.com/pradhan-not-found/Iconary#readme",
   "private": true,
   "scripts": {
     "dev": "vite",
