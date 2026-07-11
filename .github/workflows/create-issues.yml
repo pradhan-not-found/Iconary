@@ -20,6 +20,16 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
+
+          gh label create "google summer of code" || true
+          gh label create "gsoc" || true
+          gh label create "open source" || true
+          gh label create "machine learning" || true
+          gh label create "contribution" || true
+          gh label create "UI" || true
+          gh label create "good first issue" || true
+          gh label create "help wanted" || true
+
           # Check if issue already exists to avoid duplicates
           if ! gh issue list --search "in:title Neural Networks" | grep -q "Neural Networks"; then
             gh issue create \
@@ -32,7 +42,7 @@ jobs:
               - Include a 1-2 line concept explainer.
 
               See \`CONTRIBUTING.md\` to get started!" \
-              --label "google summer of code, contribution"
+              --label "google summer of code" --label "contribution"
             sleep 2
           fi
 
@@ -47,7 +57,7 @@ jobs:
               - Include a 1-2 line concept explainer.
 
               See \`CONTRIBUTING.md\` to get started!" \
-              --label "open source, contribution"
+              --label "open source" --label "contribution"
             sleep 2
           fi
 
@@ -60,7 +70,7 @@ jobs:
               - Create a new Vue package in the repository.
               - Ensure the build pipeline exports Vue components correctly.
               - Update the README with Vue installation instructions." \
-              --label "machine learning, UI"
+              --label "machine learning" --label "UI"
             sleep 2
           fi
 
@@ -75,7 +85,7 @@ jobs:
               - Include a 1-2 line concept explainer.
 
               See \`CONTRIBUTING.md\` to get started!" \
-              --label "machine learning, UI"
+              --label "machine learning" --label "UI"
             sleep 2
           fi
 
@@ -90,7 +100,7 @@ jobs:
               - Include a 1-2 line concept explainer.
 
               See \`CONTRIBUTING.md\` to get started!" \
-              --label "UI, contribution"
+              --label "UI" --label "contribution"
             sleep 2
           fi
 
@@ -105,7 +115,7 @@ jobs:
               - Include a 1-2 line concept explainer.
 
               See \`CONTRIBUTING.md\` to get started!" \
-              --label "help wanted, machine learning"
+              --label "help wanted" --label "machine learning"
             sleep 2
           fi
 
@@ -120,7 +130,7 @@ jobs:
               - Include a 1-2 line concept explainer.
 
               See \`CONTRIBUTING.md\` to get started!" \
-              --label "good first issue, open source"
+              --label "good first issue" --label "open source"
             sleep 2
           fi
 
@@ -133,7 +143,7 @@ jobs:
               - Create a Figma file with all current icons.
               - Organize by category.
               - Include variants (Outline, Filled, Duotone) as components." \
-              --label "good first issue, UI"
+              --label "good first issue" --label "UI"
             sleep 2
           fi
 
@@ -148,7 +158,7 @@ jobs:
               - Include a 1-2 line concept explainer.
 
               See \`CONTRIBUTING.md\` to get started!" \
-              --label "gsoc, machine learning"
+              --label "gsoc" --label "machine learning"
             sleep 2
           fi
 
@@ -163,7 +173,7 @@ jobs:
               - Include a 1-2 line concept explainer.
 
               See \`CONTRIBUTING.md\` to get started!" \
-              --label "gsoc, open source"
+              --label "gsoc" --label "open source"
             sleep 2
           fi
 
@@ -178,7 +188,7 @@ jobs:
               - Include a 1-2 line concept explainer.
 
               See \`CONTRIBUTING.md\` to get started!" \
-              --label "open source, contribution"
+              --label "open source" --label "contribution"
             sleep 2
           fi
 
@@ -193,7 +203,7 @@ jobs:
               - Include a 1-2 line concept explainer.
 
               See \`CONTRIBUTING.md\` to get started!" \
-              --label "help wanted, machine learning"
+              --label "help wanted" --label "machine learning"
             sleep 2
           fi
 
@@ -208,7 +218,7 @@ jobs:
               - Include a 1-2 line concept explainer.
 
               See \`CONTRIBUTING.md\` to get started!" \
-              --label "help wanted, open source"
+              --label "help wanted" --label "open source"
             sleep 2
           fi
 
@@ -223,7 +233,7 @@ jobs:
               - Include a 1-2 line concept explainer.
 
               See \`CONTRIBUTING.md\` to get started!" \
-              --label "help wanted, machine learning"
+              --label "help wanted" --label "machine learning"
             sleep 2
           fi
 
@@ -238,7 +248,7 @@ jobs:
               - Include a 1-2 line concept explainer.
 
               See \`CONTRIBUTING.md\` to get started!" \
-              --label "good first issue, open source"
+              --label "good first issue" --label "open source"
             sleep 2
           fi
 
@@ -253,7 +263,7 @@ jobs:
               - Include a 1-2 line concept explainer.
 
               See \`CONTRIBUTING.md\` to get started!" \
-              --label "good first issue, open source"
+              --label "good first issue" --label "open source"
             sleep 2
           fi
 
@@ -268,7 +278,7 @@ jobs:
               - Include a 1-2 line concept explainer.
 
               See \`CONTRIBUTING.md\` to get started!" \
-              --label "gsoc, machine learning"
+              --label "gsoc" --label "machine learning"
             sleep 2
           fi
 
@@ -283,7 +293,7 @@ jobs:
               - Include a 1-2 line concept explainer.
 
               See \`CONTRIBUTING.md\` to get started!" \
-              --label "help wanted, open source"
+              --label "help wanted" --label "open source"
             sleep 2
           fi
 
@@ -298,7 +308,7 @@ jobs:
               - Include a 1-2 line concept explainer.
 
               See \`CONTRIBUTING.md\` to get started!" \
-              --label "UI, contribution"
+              --label "UI" --label "contribution"
             sleep 2
           fi
 
@@ -313,7 +323,7 @@ jobs:
               - Include a 1-2 line concept explainer.
 
               See \`CONTRIBUTING.md\` to get started!" \
-              --label "good first issue, open source"
+              --label "good first issue" --label "open source"
             sleep 2
           fi
 
@@ -328,7 +338,7 @@ jobs:
               - Include a 1-2 line concept explainer.
 
               See \`CONTRIBUTING.md\` to get started!" \
-              --label "open source, contribution"
+              --label "open source" --label "contribution"
             sleep 2
           fi
 
@@ -343,7 +353,7 @@ jobs:
               - Include a 1-2 line concept explainer.
 
               See \`CONTRIBUTING.md\` to get started!" \
-              --label "gsoc, machine learning"
+              --label "gsoc" --label "machine learning"
             sleep 2
           fi
 
@@ -358,7 +368,7 @@ jobs:
               - Include a 1-2 line concept explainer.
 
               See \`CONTRIBUTING.md\` to get started!" \
-              --label "good first issue, UI"
+              --label "good first issue" --label "UI"
             sleep 2
           fi
 
@@ -373,7 +383,7 @@ jobs:
               - Include a 1-2 line concept explainer.
 
               See \`CONTRIBUTING.md\` to get started!" \
-              --label "good first issue, open source"
+              --label "good first issue" --label "open source"
             sleep 2
           fi
 
@@ -388,7 +398,7 @@ jobs:
               - Include a 1-2 line concept explainer.
 
               See \`CONTRIBUTING.md\` to get started!" \
-              --label "open source, contribution"
+              --label "open source" --label "contribution"
             sleep 2
           fi
 
@@ -403,7 +413,7 @@ jobs:
               - Include a 1-2 line concept explainer.
 
               See \`CONTRIBUTING.md\` to get started!" \
-              --label "good first issue, UI"
+              --label "good first issue" --label "UI"
             sleep 2
           fi
 
@@ -418,7 +428,7 @@ jobs:
               - Include a 1-2 line concept explainer.
 
               See \`CONTRIBUTING.md\` to get started!" \
-              --label "google summer of code, contribution"
+              --label "google summer of code" --label "contribution"
             sleep 2
           fi
 
@@ -433,7 +443,7 @@ jobs:
               - Include a 1-2 line concept explainer.
 
               See \`CONTRIBUTING.md\` to get started!" \
-              --label "good first issue, UI"
+              --label "good first issue" --label "UI"
             sleep 2
           fi
 
@@ -448,7 +458,7 @@ jobs:
               - Include a 1-2 line concept explainer.
 
               See \`CONTRIBUTING.md\` to get started!" \
-              --label "gsoc, machine learning"
+              --label "gsoc" --label "machine learning"
             sleep 2
           fi
 
@@ -463,7 +473,7 @@ jobs:
               - Include a 1-2 line concept explainer.
 
               See \`CONTRIBUTING.md\` to get started!" \
-              --label "UI, contribution"
+              --label "UI" --label "contribution"
             sleep 2
           fi
 
@@ -478,7 +488,7 @@ jobs:
               - Include a 1-2 line concept explainer.
 
               See \`CONTRIBUTING.md\` to get started!" \
-              --label "google summer of code, contribution"
+              --label "google summer of code" --label "contribution"
             sleep 2
           fi
 
@@ -493,7 +503,7 @@ jobs:
               - Include a 1-2 line concept explainer.
 
               See \`CONTRIBUTING.md\` to get started!" \
-              --label "help wanted, machine learning"
+              --label "help wanted" --label "machine learning"
             sleep 2
           fi
 
@@ -508,7 +518,7 @@ jobs:
               - Include a 1-2 line concept explainer.
 
               See \`CONTRIBUTING.md\` to get started!" \
-              --label "open source, contribution"
+              --label "open source" --label "contribution"
             sleep 2
           fi
 
@@ -523,7 +533,7 @@ jobs:
               - Include a 1-2 line concept explainer.
 
               See \`CONTRIBUTING.md\` to get started!" \
-              --label "gsoc, machine learning, open source"
+              --label "gsoc" --label "machine learning" --label "open source"
             sleep 2
           fi
 
@@ -538,7 +548,7 @@ jobs:
               - Include a 1-2 line concept explainer.
 
               See \`CONTRIBUTING.md\` to get started!" \
-              --label "machine learning, contribution"
+              --label "machine learning" --label "contribution"
             sleep 2
           fi
 
@@ -553,6 +563,6 @@ jobs:
               - Include a 1-2 line concept explainer.
 
               See \`CONTRIBUTING.md\` to get started!" \
-              --label "google summer of code, open source"
+              --label "google summer of code" --label "open source"
             sleep 2
           fi
