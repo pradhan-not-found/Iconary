@@ -32,7 +32,7 @@ export function Layout() {
           <div className="hidden md:flex items-stretch border-l border-[#333]">
             <Link to="/browse" className="flex items-center px-6 py-3.5 text-[1.25rem] text-[#a3a3a3] transition-colors hover:text-white border-r border-[#333] font-display">Browse</Link>
             <Link to="/docs" className="flex items-center px-6 py-3.5 text-[1.25rem] text-[#a3a3a3] transition-colors hover:text-white border-r border-[#333] font-display">Docs</Link>
-            <a href="/#contribute" className="flex items-center px-6 py-3.5 text-[1.25rem] text-[#a3a3a3] transition-colors hover:text-white border-r border-[#333] font-display">Contribute</a>
+            <a href="https://github.com/pradhan-not-found/Iconary/issues" target="_blank" rel="noopener noreferrer" className="flex items-center px-6 py-3.5 text-[1.25rem] text-[#a3a3a3] transition-colors hover:text-white border-r border-[#333] font-display">Contribute</a>
             <a href="/#faq" className="flex items-center px-6 py-3.5 text-[1.25rem] text-[#a3a3a3] transition-colors hover:text-white border-r border-[#333] font-display">FAQ</a>
             <a href="https://github.com/pradhan-not-found/Iconary" target="_blank" rel="noopener noreferrer" className="flex items-stretch px-8 bg-white/5 hover:bg-white/10 backdrop-blur-md transition-colors text-white group shadow-[inset_1px_0_0_0_rgba(255,255,255,0.05)]">
               <div className="flex items-center gap-4">

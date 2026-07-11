@@ -105,6 +105,7 @@ export function Home() {
               <div className="mt-8 flex flex-wrap gap-px">
                 <a href="#browse" className="bg-white text-black px-6 py-3 text-sm font-bold border border-[#333] transition-colors hover:bg-[#e5e5e5]">Browse icons</a>
                 <a href="#docs" className="bg-transparent text-white px-6 py-3 text-sm font-bold border border-[#333] transition-colors hover:bg-[#222]">Read the docs</a>
+                <a href="#faq" className="bg-transparent text-[#a3a3a3] px-6 py-3 text-sm font-bold border border-[#333] transition-colors hover:bg-[#222] hover:text-white">FAQ</a>
               </div>
             </div>
 
@@ -285,6 +286,7 @@ export function Home() {
             </div>
             <div className="flex flex-wrap gap-2 mb-4">
               {[
+                "https://avatars.githubusercontent.com/github",
                 "contributors/founder.jpeg",
                 "https://avatars.githubusercontent.com/u/9919?v=4",
                 "https://avatars.githubusercontent.com/u/810438?v=4",
