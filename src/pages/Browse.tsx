@@ -8,7 +8,7 @@ export function Browse() {
   const [category, setCategory] = useState<string | null>(null);
   const [showFilters, setShowFilters] = useState(false);
   const [selectedIcon, setSelectedIcon] = useState<{id: string, name: string, icon: any} | null>(null);
-  const [activeTab, setActiveTab] = useState<'React' | 'Vue' | 'SVG'>('React');
+  const [activeTab, setActiveTab] = useState<'Web' | 'React' | 'React native' | 'Vue' | 'Svelte' | 'Flutter' | 'Angular' | 'SVG'>('React');
 
   const handleCopy = (iconId: string) => {
     let code = '';
