@@ -106,6 +106,17 @@ export function Browse() {
       </div>
 
       <div className="w-full">
+        <style>{`
+          .icon-variant-solid svg path, .icon-variant-solid svg rect, .icon-variant-solid svg circle, .icon-variant-solid svg polygon {
+            fill: currentColor !important;
+            stroke: none !important;
+          }
+          .icon-variant-duotone svg path, .icon-variant-duotone svg rect, .icon-variant-duotone svg circle, .icon-variant-duotone svg polygon {
+            fill: currentColor !important;
+            fill-opacity: 0.2 !important;
+            stroke: currentColor !important;
+          }
+        `}</style>
         <div className="max-w-6xl mx-auto px-6 md:px-12 py-8">
           <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 xl:grid-cols-8 border-l border-t border-[#333]">
             {displayIcons.map((item) => (
@@ -113,7 +124,7 @@ export function Browse() {
               key={item.id} 
               onClick={() => setSelectedIcon(item)}
               title="View icon details"
-              className="aspect-square flex flex-col items-center justify-center p-4 gap-3 border-r border-b border-[#333] bg-transparent hover:bg-[#1a1a1a] transition-all duration-200 cursor-pointer group relative"
+              className={`aspect-square flex flex-col items-center justify-center p-4 gap-3 border-r border-b border-[#333] bg-transparent hover:bg-[#1a1a1a] transition-all duration-200 cursor-pointer group relative icon-variant-${iconStyle}`}
             >
               <div className="absolute top-3 right-3 opacity-0 group-hover:opacity-100 transition-opacity duration-200">
                 <svg viewBox="0 0 24 24" className="w-[14px] h-[14px] stroke-[#888] group-hover:stroke-white fill-none stroke-[2px]" strokeLinecap="round" strokeLinejoin="round">
@@ -122,7 +133,7 @@ export function Browse() {
                   <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
                 </svg>
               </div>
-              <HugeiconsIcon icon={item.icon} variant={iconStyle} size={36} className="text-[#a3a3a3] group-hover:text-white group-hover:-translate-y-1 transition-all duration-300" />
+              <HugeiconsIcon icon={item.icon} size={36} className="text-[#a3a3a3] group-hover:text-white group-hover:-translate-y-1 transition-all duration-300" />
               <span 
                 className="text-[0.6rem] uppercase tracking-widest text-[#606060] text-center px-2 group-hover:text-white transition-colors line-clamp-2" 
               >

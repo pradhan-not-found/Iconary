@@ -473,7 +473,7 @@ export function IconModal({ icon, initialVariant, onClose }: IconModalProps) {
                 <HugeiconsIcon
                   icon={icon.icon}
                   size={80}
-                  strokeWidth={stroke}
+                  strokeWidth={Number(stroke)}
                   style={{ color: color === 'currentColor' ? '#fff' : color, position: 'relative', zIndex: 1 }}
                 />
               </div>
@@ -488,7 +488,7 @@ export function IconModal({ icon, initialVariant, onClose }: IconModalProps) {
 
             {/* Controls row */}
             <div style={{ display: 'flex', alignItems: 'center', gap: '8px', flexWrap: 'wrap' as const }}>
-              <SelectDropdown label="Variant" value={variant} options={VARIANT_OPTIONS} onChange={setVariant} prefix={<StrokeIcon />} />
+              <SelectDropdown label="Variant" value={variant} options={VARIANT_OPTIONS} onChange={(v) => setVariant(v as 'stroke'|'solid'|'duotone')} prefix={<StrokeIcon />} />
               <SelectDropdown label="Stroke" value={stroke} options={STROKE_OPTIONS} onChange={setStroke} prefix={<StrokeIcon />} />
               <SelectDropdown label="Size" value={`${size}px`} options={SIZE_OPTIONS.map((s) => `${s}px`)} onChange={(v) => setSize(v.replace('px', ''))} />
               <SelectDropdown
