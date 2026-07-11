@@ -1,49 +1,75 @@
-# Contributing to Iconary
+# Contributing to Iconary 🚀
 
-Thanks for considering a contribution! Iconary welcomes people of all skill levels — there are several ways to help, and most take less than 30 minutes.
+First off, thank you for considering contributing to Iconary! It's people like you that make Iconary a world-class tool for the AI and ML community.
 
-## Ways to Contribute
+Iconary welcomes contributors of all skill levels. We have issues ranging from `easy` (fixing typos) to `hard` (building WebGL renderers).
 
-### 1. Draw a New Icon
-- Check the [Icon Requests](#) for icons that are needed.
-- Follow the [Style Guide](./STYLE_GUIDE.md) (grid size, stroke width, naming).
-- Add your SVG to `icons/svg/` and a corresponding entry in `icons/registry.json`.
-- Open a PR using the "New Icon Submission" template.
+## 🛠 Tech Stack
 
-### 2. Write or Improve a Concept Explainer
-- Every icon has a short explanation of the AI/ML concept it represents.
-- If you're knowledgeable about a concept, you can write or refine its explainer in `icons/registry.json` (the `description` field).
-- Keep explanations to 1-2 sentences, plain English, no jargon where possible.
+Iconary's website and core tooling are built with:
+- **React 18**
+- **Vite**
+- **Tailwind CSS** (for styling the sleek dark mode UI)
+- **TypeScript**
 
-### 3. Request a New Icon
-- Open an issue using the "Icon Request" template.
-- Describe the concept and (optionally) suggest a visual idea.
+## 💻 Local Development Setup
 
-### 4. Build or Improve a Framework Package
-- Packages for React, Vue, and Svelte live in `packages/`.
-- Help keep these in sync with the icon registry, improve TypeScript types, or add new framework support (Angular, Solid, etc.)
+To run the Iconary website locally and test your changes:
 
-### 5. Translate Documentation
-- Help translate the docs site and concept explainers into other languages.
+```bash
+# 1. Clone your fork
+git clone https://github.com/YOUR_USERNAME/Iconary.git
+cd Iconary
 
-## Submission Steps
+# 2. Install dependencies
+npm install
 
-1. Fork the repo and create a new branch.
-2. Make your changes following the style guide.
-3. Run `npm run lint:icons` to check your SVG meets the guidelines.
-4. Open a Pull Request — fill out the template and link any related issue.
-5. A maintainer will review, suggest changes if needed, and merge.
+# 3. Start the dev server
+npm run dev
+```
 
-## Icon Naming Convention
+The app will be running at `http://localhost:5173`. Any changes you make to the UI in `src/` will automatically hot-reload!
 
-- Use `kebab-case`.
-- Prefix with category where helpful: `ai-`, `data-`, `model-`, `agent-`.
-- Examples: `ai-agent.svg`, `data-pipeline.svg`, `model-fine-tuning.svg`
+## 🎨 How to Contribute
 
-## Code of Conduct
+There are many ways you can contribute to Iconary:
 
-By participating, you agree to uphold our [Code of Conduct](./CODE_OF_CONDUCT.md).
+### 1. Draw a New Icon (Designers & Devs)
+- **Format:** All icons must be highly optimized SVGs.
+- **Style Guide:**
+  - `viewBox` must be `0 0 24 24`.
+  - Use `currentColor` for strokes or fills.
+  - Default `stroke-width` should be `2`.
+  - `stroke-linecap="round"` and `stroke-linejoin="round"`.
+- **Submission:** Place your new SVG in the `icons/` folder and add an entry in the JSON registry.
+- *Tip: If you're designing a duotone variant, ensure the secondary paths use `opacity="0.4"` or a secondary CSS class.*
 
-## Questions?
+### 2. Grab an Open Issue (Developers)
+- We have a massive backlog of highly impactful issues. Check the [Issues tab](https://github.com/pradhan-not-found/Iconary/issues).
+- Look for tags like `easy`, `medium`, `hard`, `good first issue`, or `hacktoberfest`.
+- When you find one you want to work on, drop a comment saying *"I'd like to work on this!"* so we can assign it to you.
+- **Areas of need:** UI polish in `src/components/`, accessibility improvements, performance optimizations, and building new CLI tools.
 
-Open a [Discussion](#) or comment on an existing issue — we're happy to help first-time contributors.
+### 3. Improve the Website UI
+- The website lives inside the `src/` directory.
+- We pride ourselves on a professional, sleek, dark-themed aesthetic. If you're adding new UI components, please ensure they match the existing design language (glassmorphism, subtle borders, accessible contrast).
+- We use Tailwind CSS for all styling.
+
+### 4. Write Concept Explainers
+- Every icon in Iconary has a 1-2 sentence explainer for the AI concept it represents (e.g., "RAG", "Embeddings").
+- If you spot an explanation that could be clearer, submit a PR to improve it!
+
+## 📤 Pull Request Process
+
+1. Fork the repo and create your branch from `main`.
+2. Name your branch something descriptive (e.g., `feat/add-neural-net-icon`, `fix/modal-accessibility`).
+3. Make your changes and test them locally (`npm run dev`).
+4. Ensure your code is formatted (we use Prettier/ESLint).
+5. Open a Pull Request. Provide a clear description and attach screenshots or screen recordings if you changed the UI.
+6. A maintainer will review your PR, suggest changes if needed, and merge it!
+
+## 💬 Need Help?
+
+If you get stuck or have questions about the architecture, feel free to open a Discussion on GitHub or tag `@pradhan-not-found` in your Pull Request. We provide mentorship for our `mentorship-available` issues and love helping first-time contributors!
+
+Thank you for building Iconary with us! 🖤
