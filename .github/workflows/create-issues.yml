@@ -43,6 +43,8 @@ jobs:
           gh label create "medium" || true
           gh label create "accessibility" || true
           gh label create "refactoring" || true
+          gh label create "community" || true
+          gh label create "documentation" || true
 
           # Check if issue already exists to avoid duplicates
           if ! gh issue list --search "in:title Neural Networks" | grep -q "Neural Networks"; then
@@ -978,5 +980,195 @@ jobs:
 
               See \`CONTRIBUTING.md\` to get started!" \
               --label "architecture" --label "hard"
+            sleep 2
+          fi
+
+          if ! gh issue list --search "in:title Copy as React Component" | grep -q "Copy as React Component"; then
+            gh issue create \
+              --title "Add a 'Copy as React Component' button to the Icon Modal" \
+              --body "Currently, users can only copy the raw SVG. Let's add a button to the modal that copies the icon as a fully functional React component (using JSX syntax).
+
+              See \`CONTRIBUTING.md\` to get started!" \
+              --label "UI" --label "medium"
+            sleep 2
+          fi
+
+          if ! gh issue list --search "in:title Open in CodeSandbox" | grep -q "Open in CodeSandbox"; then
+            gh issue create \
+              --title "Add an 'Open in CodeSandbox' button for icons" \
+              --body "It would be amazing if users could instantly test an icon. Add a button that takes the SVG and opens a pre-configured CodeSandbox React environment with the icon rendered.
+
+              See \`CONTRIBUTING.md\` to get started!" \
+              --label "UI" --label "medium" --label "tooling"
+            sleep 2
+          fi
+
+          if ! gh issue list --search "in:title Download All button as a ZIP" | grep -q "Download All button as a ZIP"; then
+            gh issue create \
+              --title "Add a 'Download All' button to export all icons as a ZIP" \
+              --body "Designers often want the whole library at once. Implement a client-side ZIP generator (using something like JSZip) that bundles all SVGs and downloads them.
+
+              See \`CONTRIBUTING.md\` to get started!" \
+              --label "tooling" --label "medium"
+            sleep 2
+          fi
+
+          if ! gh issue list --search "in:title deploy Storybook to GitHub Pages" | grep -q "deploy Storybook to GitHub Pages"; then
+            gh issue create \
+              --title "Build a GitHub Action to deploy Storybook to GitHub Pages" \
+              --body "We need our UI components documented. Create a GitHub workflow that builds Storybook and deploys it to the \`gh-pages\` branch automatically on pushes to \`main\`.
+
+              See \`CONTRIBUTING.md\` to get started!" \
+              --label "automation" --label "easy"
+            sleep 2
+          fi
+
+          if ! gh issue list --search "in:title unit tests for the IconModal" | grep -q "unit tests for the IconModal"; then
+            gh issue create \
+              --title "Add unit tests for the <IconModal> component using Vitest" \
+              --body "The IconModal is a complex component. We need comprehensive unit tests using Vitest and React Testing Library to ensure it renders correctly and handles state changes.
+
+              See \`CONTRIBUTING.md\` to get started!" \
+              --label "testing" --label "medium"
+            sleep 2
+          fi
+
+          if ! gh issue list --search "in:title CLI to scaffold new icons" | grep -q "CLI to scaffold new icons"; then
+            gh issue create \
+              --title "Implement an 'Iconary' CLI to scaffold new icons locally" \
+              --body "Create a Node.js CLI script (e.g., \`npm run create-icon\`) that prompts the contributor for an icon name, creates the boilerplate SVG file, and updates the necessary registry files automatically.
+
+              See \`CONTRIBUTING.md\` to get started!" \
+              --label "tooling" --label "hard"
+            sleep 2
+          fi
+
+          if ! gh issue list --search "in:title Related Icons section" | grep -q "Related Icons section"; then
+            gh issue create \
+              --title "Add a 'Related Icons' section to the Icon Modal" \
+              --body "When viewing an icon, it would be useful to see 3-4 'related' icons at the bottom of the modal. This requires implementing a lightweight similarity algorithm based on tags or categories.
+
+              See \`CONTRIBUTING.md\` to get started!" \
+              --label "UI" --label "architecture" --label "hard"
+            sleep 2
+          fi
+
+          if ! gh issue list --search "in:title dark mode across the entire docs site" | grep -q "dark mode across the entire docs site"; then
+            gh issue create \
+              --title "Implement dark mode across the entire docs site" \
+              --body "The current docs site is hardcoded to a specific theme. Implement a fully robust dark/light mode toggle that respects system preferences and persists in localStorage.
+
+              See \`CONTRIBUTING.md\` to get started!" \
+              --label "UI" --label "medium"
+            sleep 2
+          fi
+
+          if ! gh issue list --search "in:title Random Icon button" | grep -q "Random Icon button"; then
+            gh issue create \
+              --title "Add a 'Random Icon' button to discover new icons" \
+              --body "Add a fun little 'dice' button near the search bar that selects a random icon from the library and opens its modal for serendipitous discovery.
+
+              See \`CONTRIBUTING.md\` to get started!" \
+              --label "UI" --label "easy"
+            sleep 2
+          fi
+
+          if ! gh issue list --search "in:title Optimize the Vite build" | grep -q "Optimize the Vite build"; then
+            gh issue create \
+              --title "Optimize the Vite build to split chunks more efficiently" \
+              --body "Our production bundle is getting a bit large. Tweak the Vite rollupOptions to intelligently split vendor chunks (like React and Hugeicons) from our application code.
+
+              See \`CONTRIBUTING.md\` to get started!" \
+              --label "optimization" --label "medium"
+            sleep 2
+          fi
+
+          if ! gh issue list --search "in:title Lighthouse 100/100 scores" | grep -q "Lighthouse 100/100 scores"; then
+            gh issue create \
+              --title "Audit website for Lighthouse 100/100 scores" \
+              --body "Run Google Lighthouse on the production site, identify any performance, accessibility, or SEO bottlenecks, and submit a PR to fix them so we hit perfect 100s across the board.
+
+              See \`CONTRIBUTING.md\` to get started!" \
+              --label "optimization" --label "easy"
+            sleep 2
+          fi
+
+          if ! gh issue list --search "in:title Contribute Icon form" | grep -q "Contribute Icon form"; then
+            gh issue create \
+              --title "Implement a 'Contribute Icon' form directly on the website" \
+              --body "Instead of forcing contributors to use Git, build a web form where they can paste their SVG code, fill out the metadata, and have it automatically open a Pull Request via the GitHub API.
+
+              See \`CONTRIBUTING.md\` to get started!" \
+              --label "UI" --label "hard" --label "automation"
+            sleep 2
+          fi
+
+          if ! gh issue list --search "in:title Getting Started video tutorial" | grep -q "Getting Started video tutorial"; then
+            gh issue create \
+              --title "Create a 'Getting Started' video tutorial for contributors" \
+              --body "Record a short 3-5 minute screen share explaining how to clone the repo, run the dev server, and add a new icon. Upload it to YouTube or embed it in the CONTRIBUTING.md.
+
+              See \`CONTRIBUTING.md\` to get started!" \
+              --label "documentation" --label "medium"
+            sleep 2
+          fi
+
+          if ! gh issue list --search "in:title View on GitHub button" | grep -q "View on GitHub button"; then
+            gh issue create \
+              --title "Add a 'View on GitHub' button to the Icon Modal" \
+              --body "Add a small link/button inside the Icon Modal that takes the user directly to the source SVG file for that specific icon on GitHub.
+
+              See \`CONTRIBUTING.md\` to get started!" \
+              --label "UI" --label "easy"
+            sleep 2
+          fi
+
+          if ! gh issue list --search "in:title Set up Dependabot" | grep -q "Set up Dependabot"; then
+            gh issue create \
+              --title "Set up Dependabot for automatic dependency updates" \
+              --body "Add a \\`.github/dependabot.yml\\` configuration file to automatically check for and open PRs for npm package updates on a weekly basis.
+
+              See \`CONTRIBUTING.md\` to get started!" \
+              --label "automation" --label "easy"
+            sleep 2
+          fi
+
+          if ! gh issue list --search "in:title custom 404 page" | grep -q "custom 404 page"; then
+            gh issue create \
+              --title "Implement a custom 404 page" \
+              --body "Our current 404 page is just the default browser or host page. Build a branded, aesthetically pleasing 404 page for the React app.
+
+              See \`CONTRIBUTING.md\` to get started!" \
+              --label "UI" --label "easy"
+            sleep 2
+          fi
+
+          if ! gh issue list --search "in:title Plausible analytics" | grep -q "Plausible analytics"; then
+            gh issue create \
+              --title "Add Plausible analytics to the docs site" \
+              --body "Integrate a lightweight, privacy-friendly analytics script (like Plausible) into the index.html so we can track page views without compromising user privacy.
+
+              See \`CONTRIBUTING.md\` to get started!" \
+              --label "tooling" --label "easy"
+            sleep 2
+          fi
+
+          if ! gh issue list --search "in:title Trending Icons section" | grep -q "Trending Icons section"; then
+            gh issue create \
+              --title "Implement a 'Trending Icons' section on the homepage" \
+              --body "We need a way to track which icons are copied/downloaded the most and display the top 5 'Trending Icons' on the homepage. Requires setting up a lightweight database (like Supabase or Redis) and an API route.
+
+              See \`CONTRIBUTING.md\` to get started!" \
+              --label "backend" --label "architecture" --label "hard"
+            sleep 2
+          fi
+
+          if ! gh issue list --search "in:title downloading icons in PDF format" | grep -q "downloading icons in PDF format"; then
+            gh issue create \
+              --title "Add support for downloading icons in PDF format" \
+              --body "Some print designers prefer PDF vectors over SVGs. Implement a client-side converter (using pdfkit or similar) to allow downloading the icon as a PDF from the modal.
+
+              See \`CONTRIBUTING.md\` to get started!" \
+              --label "tooling" --label "medium"
             sleep 2
           fi
