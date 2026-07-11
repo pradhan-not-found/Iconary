@@ -1,4 +1,4 @@
-# Security Policy
+# <img src="https://api.iconify.design/lucide/shield.svg?color=white" width="24" style="vertical-align: text-bottom;" /> Security Policy
 
 ## Supported Versions
 

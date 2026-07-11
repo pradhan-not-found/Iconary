@@ -1,4 +1,4 @@
-# Contributing to Iconary 🚀
+# <img src="https://api.iconify.design/lucide/heart-handshake.svg?color=white" width="24" style="vertical-align: text-bottom;" /> Contributing to Iconary
 
 First off, thank you for considering contributing to Iconary! It's people like you that make Iconary a world-class tool for the AI and ML community.
 
@@ -40,7 +40,7 @@ Go to the original repository and click "New Pull Request".
 
 <br />
 
-## 🛠 Tech Stack
+## <img src="https://api.iconify.design/lucide/layers.svg?color=white" width="20" style="vertical-align: text-bottom;" /> Tech Stack
 
 Iconary's website and core tooling are built with:
 - **React 18**
@@ -48,7 +48,7 @@ Iconary's website and core tooling are built with:
 - **Tailwind CSS** (for styling the sleek dark mode UI)
 - **TypeScript**
 
-## 💻 Local Development Setup
+## <img src="https://api.iconify.design/lucide/monitor.svg?color=white" width="20" style="vertical-align: text-bottom;" /> Local Development Setup
 
 To run the Iconary website locally and test your changes:
 
@@ -66,7 +66,7 @@ npm run dev
 
 The app will be running at `http://localhost:5173`. Any changes you make to the UI in `src/` will automatically hot-reload!
 
-## 🎨 How to Contribute
+## <img src="https://api.iconify.design/lucide/paint-bucket.svg?color=white" width="20" style="vertical-align: text-bottom;" /> How to Contribute
 
 There are many ways you can contribute to Iconary:
 
@@ -95,7 +95,7 @@ There are many ways you can contribute to Iconary:
 - Every icon in Iconary has a 1-2 sentence explainer for the AI concept it represents (e.g., "RAG", "Embeddings").
 - If you spot an explanation that could be clearer, submit a PR to improve it!
 
-## 📤 Pull Request Process
+## <img src="https://api.iconify.design/lucide/git-pull-request.svg?color=white" width="20" style="vertical-align: text-bottom;" /> Pull Request Process
 
 1. Fork the repo and create your branch from `main`.
 2. Name your branch something descriptive (e.g., `feat/add-neural-net-icon`, `fix/modal-accessibility`).
@@ -104,7 +104,7 @@ There are many ways you can contribute to Iconary:
 5. Open a Pull Request. Provide a clear description and attach screenshots or screen recordings if you changed the UI.
 6. A maintainer will review your PR, suggest changes if needed, and merge it!
 
-## 👑 Official Maintainer
+## <img src="https://api.iconify.design/lucide/crown.svg?color=white" width="20" style="vertical-align: text-bottom;" /> Official Maintainer
 
 Iconary is proudly maintained and curated by:
 - **Name:** Souradeep Pradhan
@@ -113,4 +113,4 @@ Iconary is proudly maintained and curated by:
 
 If you get stuck or have questions about the architecture, feel free to open a Discussion on GitHub or tag the maintainer in your Pull Request. We provide mentorship for our `mentorship-available` issues and love helping first-time contributors!
 
-Thank you for building Iconary with us! 🖤
+Thank you for building Iconary with us! <img src="https://api.iconify.design/lucide/heart.svg?color=white" width="16" style="vertical-align: middle;" />

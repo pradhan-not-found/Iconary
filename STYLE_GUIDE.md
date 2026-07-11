@@ -1,4 +1,4 @@
-# Iconary Style Guide
+# <img src="https://api.iconify.design/lucide/palette.svg?color=white" width="24" style="vertical-align: text-bottom;" /> Iconary Style Guide
 
 Consistency is what makes an icon set feel professional. Please follow these rules closely.
 
