@@ -39,6 +39,10 @@ jobs:
           gh label create "design" || true
           gh label create "PWA" || true
           gh label create "backend" || true
+          gh label create "easy" || true
+          gh label create "medium" || true
+          gh label create "accessibility" || true
+          gh label create "refactoring" || true
 
           # Check if issue already exists to avoid duplicates
           if ! gh issue list --search "in:title Neural Networks" | grep -q "Neural Networks"; then
@@ -824,5 +828,155 @@ jobs:
 
               See \`CONTRIBUTING.md\` to get started!" \
               --label "contribution" --label "UI"
+            sleep 2
+          fi
+
+          if ! gh issue list --search "in:title Fix typo in README.md" | grep -q "Fix typo in README.md"; then
+            gh issue create \
+              --title "Fix typo in README.md" \
+              --body "There are a few minor grammatical and spelling errors in the README.md. Please review the document and fix them. Great first issue!
+
+              See \`CONTRIBUTING.md\` to get started!" \
+              --label "good first issue" --label "easy"
+            sleep 2
+          fi
+
+          if ! gh issue list --search "in:title hover effect to the Browse button" | grep -q "hover effect to the Browse button"; then
+            gh issue create \
+              --title "Add hover effect to the Browse button" \
+              --body "The 'Browse icons' button on the hero section feels a bit static. Let's add a subtle scale-up transform or background color transition on hover to make it feel more interactive.
+
+              See \`CONTRIBUTING.md\` to get started!" \
+              --label "UI" --label "easy"
+            sleep 2
+          fi
+
+          if ! gh issue list --search "in:title Improve contrast ratio for placeholder text" | grep -q "Improve contrast ratio for placeholder text"; then
+            gh issue create \
+              --title "Improve contrast ratio for placeholder text in search bar" \
+              --body "The placeholder text in our search bar doesn't currently meet WCAG AA contrast standards. We need to darken the text color slightly to ensure it's readable for everyone.
+
+              See \`CONTRIBUTING.md\` to get started!" \
+              --label "accessibility" --label "easy"
+            sleep 2
+          fi
+
+          if ! gh issue list --search "in:title GitHub issue templates" | grep -q "GitHub issue templates"; then
+            gh issue create \
+              --title "Add GitHub issue templates" \
+              --body "Create standard GitHub issue templates (Bug Report, Feature Request, New Icon Request) in the \\`.github/ISSUE_TEMPLATE\\` directory to help contributors provide better context.
+
+              See \`CONTRIBUTING.md\` to get started!" \
+              --label "tooling" --label "easy"
+            sleep 2
+          fi
+
+          if ! gh issue list --search "in:title Scroll to top button" | grep -q "Scroll to top button"; then
+            gh issue create \
+              --title "Add a 'Scroll to top' button on the Browse page" \
+              --body "When a user scrolls far down the browse page, it takes a while to get back up. Add a small FAB (Floating Action Button) in the bottom right corner that appears after scrolling and smoothly scrolls the user back to the top.
+
+              See \`CONTRIBUTING.md\` to get started!" \
+              --label "UI" --label "easy"
+            sleep 2
+          fi
+
+          if ! gh issue list --search "in:title keyboard navigation for the Icon Modal" | grep -q "keyboard navigation for the Icon Modal"; then
+            gh issue create \
+              --title "Implement keyboard navigation for the Icon Modal" \
+              --body "Users should be able to navigate the Icon Modal entirely with their keyboard. Ensure the 'Copy', 'Download', and dropdown buttons are focusable via 'Tab' and triggerable via 'Enter'/'Space'.
+
+              See \`CONTRIBUTING.md\` to get started!" \
+              --label "UI" --label "medium" --label "accessibility"
+            sleep 2
+          fi
+
+          if ! gh issue list --search "in:title Copy SVG keyboard shortcut" | grep -q "Copy SVG keyboard shortcut"; then
+            gh issue create \
+              --title "Add a 'Copy SVG' keyboard shortcut" \
+              --body "When a user has an icon modal open, pressing \\`Ctrl+C\\` (or \\`Cmd+C\\` on Mac) should automatically copy the raw SVG code to their clipboard.
+
+              See \`CONTRIBUTING.md\` to get started!" \
+              --label "UI" --label "medium"
+            sleep 2
+          fi
+
+          if ! gh issue list --search "in:title auto-label PRs" | grep -q "auto-label PRs"; then
+            gh issue create \
+              --title "Create a GitHub Action to auto-label PRs" \
+              --body "Implement a GitHub action that automatically labels Pull Requests based on the files changed. For example, changes to \\`src/components\\` get a 'React' label, changes to \\`icons/\\` get an 'Icon' label.
+
+              See \`CONTRIBUTING.md\` to get started!" \
+              --label "automation" --label "medium"
+            sleep 2
+          fi
+
+          if ! gh issue list --search "in:title Toast notification when an icon is copied" | grep -q "Toast notification when an icon is copied"; then
+            gh issue create \
+              --title "Add a 'Toast' notification when an icon is copied" \
+              --body "We currently show 'Copied!' on the button itself. Let's also add a global toast notification (using a library like Sonner) that appears at the bottom of the screen.
+
+              See \`CONTRIBUTING.md\` to get started!" \
+              --label "UI" --label "medium"
+            sleep 2
+          fi
+
+          if ! gh issue list --search "in:title custom hook for search logic" | grep -q "custom hook for search logic"; then
+            gh issue create \
+              --title "Refactor Browse.tsx to use a custom hook for search logic" \
+              --body "The search and filtering logic in \\`Browse.tsx\\` is getting a bit bulky. Extract this logic into a clean, reusable \\`useIconSearch\\` custom hook to separate UI from business logic.
+
+              See \`CONTRIBUTING.md\` to get started!" \
+              --label "refactoring" --label "medium"
+            sleep 2
+          fi
+
+          if ! gh issue list --search "in:title fuzzy search support using fuse.js" | grep -q "fuzzy search support using fuse.js"; then
+            gh issue create \
+              --title "Add fuzzy search support using fuse.js" \
+              --body "Our current search is an exact substring match. Integrate \\`fuse.js\\` to allow for fuzzy searching so users can still find icons even if they make slight typos.
+
+              See \`CONTRIBUTING.md\` to get started!" \
+              --label "tooling" --label "medium"
+            sleep 2
+          fi
+
+          if ! gh issue list --search "in:title strip data attributes from production SVGs" | grep -q "strip data attributes from production SVGs"; then
+            gh issue create \
+              --title "Set up a Webpack plugin to strip data-* attributes from production SVGs" \
+              --body "We use some internal \\`data-*\\` attributes on our SVGs for testing and internal logic. Write a custom build plugin that safely strips these attributes before final production bundling to save bytes.
+
+              See \`CONTRIBUTING.md\` to get started!" \
+              --label "tooling" --label "hard"
+            sleep 2
+          fi
+
+          if ! gh issue list --search "in:title custom SVG parser to validate incoming icon contributions" | grep -q "custom SVG parser to validate incoming icon contributions"; then
+            gh issue create \
+              --title "Implement a custom SVG parser to validate incoming icon contributions in CI" \
+              --body "When users submit new icons via PR, we need an automated CI script that parses the raw SVG string and ensures it strictly follows our style guidelines (e.g. correct viewBox, no inline styles, only allowed tags).
+
+              See \`CONTRIBUTING.md\` to get started!" \
+              --label "automation" --label "hard"
+            sleep 2
+          fi
+
+          if ! gh issue list --search "in:title dynamic OG images" | grep -q "dynamic OG images"; then
+            gh issue create \
+              --title "Create a Next.js API route to generate dynamic OG images for each icon" \
+              --body "When a specific icon is shared on social media, we want a dynamic Open Graph image generated on the fly that displays the icon on a beautiful branded background. (Requires setting up an Edge Function using @vercel/og).
+
+              See \`CONTRIBUTING.md\` to get started!" \
+              --label "backend" --label "hard"
+            sleep 2
+          fi
+
+          if ! gh issue list --search "in:title rust-based WASM module" | grep -q "rust-based WASM module"; then
+            gh issue create \
+              --title "Add a Rust-based WASM module for ultra-fast client-side SVG optimization" \
+              --body "SVGO running in the browser can be slow for massive SVGs. Build a Rust library that performs AST-level SVG optimization, compile it to WebAssembly, and integrate it into our web app for real-time processing.
+
+              See \`CONTRIBUTING.md\` to get started!" \
+              --label "architecture" --label "hard"
             sleep 2
           fi
