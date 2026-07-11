@@ -9,6 +9,7 @@ export function Browse() {
   const [category, setCategory] = useState<string | null>(null);
   const [showFilters, setShowFilters] = useState(false);
   const [selectedIcon, setSelectedIcon] = useState<IconDef | null>(null);
+  const [iconStyle, setIconStyle] = useState<'stroke' | 'solid' | 'duotone'>('stroke');
 
 
 
@@ -80,9 +81,15 @@ export function Browse() {
             {showFilters && (
               <div className="absolute top-full right-0 mt-2 w-48 bg-[#1a1a1a] border border-[#333] rounded-lg shadow-xl py-2 z-50">
                 <div className="px-4 py-2 text-xs font-bold uppercase tracking-widest text-[#666] mb-1">Style</div>
-                <button className="w-full text-left px-4 py-2 text-[0.9rem] text-[#e5e5e5] hover:bg-[#222] flex items-center justify-between">Outline <span className="w-1.5 h-1.5 rounded-full bg-white"></span></button>
-                <button className="w-full text-left px-4 py-2 text-[0.9rem] text-[#888] hover:bg-[#222]">Filled</button>
-                <button className="w-full text-left px-4 py-2 text-[0.9rem] text-[#888] hover:bg-[#222]">Duotone</button>
+                <button onClick={() => setIconStyle('stroke')} className="w-full text-left px-4 py-2 text-[0.9rem] hover:bg-[#222] flex items-center justify-between transition-colors" style={{ color: iconStyle === 'stroke' ? '#e5e5e5' : '#888' }}>
+                  Outline {iconStyle === 'stroke' && <span className="w-1.5 h-1.5 rounded-full bg-white"></span>}
+                </button>
+                <button onClick={() => setIconStyle('solid')} className="w-full text-left px-4 py-2 text-[0.9rem] hover:bg-[#222] flex items-center justify-between transition-colors" style={{ color: iconStyle === 'solid' ? '#e5e5e5' : '#888' }}>
+                  Filled {iconStyle === 'solid' && <span className="w-1.5 h-1.5 rounded-full bg-white"></span>}
+                </button>
+                <button onClick={() => setIconStyle('duotone')} className="w-full text-left px-4 py-2 text-[0.9rem] hover:bg-[#222] flex items-center justify-between transition-colors" style={{ color: iconStyle === 'duotone' ? '#e5e5e5' : '#888' }}>
+                  Duotone {iconStyle === 'duotone' && <span className="w-1.5 h-1.5 rounded-full bg-white"></span>}
+                </button>
               </div>
             )}
           </div>
@@ -115,7 +122,7 @@ export function Browse() {
                   <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
                 </svg>
               </div>
-              <HugeiconsIcon icon={item.icon} size={36} className="text-[#a3a3a3] group-hover:text-white group-hover:-translate-y-1 transition-all duration-300" />
+              <HugeiconsIcon icon={item.icon} variant={iconStyle} size={36} className="text-[#a3a3a3] group-hover:text-white group-hover:-translate-y-1 transition-all duration-300" />
               <span 
                 className="text-[0.6rem] uppercase tracking-widest text-[#606060] text-center px-2 group-hover:text-white transition-colors line-clamp-2" 
               >
