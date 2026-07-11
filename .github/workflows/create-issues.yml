@@ -1543,3 +1543,133 @@ jobs:
               --label "icon-request" --label "design" --label "hard"
             sleep 2
           fi
+
+          if ! gh issue list --search "in:title Design a 'Tensor' Icon" | grep -q "Design a 'Tensor' Icon"; then
+            gh issue create \
+              --title "Design a 'Tensor' Icon" \
+              --body "Tensors are multi-dimensional arrays (the core data structure in Deep Learning). We need an icon representing a 3D matrix or hypercube.
+
+              Check out \\`STYLE_GUIDE.md\\` before you start designing!" \
+              --label "icon-request" --label "design" --label "hard"
+            sleep 2
+          fi
+
+          if ! gh issue list --search "in:title Design an 'Activation Function' Icon" | grep -q "Design an 'Activation Function' Icon"; then
+            gh issue create \
+              --title "Design an 'Activation Function' Icon" \
+              --body "Design an icon for Activation Functions (like ReLU, Sigmoid, Tanh). A classic 'S' curve or step function on an axis works perfectly.
+
+              Check out \\`STYLE_GUIDE.md\\` before you start designing!" \
+              --label "icon-request" --label "design" --label "easy"
+            sleep 2
+          fi
+
+          if ! gh issue list --search "in:title Design a 'Loss Function' Icon" | grep -q "Design a 'Loss Function' Icon"; then
+            gh issue create \
+              --title "Design a 'Loss Function' Icon" \
+              --body "Design an icon for Cost/Loss Functions in Machine Learning. Something representing error calculation or minimizing a gap.
+
+              Check out \\`STYLE_GUIDE.md\\` before you start designing!" \
+              --label "icon-request" --label "design" --label "medium"
+            sleep 2
+          fi
+
+          if ! gh issue list --search "in:title Design an 'Attention Mechanism' Icon" | grep -q "Design an 'Attention Mechanism' Icon"; then
+            gh issue create \
+              --title "Design an 'Attention Mechanism' Icon" \
+              --body "The core of modern LLMs! We need an icon representing 'Attention' (focusing on specific parts of a sequence). Maybe a spotlight on specific data nodes.
+
+              Check out \\`STYLE_GUIDE.md\\` before you start designing!" \
+              --label "icon-request" --label "design" --label "hard"
+            sleep 2
+          fi
+
+          if ! gh issue list --search "in:title Design a 'Reinforcement Learning' Icon" | grep -q "Design a 'Reinforcement Learning' Icon"; then
+            gh issue create \
+              --title "Design a 'Reinforcement Learning' Icon" \
+              --body "Design an icon for RL (Reinforcement Learning). Needs to represent an agent taking an action and receiving a reward (like a plus sign or trophy).
+
+              Check out \\`STYLE_GUIDE.md\\` before you start designing!" \
+              --label "icon-request" --label "design" --label "medium"
+            sleep 2
+          fi
+
+          if ! gh issue list --search "in:title Design a 'Transfer Learning' Icon" | grep -q "Design a 'Transfer Learning' Icon"; then
+            gh issue create \
+              --title "Design a 'Transfer Learning' Icon" \
+              --body "Transfer learning involves taking knowledge from one model and applying it to another. Design an icon showing 'knowledge transfer' between two brains or networks.
+
+              Check out \\`STYLE_GUIDE.md\\` before you start designing!" \
+              --label "icon-request" --label "design" --label "medium"
+            sleep 2
+          fi
+
+          if ! gh issue list --search "in:title Design a 'Hyperparameter Tuning' Icon" | grep -q "Design a 'Hyperparameter Tuning' Icon"; then
+            gh issue create \
+              --title "Design a 'Hyperparameter Tuning' Icon" \
+              --body "Design an icon representing Hyperparameter Optimization. Sliders, dials, or tuning knobs on a model architecture are common metaphors.
+
+              Check out \\`STYLE_GUIDE.md\\` before you start designing!" \
+              --label "icon-request" --label "design" --label "easy"
+            sleep 2
+          fi
+
+          if ! gh issue list --search "in:title Design a 'Cross-Validation' Icon" | grep -q "Design a 'Cross-Validation' Icon"; then
+            gh issue create \
+              --title "Design a 'Cross-Validation' Icon" \
+              --body "Design an icon for K-Fold Cross-Validation (splitting a dataset into chunks/folds to test a model).
+
+              Check out \\`STYLE_GUIDE.md\\` before you start designing!" \
+              --label "icon-request" --label "design" --label "medium"
+            sleep 2
+          fi
+
+          if ! gh issue list --search "in:title Design an 'Object Detection' Icon" | grep -q "Design an 'Object Detection' Icon"; then
+            gh issue create \
+              --title "Design an 'Object Detection' Icon" \
+              --body "Design an icon for Object Detection in Computer Vision. Bounding boxes identifying distinct subjects in a frame is standard.
+
+              Check out \\`STYLE_GUIDE.md\\` before you start designing!" \
+              --label "icon-request" --label "design" --label "easy"
+            sleep 2
+          fi
+
+          if ! gh issue list --search "in:title Design a 'Time Series Analysis' Icon" | grep -q "Design a 'Time Series Analysis' Icon"; then
+            gh issue create \
+              --title "Design a 'Time Series Analysis' Icon" \
+              --body "Design an icon for Time Series Data (data points indexed over time, like stock prices or sensor readings). A line chart combined with a clock/timeline.
+
+              Check out \\`STYLE_GUIDE.md\\` before you start designing!" \
+              --label "icon-request" --label "design" --label "easy"
+            sleep 2
+          fi
+
+          if ! gh issue list --search "in:title Design a 'Word Embedding' Icon" | grep -q "Design a 'Word Embedding' Icon"; then
+            gh issue create \
+              --title "Design a 'Word Embedding' Icon" \
+              --body "Design an icon representing mapping text/words to mathematical vectors.
+
+              Check out \\`STYLE_GUIDE.md\\` before you start designing!" \
+              --label "icon-request" --label "design" --label "medium"
+            sleep 2
+          fi
+
+          if ! gh issue list --search "in:title Design an 'Autoencoder' Icon" | grep -q "Design an 'Autoencoder' Icon"; then
+            gh issue create \
+              --title "Design an 'Autoencoder' Icon" \
+              --body "Autoencoders compress and decompress data. Design an icon showing an 'hourglass' shaped neural network structure.
+
+              Check out \\`STYLE_GUIDE.md\\` before you start designing!" \
+              --label "icon-request" --label "design" --label "hard"
+            sleep 2
+          fi
+
+          if ! gh issue list --search "in:title Design a 'Diffusion Model' Icon" | grep -q "Design a 'Diffusion Model' Icon"; then
+            gh issue create \
+              --title "Design a 'Diffusion Model' Icon" \
+              --body "Diffusion Models (like Midjourney/Stable Diffusion) work by adding and removing noise from images. Design an icon representing noise transforming into a clear image.
+
+              Check out \\`STYLE_GUIDE.md\\` before you start designing!" \
+              --label "icon-request" --label "design" --label "hard"
+            sleep 2
+          fi
