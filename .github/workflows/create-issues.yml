@@ -242,3 +242,78 @@ jobs:
             sleep 2
           fi
 
+          if ! gh issue list --search "in:title Generative Adversarial Network" | grep -q "Generative Adversarial Network"; then
+            gh issue create \
+              --title "Add an icon for Generative Adversarial Network (GAN)" \
+              --body "We need an icon representing a GAN architecture.
+
+              ## Requirements
+              - Must have outline, filled, and duotone variants.
+              - Follow the style guide in \`STYLE_GUIDE.md\`.
+              - Include a 1-2 line concept explainer.
+
+              See \`CONTRIBUTING.md\` to get started!" \
+              --label "good first issue"
+            sleep 2
+          fi
+
+          if ! gh issue list --search "in:title Reinforcement Learning" | grep -q "Reinforcement Learning"; then
+            gh issue create \
+              --title "Add an icon for Reinforcement Learning" \
+              --body "We need an icon representing Reinforcement Learning (agents, rewards, environments).
+
+              ## Requirements
+              - Must have outline, filled, and duotone variants.
+              - Follow the style guide in \`STYLE_GUIDE.md\`.
+              - Include a 1-2 line concept explainer.
+
+              See \`CONTRIBUTING.md\` to get started!" \
+              --label "good first issue"
+            sleep 2
+          fi
+
+          if ! gh issue list --search "in:title Attention Mechanism" | grep -q "Attention Mechanism"; then
+            gh issue create \
+              --title "Add an icon for Attention Mechanism" \
+              --body "We need an icon representing the Attention Mechanism used in Transformers.
+
+              ## Requirements
+              - Must have outline, filled, and duotone variants.
+              - Follow the style guide in \`STYLE_GUIDE.md\`.
+              - Include a 1-2 line concept explainer.
+
+              See \`CONTRIBUTING.md\` to get started!" \
+              --label "good first issue"
+            sleep 2
+          fi
+
+          if ! gh issue list --search "in:title Hyperparameter Tuning" | grep -q "Hyperparameter Tuning"; then
+            gh issue create \
+              --title "Add an icon for Hyperparameter Tuning" \
+              --body "We need an icon representing Hyperparameter Tuning or Optimization.
+
+              ## Requirements
+              - Must have outline, filled, and duotone variants.
+              - Follow the style guide in \`STYLE_GUIDE.md\`.
+              - Include a 1-2 line concept explainer.
+
+              See \`CONTRIBUTING.md\` to get started!" \
+              --label "good first issue"
+            sleep 2
+          fi
+
+          if ! gh issue list --search "in:title Bias and Fairness" | grep -q "Bias and Fairness"; then
+            gh issue create \
+              --title "Add an icon for Bias and Fairness in AI" \
+              --body "We need an icon representing the concept of Bias and Fairness in machine learning models.
+
+              ## Requirements
+              - Must have outline, filled, and duotone variants.
+              - Follow the style guide in \`STYLE_GUIDE.md\`.
+              - Include a 1-2 line concept explainer.
+
+              See \`CONTRIBUTING.md\` to get started!" \
+              --label "good first issue"
+            sleep 2
+          fi
+
