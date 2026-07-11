@@ -1423,3 +1423,123 @@ jobs:
               --label "icon-request" --label "design" --label "medium"
             sleep 2
           fi
+
+          if ! gh issue list --search "in:title Design a 'Neural Network Node' Icon" | grep -q "Design a 'Neural Network Node' Icon"; then
+            gh issue create \
+              --title "Design a 'Neural Network Node' Icon" \
+              --body "We need an icon specifically representing a single node/perceptron within a neural network. Maybe a glowing circle with input/output dendrite lines.
+
+              Check out \\`STYLE_GUIDE.md\\` before you start designing!" \
+              --label "icon-request" --label "design" --label "easy"
+            sleep 2
+          fi
+
+          if ! gh issue list --search "in:title Design a 'Backpropagation' Icon" | grep -q "Design a 'Backpropagation' Icon"; then
+            gh issue create \
+              --title "Design a 'Backpropagation' Icon" \
+              --body "Design an icon for Backpropagation (the backwards calculation of errors in a neural network). Arrows flowing backwards through layers would be ideal.
+
+              Check out \\`STYLE_GUIDE.md\\` before you start designing!" \
+              --label "icon-request" --label "design" --label "hard"
+            sleep 2
+          fi
+
+          if ! gh issue list --search "in:title Design an 'Epoch' Icon" | grep -q "Design an 'Epoch' Icon"; then
+            gh issue create \
+              --title "Design an 'Epoch / Training Cycle' Icon" \
+              --body "An Epoch is one complete pass through the training data. We need an icon representing a full data cycle or loop.
+
+              Check out \\`STYLE_GUIDE.md\\` before you start designing!" \
+              --label "icon-request" --label "design" --label "easy"
+            sleep 2
+          fi
+
+          if ! gh issue list --search "in:title Design a 'Dimensionality Reduction' Icon" | grep -q "Design a 'Dimensionality Reduction' Icon"; then
+            gh issue create \
+              --title "Design a 'Dimensionality Reduction' Icon" \
+              --body "Represent concepts like PCA or t-SNE where high-dimensional data is reduced to 2D/3D. Perhaps a 3D cube casting a 2D shadow.
+
+              Check out \\`STYLE_GUIDE.md\\` before you start designing!" \
+              --label "icon-request" --label "design" --label "hard"
+            sleep 2
+          fi
+
+          if ! gh issue list --search "in:title Design a 'Synthetic Data' Icon" | grep -q "Design a 'Synthetic Data' Icon"; then
+            gh issue create \
+              --title "Design a 'Synthetic Data' Icon" \
+              --body "Synthetic data is artificially generated data used to train models. We need an icon representing 'fake' or 'manufactured' data (e.g. a database with a wand/sparkles).
+
+              Check out \\`STYLE_GUIDE.md\\` before you start designing!" \
+              --label "icon-request" --label "design" --label "medium"
+            sleep 2
+          fi
+
+          if ! gh issue list --search "in:title Design a 'Data Lake' Icon" | grep -q "Design a 'Data Lake' Icon"; then
+            gh issue create \
+              --title "Design a 'Data Lake' Icon" \
+              --body "Design an icon for a Data Lake (a massive pool of raw, unstructured data).
+
+              Check out \\`STYLE_GUIDE.md\\` before you start designing!" \
+              --label "icon-request" --label "design" --label "easy"
+            sleep 2
+          fi
+
+          if ! gh issue list --search "in:title Design a 'Gradient Descent' Icon" | grep -q "Design a 'Gradient Descent' Icon"; then
+            gh issue create \
+              --title "Design a 'Gradient Descent' Icon" \
+              --body "Gradient descent is an optimization algorithm. The classic visualization is a curve/valley with a point stepping down towards the global minimum.
+
+              Check out \\`STYLE_GUIDE.md\\` before you start designing!" \
+              --label "icon-request" --label "design" --label "medium"
+            sleep 2
+          fi
+
+          if ! gh issue list --search "in:title Design a 'Neural Processing Unit' Icon" | grep -q "Design a 'Neural Processing Unit' Icon"; then
+            gh issue create \
+              --title "Design a 'Neural Processing Unit (NPU)' Icon" \
+              --body "We need an icon specifically for NPUs (AI chips built into modern devices). Needs to look distinct from a standard CPU/GPU.
+
+              Check out \\`STYLE_GUIDE.md\\` before you start designing!" \
+              --label "icon-request" --label "design" --label "medium"
+            sleep 2
+          fi
+
+          if ! gh issue list --search "in:title Design a 'Prompt Engineering' Icon" | grep -q "Design a 'Prompt Engineering' Icon"; then
+            gh issue create \
+              --title "Design a 'Prompt Engineering' Icon" \
+              --body "Design an icon representing the craft of Prompt Engineering (e.g., tweaking inputs to get the best outputs from an LLM).
+
+              Check out \\`STYLE_GUIDE.md\\` before you start designing!" \
+              --label "icon-request" --label "design" --label "easy"
+            sleep 2
+          fi
+
+          if ! gh issue list --search "in:title Design a 'Retrieval Augmented Generation' Icon" | grep -q "Design a 'Retrieval Augmented Generation' Icon"; then
+            gh issue create \
+              --title "Design a 'Retrieval Augmented Generation (RAG)' Icon" \
+              --body "RAG combines LLMs with external knowledge bases. We need an icon that shows a model 'fetching' or 'retrieving' data from a document or database before answering.
+
+              Check out \\`STYLE_GUIDE.md\\` before you start designing!" \
+              --label "icon-request" --label "design" --label "hard"
+            sleep 2
+          fi
+
+          if ! gh issue list --search "in:title Design an 'Edge AI' Icon" | grep -q "Design an 'Edge AI' Icon"; then
+            gh issue create \
+              --title "Design an 'Edge AI' Icon" \
+              --body "Edge AI means running models locally on mobile devices or IoT sensors rather than the cloud. We need an icon for 'on-device intelligence'.
+
+              Check out \\`STYLE_GUIDE.md\\` before you start designing!" \
+              --label "icon-request" --label "design" --label "medium"
+            sleep 2
+          fi
+
+          if ! gh issue list --search "in:title Design a 'Generative Adversarial Network' Icon" | grep -q "Design a 'Generative Adversarial Network' Icon"; then
+            gh issue create \
+              --title "Design a 'Generative Adversarial Network (GAN)' Icon" \
+              --body "GANs pit two neural networks against each other (a generator and a discriminator). Design an icon representing two AI entities facing off or verifying each other.
+
+              Check out \\`STYLE_GUIDE.md\\` before you start designing!" \
+              --label "icon-request" --label "design" --label "hard"
+            sleep 2
+          fi
