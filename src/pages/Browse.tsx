@@ -157,12 +157,58 @@ export function Browse() {
               </div>
               
               <div className="flex flex-col flex-1">
-                <div className="flex items-center gap-1 border-b border-[#333] mb-5">
-                  {(['React', 'Vue', 'SVG'] as const).map(tab => (
+                <div className="flex items-center gap-3 mb-6 flex-wrap">
+                  <div className="flex items-center border border-[#333] rounded-lg bg-[#111] px-3 py-1.5 gap-2">
+                    <svg viewBox="0 0 24 24" width="14" height="14" stroke="#a3a3a3" strokeWidth="2" fill="none"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
+                    <select className="bg-transparent text-[#e5e5e5] text-[0.85rem] focus:outline-none appearance-none" defaultValue="1.5">
+                      <option value="1">1</option>
+                      <option value="1.5">1.5</option>
+                      <option value="2">2</option>
+                    </select>
+                    <svg viewBox="0 0 24 24" width="12" height="12" stroke="#a3a3a3" strokeWidth="2" fill="none"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                  </div>
+                  
+                  <div className="flex items-center border border-[#333] rounded-lg bg-[#111] px-3 py-1.5 gap-2">
+                    <select className="bg-transparent text-[#e5e5e5] text-[0.85rem] focus:outline-none appearance-none" defaultValue="24px">
+                      <option value="16px">16px</option>
+                      <option value="24px">24px</option>
+                      <option value="32px">32px</option>
+                      <option value="48px">48px</option>
+                    </select>
+                    <svg viewBox="0 0 24 24" width="12" height="12" stroke="#a3a3a3" strokeWidth="2" fill="none"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                  </div>
+
+                  <div className="flex items-center border border-[#333] rounded-lg bg-[#111] px-3 py-1.5 gap-2">
+                    <div className="w-3 h-3 rounded-sm bg-white border border-[#333]"></div>
+                    <select className="bg-transparent text-[#e5e5e5] text-[0.85rem] focus:outline-none appearance-none" defaultValue="currentColor">
+                      <option value="currentColor">currentColor</option>
+                      <option value="#ffffff">#ffffff</option>
+                      <option value="#000000">#000000</option>
+                    </select>
+                  </div>
+                  
+                  <button className="p-2 border border-[#333] rounded-lg bg-[#111] text-[#a3a3a3] hover:text-white transition-colors">
+                    <svg viewBox="0 0 24 24" width="14" height="14" stroke="currentColor" strokeWidth="2" fill="none"><path d="M23 4v6h-6"></path><path d="M1 20v-6h6"></path><path d="M3.51 9a9 9 0 0 1 14.85-3.36L23 10M1 14l4.64 4.36A9 9 0 0 0 20.49 15"></path></svg>
+                  </button>
+                </div>
+
+                <div className="flex items-center gap-3 mb-6">
+                  <button onClick={() => handleCopy(selectedIcon.id)} className="flex items-center justify-center gap-2 flex-1 border border-[#333] rounded-lg bg-[#111] hover:bg-[#222] transition-colors py-2.5 text-[0.8rem] font-bold text-[#e5e5e5]">
+                    <svg viewBox="0 0 24 24" width="14" height="14" stroke="currentColor" strokeWidth="2" fill="none"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
+                    SVG STROKED
+                  </button>
+                  <button onClick={() => handleCopy(selectedIcon.id)} className="flex items-center justify-center gap-2 flex-1 border border-[#333] rounded-lg bg-[#111] hover:bg-[#222] transition-colors py-2.5 text-[0.8rem] font-bold text-[#e5e5e5]">
+                    <svg viewBox="0 0 24 24" width="14" height="14" stroke="currentColor" strokeWidth="2" fill="none"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
+                    SVG STROKED
+                  </button>
+                </div>
+                
+                <div className="flex items-center gap-1 border-b border-[#333] mb-5 overflow-x-auto pb-1 scrollbar-hide">
+                  {(['Web', 'React', 'React native', 'Vue', 'Svelte', 'Flutter', 'Angular'] as const).map(tab => (
                     <button 
                       key={tab}
-                      onClick={() => setActiveTab(tab)}
-                      className={`px-6 py-2.5 text-[0.85rem] font-medium transition-colors border-b-2 -mb-px ${activeTab === tab ? 'border-white text-white' : 'border-transparent text-[#888] hover:text-[#bbb]'}`}
+                      onClick={() => setActiveTab(tab as any)}
+                      className={`px-4 py-2.5 text-[0.8rem] font-medium transition-colors border-b-2 -mb-px whitespace-nowrap ${activeTab === tab ? 'border-white text-white' : 'border-transparent text-[#888] hover:text-[#bbb]'}`}
                     >
                       {tab}
                     </button>
@@ -180,18 +226,16 @@ export function Browse() {
                   <div className="p-4 overflow-x-auto">
                     <code className="text-[0.85rem] text-[#e5e5e5] font-mono whitespace-pre">
                       {activeTab === 'React' && `import { ${selectedIcon.id} } from "@iconary/react";\n\n<${selectedIcon.id} size={24} />`}
+                      {activeTab === 'React native' && `import { ${selectedIcon.id} } from "@iconary/react-native";\n\n<${selectedIcon.id} size={24} />`}
                       {activeTab === 'Vue' && `import { ${selectedIcon.id} } from "iconary-vue";\n\n<${selectedIcon.id} :size="24" />`}
+                      {activeTab === 'Svelte' && `<script>\n  import { ${selectedIcon.id} } from "iconary-svelte";\n</script>\n\n<${selectedIcon.id} size={24} />`}
+                      {activeTab === 'Flutter' && `Iconary(Iconary.${selectedIcon.id}, size: 24, color: Colors.white)`}
+                      {activeTab === 'Angular' && `import { ${selectedIcon.id} } from "@iconary/angular";\n\n<iconary-${selectedIcon.id.toLowerCase()} size="24"></iconary-${selectedIcon.id.toLowerCase()}>`}
+                      {activeTab === 'Web' && `<script src="https://cdn.iconary.ai/web.js"></script>\n\n<i class="iconary-${selectedIcon.id.toLowerCase()}"></i>`}
                       {activeTab === 'SVG' && `<svg width="24" height="24" viewBox="0 0 24 24" fill="none"\n  stroke="currentColor" strokeWidth="1.5"\n  strokeLinecap="round" strokeLinejoin="round">\n  <!-- paths... -->\n</svg>`}
                     </code>
                   </div>
                 </div>
-                
-                <button 
-                  onClick={() => handleCopy(selectedIcon.id)}
-                  className="mt-5 w-full py-3 bg-white text-black font-bold text-[0.9rem] rounded-lg hover:bg-[#e5e5e5] transition-colors"
-                >
-                  Copy {activeTab} Code
-                </button>
               </div>
             </div>
           </div>

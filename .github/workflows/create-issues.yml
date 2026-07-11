@@ -466,3 +466,48 @@ jobs:
               --label "good first issue"
             sleep 2
           fi
+
+          if ! gh issue list --search "in:title Activation Function" | grep -q "Activation Function"; then
+            gh issue create \
+              --title "Add an icon for Activation Function" \
+              --body "We need an icon representing an Activation Function (like ReLU, Sigmoid).
+
+              ## Requirements
+              - Must have outline, filled, and duotone variants.
+              - Follow the style guide in \`STYLE_GUIDE.md\`.
+              - Include a 1-2 line concept explainer.
+
+              See \`CONTRIBUTING.md\` to get started!" \
+              --label "good first issue"
+            sleep 2
+          fi
+
+          if ! gh issue list --search "in:title Gradient Descent" | grep -q "Gradient Descent"; then
+            gh issue create \
+              --title "Add an icon for Gradient Descent" \
+              --body "We need an icon representing the concept of Gradient Descent or loss minimization.
+
+              ## Requirements
+              - Must have outline, filled, and duotone variants.
+              - Follow the style guide in \`STYLE_GUIDE.md\`.
+              - Include a 1-2 line concept explainer.
+
+              See \`CONTRIBUTING.md\` to get started!" \
+              --label "good first issue"
+            sleep 2
+          fi
+
+          if ! gh issue list --search "in:title Epoch" | grep -q "Epoch"; then
+            gh issue create \
+              --title "Add an icon for Epoch" \
+              --body "We need an icon representing an Epoch (training cycle).
+
+              ## Requirements
+              - Must have outline, filled, and duotone variants.
+              - Follow the style guide in \`STYLE_GUIDE.md\`.
+              - Include a 1-2 line concept explainer.
+
+              See \`CONTRIBUTING.md\` to get started!" \
+              --label "good first issue"
+            sleep 2
+          fi
