@@ -317,3 +317,78 @@ jobs:
             sleep 2
           fi
 
+          if ! gh issue list --search "in:title Data Pipeline" | grep -q "Data Pipeline"; then
+            gh issue create \
+              --title "Add an icon for Data Pipeline / ETL" \
+              --body "We need an icon representing a Data Pipeline or ETL (Extract, Transform, Load) process.
+
+              ## Requirements
+              - Must have outline, filled, and duotone variants.
+              - Follow the style guide in \`STYLE_GUIDE.md\`.
+              - Include a 1-2 line concept explainer.
+
+              See \`CONTRIBUTING.md\` to get started!" \
+              --label "good first issue"
+            sleep 2
+          fi
+
+          if ! gh issue list --search "in:title Edge AI" | grep -q "Edge AI"; then
+            gh issue create \
+              --title "Add an icon for Edge AI" \
+              --body "We need an icon representing Edge AI (running models on local or edge devices).
+
+              ## Requirements
+              - Must have outline, filled, and duotone variants.
+              - Follow the style guide in \`STYLE_GUIDE.md\`.
+              - Include a 1-2 line concept explainer.
+
+              See \`CONTRIBUTING.md\` to get started!" \
+              --label "good first issue"
+            sleep 2
+          fi
+
+          if ! gh issue list --search "in:title Model Checkpoint" | grep -q "Model Checkpoint"; then
+            gh issue create \
+              --title "Add an icon for Model Checkpoint" \
+              --body "We need an icon representing a Model Checkpoint saved during training.
+
+              ## Requirements
+              - Must have outline, filled, and duotone variants.
+              - Follow the style guide in \`STYLE_GUIDE.md\`.
+              - Include a 1-2 line concept explainer.
+
+              See \`CONTRIBUTING.md\` to get started!" \
+              --label "good first issue"
+            sleep 2
+          fi
+
+          if ! gh issue list --search "in:title AI Hallucination" | grep -q "AI Hallucination"; then
+            gh issue create \
+              --title "Add an icon for AI Hallucination" \
+              --body "We need an icon representing an AI Hallucination or an incorrect confident response.
+
+              ## Requirements
+              - Must have outline, filled, and duotone variants.
+              - Follow the style guide in \`STYLE_GUIDE.md\`.
+              - Include a 1-2 line concept explainer.
+
+              See \`CONTRIBUTING.md\` to get started!" \
+              --label "good first issue"
+            sleep 2
+          fi
+
+          if ! gh issue list --search "in:title MLOps" | grep -q "MLOps"; then
+            gh issue create \
+              --title "Add an icon for MLOps" \
+              --body "We need an icon representing MLOps (Machine Learning Operations) workflows.
+
+              ## Requirements
+              - Must have outline, filled, and duotone variants.
+              - Follow the style guide in \`STYLE_GUIDE.md\`.
+              - Include a 1-2 line concept explainer.
+
+              See \`CONTRIBUTING.md\` to get started!" \
+              --label "good first issue"
+            sleep 2
+          fi
+
