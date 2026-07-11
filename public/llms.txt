@@ -1,0 +1,26 @@
+# Iconary
+
+Iconary is an open-source icon library specifically designed for Artificial Intelligence (AI), Machine Learning (ML), and Data Science interfaces. It provides highly scalable, semantic vector icons designed exclusively for complex tech concepts.
+
+## Key Features
+- **AI-Focused Vocabulary**: Icons for specialized concepts like Agents, Embeddings, RAG Architecture, Vector Databases, Fine-Tuning, and more.
+- **Three Styles**: Every icon ships with `outline`, `filled`, and `duotone` variants.
+- **Framework Native**: Includes tree-shakeable packages for React (`iconary-react`) and Vue (`iconary-vue`).
+- **Concept Explainers**: Each icon comes with a 1-2 sentence plain-English explanation to help bridge the gap between engineering and UX.
+- **Highly Optimized**: All SVGs are minified via SVGO for zero bloat.
+
+## Quick Start (React)
+```bash
+npx iconary-react
+```
+```tsx
+import { Agent, VectorDatabase } from "@iconary/react";
+
+export default function App() {
+  return <Agent size={28} style="duotone" />;
+}
+```
+
+## Relevant Links
+- GitHub: https://github.com/pradhan-not-found/Iconary
+- License: MIT License
