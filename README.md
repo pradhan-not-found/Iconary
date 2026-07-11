@@ -40,11 +40,11 @@ Get up and running in seconds. Choose your preferred framework below:
 <br/>
 
 ```bash
-npx iconary-react
+npm install iconary-react
 ```
 
 ```tsx
-import { Agent, VectorDatabase, FineTuning } from "@iconary/react";
+import { Agent, VectorDatabase, FineTuning } from "iconary-react";
 
 export default function App() {
   return (
