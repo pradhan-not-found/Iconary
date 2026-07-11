@@ -33,6 +33,8 @@ Write code, design an icon, or fix a typo! Test locally by running `npm run dev`
 5. **<kbd><img src="https://api.iconify.design/lucide/upload-cloud.svg?color=white" width="16" style="vertical-align: middle;" /></kbd> Commit & Push**  
 Save your changes (`git commit -m "add my new icon"`) and push to your fork (`git push origin feature/my-new-icon`).
 
+> **Note on Authorship:** To ensure you show up in the GitHub Contributors list, make sure your local Git email matches the email on your GitHub account! You can set it by running: `git config --global user.email "your_email@example.com"`
+
 ↓
 
 6. **<kbd><img src="https://api.iconify.design/lucide/git-pull-request.svg?color=white" width="16" style="vertical-align: middle;" /></kbd> Open a Pull Request**  

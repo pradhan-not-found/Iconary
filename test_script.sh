@@ -1,0 +1,806 @@
+
+gh label create "mentorship-available" || true
+gh label create "hacktoberfest" || true
+gh label create "open source" || true
+gh label create "machine learning" || true
+gh label create "contribution" || true
+gh label create "UI" || true
+gh label create "good first issue" || true
+gh label create "help wanted" || true
+gh label create "hard" || true
+gh label create "optimization" || true
+gh label create "architecture" || true
+gh label create "tooling" || true
+gh label create "testing" || true
+gh label create "up-for-grabs" || true
+gh label create "automation" || true
+gh label create "design" || true
+gh label create "PWA" || true
+gh label create "backend" || true
+
+# Check if issue already exists to avoid duplicates
+if ! gh issue list --search "in:title Neural Networks" | grep -q "Neural Networks"; then
+  gh issue create \
+    --title "Add an icon for Neural Networks" \
+    --body "We need a new icon representing a Neural Network. 
+
+    ## Requirements
+    - Must have outline, filled, and duotone variants.
+    - Follow the style guide in \`STYLE_GUIDE.md\`.
+    - Include a 1-2 line concept explainer.
+
+    See \`CONTRIBUTING.md\` to get started!" \
+    --label "mentorship-available" --label "contribution"
+  sleep 2
+fi
+
+if ! gh issue list --search "in:title Vector Database" | grep -q "Vector Database"; then
+  gh issue create \
+    --title "Add an icon for Vector Database" \
+    --body "We need a new icon representing a Vector Database.
+
+    ## Requirements
+    - Must have outline, filled, and duotone variants.
+    - Follow the style guide in \`STYLE_GUIDE.md\`.
+    - Include a 1-2 line concept explainer.
+
+    See \`CONTRIBUTING.md\` to get started!" \
+    --label "open source" --label "contribution"
+  sleep 2
+fi
+
+if ! gh issue list --search "in:title Vue.js Support" | grep -q "Vue.js Support"; then
+  gh issue create \
+    --title "Add Vue.js Support" \
+    --body "We currently support React, but we want to make the Iconary library available for Vue.js developers as well!
+
+    ## Requirements
+    - Create a new Vue package in the repository.
+    - Ensure the build pipeline exports Vue components correctly.
+    - Update the README with Vue installation instructions." \
+    --label "machine learning" --label "UI"
+  sleep 2
+fi
+
+if ! gh issue list --search "in:title Large Language Model (LLM)" | grep -q "Large Language Model (LLM)"; then
+  gh issue create \
+    --title "Add an icon for Large Language Model (LLM)" \
+    --body "We need a core icon representing a Large Language Model.
+
+    ## Requirements
+    - Must have outline, filled, and duotone variants.
+    - Follow the style guide in \`STYLE_GUIDE.md\`.
+    - Include a 1-2 line concept explainer.
+
+    See \`CONTRIBUTING.md\` to get started!" \
+    --label "machine learning" --label "UI"
+  sleep 2
+fi
+
+if ! gh issue list --search "in:title RAG Architecture" | grep -q "RAG Architecture"; then
+  gh issue create \
+    --title "Add an icon for RAG Architecture" \
+    --body "We need an icon representing Retrieval-Augmented Generation (RAG).
+
+    ## Requirements
+    - Must have outline, filled, and duotone variants.
+    - Follow the style guide in \`STYLE_GUIDE.md\`.
+    - Include a 1-2 line concept explainer.
+
+    See \`CONTRIBUTING.md\` to get started!" \
+    --label "UI" --label "contribution"
+  sleep 2
+fi
+
+if ! gh issue list --search "in:title Authentication Lock" | grep -q "Authentication Lock"; then
+  gh issue create \
+    --title "Add an icon for Authentication Lock" \
+    --body "We need a standard lock icon for authentication and security UI.
+
+    ## Requirements
+    - Must have outline, filled, and duotone variants.
+    - Follow the style guide in \`STYLE_GUIDE.md\`.
+    - Include a 1-2 line concept explainer.
+
+    See \`CONTRIBUTING.md\` to get started!" \
+    --label "help wanted" --label "machine learning"
+  sleep 2
+fi
+
+if ! gh issue list --search "in:title TailwindCSS" | grep -q "TailwindCSS"; then
+  gh issue create \
+    --title "Add an icon for TailwindCSS" \
+    --body "We need a technology icon representing the TailwindCSS framework.
+
+    ## Requirements
+    - Must have outline, filled, and duotone variants.
+    - Follow the style guide in \`STYLE_GUIDE.md\`.
+    - Include a 1-2 line concept explainer.
+
+    See \`CONTRIBUTING.md\` to get started!" \
+    --label "good first issue" --label "open source"
+  sleep 2
+fi
+
+if ! gh issue list --search "in:title Figma Community File" | grep -q "Figma Community File"; then
+  gh issue create \
+    --title "Create a Figma Community File" \
+    --body "To make Iconary easier for designers to use, we should publish an official Figma community file.
+
+    ## Requirements
+    - Create a Figma file with all current icons.
+    - Organize by category.
+    - Include variants (Outline, Filled, Duotone) as components." \
+    --label "good first issue" --label "UI"
+  sleep 2
+fi
+
+if ! gh issue list --search "in:title Dark Mode Toggle" | grep -q "Dark Mode Toggle"; then
+  gh issue create \
+    --title "Add Dark Mode Toggle icon" \
+    --body "We need a sun/moon hybrid icon or standard toggle for switching to Dark Mode.
+
+    ## Requirements
+    - Must have outline, filled, and duotone variants.
+    - Follow the style guide in \`STYLE_GUIDE.md\`.
+    - Include a 1-2 line concept explainer.
+
+    See \`CONTRIBUTING.md\` to get started!" \
+    --label "hacktoberfest" --label "machine learning"
+  sleep 2
+fi
+
+if ! gh issue list --search "in:title Next.js" | grep -q "Next.js"; then
+  gh issue create \
+    --title "Add an icon for Next.js" \
+    --body "We need an icon representing the Next.js framework.
+
+    ## Requirements
+    - Must have outline, filled, and duotone variants.
+    - Follow the style guide in \`STYLE_GUIDE.md\`.
+    - Include a 1-2 line concept explainer.
+
+    See \`CONTRIBUTING.md\` to get started!" \
+    --label "hacktoberfest" --label "open source"
+  sleep 2
+fi
+
+if ! gh issue list --search "in:title Dataset" | grep -q "Dataset"; then
+  gh issue create \
+    --title "Add an icon for Dataset" \
+    --body "We need an icon representing a Dataset used in ML training or evaluation.
+
+    ## Requirements
+    - Must have outline, filled, and duotone variants.
+    - Follow the style guide in \`STYLE_GUIDE.md\`.
+    - Include a 1-2 line concept explainer.
+
+    See \`CONTRIBUTING.md\` to get started!" \
+    --label "open source" --label "contribution"
+  sleep 2
+fi
+
+if ! gh issue list --search "in:title Prompt Engineering" | grep -q "Prompt Engineering"; then
+  gh issue create \
+    --title "Add an icon for Prompt Engineering" \
+    --body "We need an icon representing the concept of Prompt Engineering for LLMs.
+
+    ## Requirements
+    - Must have outline, filled, and duotone variants.
+    - Follow the style guide in \`STYLE_GUIDE.md\`.
+    - Include a 1-2 line concept explainer.
+
+    See \`CONTRIBUTING.md\` to get started!" \
+    --label "help wanted" --label "machine learning"
+  sleep 2
+fi
+
+if ! gh issue list --search "in:title GPU Accelerator" | grep -q "GPU Accelerator"; then
+  gh issue create \
+    --title "Add an icon for GPU Accelerator" \
+    --body "We need an icon representing a GPU or hardware accelerator used for AI workloads.
+
+    ## Requirements
+    - Must have outline, filled, and duotone variants.
+    - Follow the style guide in \`STYLE_GUIDE.md\`.
+    - Include a 1-2 line concept explainer.
+
+    See \`CONTRIBUTING.md\` to get started!" \
+    --label "help wanted" --label "open source"
+  sleep 2
+fi
+
+if ! gh issue list --search "in:title Knowledge Graph" | grep -q "Knowledge Graph"; then
+  gh issue create \
+    --title "Add an icon for Knowledge Graph" \
+    --body "We need an icon representing a Knowledge Graph, often used with RAG architectures.
+
+    ## Requirements
+    - Must have outline, filled, and duotone variants.
+    - Follow the style guide in \`STYLE_GUIDE.md\`.
+    - Include a 1-2 line concept explainer.
+
+    See \`CONTRIBUTING.md\` to get started!" \
+    --label "help wanted" --label "machine learning"
+  sleep 2
+fi
+
+if ! gh issue list --search "in:title Tokenization" | grep -q "Tokenization"; then
+  gh issue create \
+    --title "Add an icon for Tokenization" \
+    --body "We need an icon representing the concept of Tokenization (splitting text into tokens).
+
+    ## Requirements
+    - Must have outline, filled, and duotone variants.
+    - Follow the style guide in \`STYLE_GUIDE.md\`.
+    - Include a 1-2 line concept explainer.
+
+    See \`CONTRIBUTING.md\` to get started!" \
+    --label "good first issue" --label "open source"
+  sleep 2
+fi
+
+if ! gh issue list --search "in:title Generative Adversarial Network" | grep -q "Generative Adversarial Network"; then
+  gh issue create \
+    --title "Add an icon for Generative Adversarial Network (GAN)" \
+    --body "We need an icon representing a GAN architecture.
+
+    ## Requirements
+    - Must have outline, filled, and duotone variants.
+    - Follow the style guide in \`STYLE_GUIDE.md\`.
+    - Include a 1-2 line concept explainer.
+
+    See \`CONTRIBUTING.md\` to get started!" \
+    --label "good first issue" --label "open source"
+  sleep 2
+fi
+
+if ! gh issue list --search "in:title Reinforcement Learning" | grep -q "Reinforcement Learning"; then
+  gh issue create \
+    --title "Add an icon for Reinforcement Learning" \
+    --body "We need an icon representing Reinforcement Learning (agents, rewards, environments).
+
+    ## Requirements
+    - Must have outline, filled, and duotone variants.
+    - Follow the style guide in \`STYLE_GUIDE.md\`.
+    - Include a 1-2 line concept explainer.
+
+    See \`CONTRIBUTING.md\` to get started!" \
+    --label "hacktoberfest" --label "machine learning"
+  sleep 2
+fi
+
+if ! gh issue list --search "in:title Attention Mechanism" | grep -q "Attention Mechanism"; then
+  gh issue create \
+    --title "Add an icon for Attention Mechanism" \
+    --body "We need an icon representing the Attention Mechanism used in Transformers.
+
+    ## Requirements
+    - Must have outline, filled, and duotone variants.
+    - Follow the style guide in \`STYLE_GUIDE.md\`.
+    - Include a 1-2 line concept explainer.
+
+    See \`CONTRIBUTING.md\` to get started!" \
+    --label "help wanted" --label "open source"
+  sleep 2
+fi
+
+if ! gh issue list --search "in:title Hyperparameter Tuning" | grep -q "Hyperparameter Tuning"; then
+  gh issue create \
+    --title "Add an icon for Hyperparameter Tuning" \
+    --body "We need an icon representing Hyperparameter Tuning or Optimization.
+
+    ## Requirements
+    - Must have outline, filled, and duotone variants.
+    - Follow the style guide in \`STYLE_GUIDE.md\`.
+    - Include a 1-2 line concept explainer.
+
+    See \`CONTRIBUTING.md\` to get started!" \
+    --label "UI" --label "contribution"
+  sleep 2
+fi
+
+if ! gh issue list --search "in:title Bias and Fairness" | grep -q "Bias and Fairness"; then
+  gh issue create \
+    --title "Add an icon for Bias and Fairness in AI" \
+    --body "We need an icon representing the concept of Bias and Fairness in machine learning models.
+
+    ## Requirements
+    - Must have outline, filled, and duotone variants.
+    - Follow the style guide in \`STYLE_GUIDE.md\`.
+    - Include a 1-2 line concept explainer.
+
+    See \`CONTRIBUTING.md\` to get started!" \
+    --label "good first issue" --label "open source"
+  sleep 2
+fi
+
+if ! gh issue list --search "in:title Data Pipeline" | grep -q "Data Pipeline"; then
+  gh issue create \
+    --title "Add an icon for Data Pipeline / ETL" \
+    --body "We need an icon representing a Data Pipeline or ETL (Extract, Transform, Load) process.
+
+    ## Requirements
+    - Must have outline, filled, and duotone variants.
+    - Follow the style guide in \`STYLE_GUIDE.md\`.
+    - Include a 1-2 line concept explainer.
+
+    See \`CONTRIBUTING.md\` to get started!" \
+    --label "open source" --label "contribution"
+  sleep 2
+fi
+
+if ! gh issue list --search "in:title Edge AI" | grep -q "Edge AI"; then
+  gh issue create \
+    --title "Add an icon for Edge AI" \
+    --body "We need an icon representing Edge AI (running models on local or edge devices).
+
+    ## Requirements
+    - Must have outline, filled, and duotone variants.
+    - Follow the style guide in \`STYLE_GUIDE.md\`.
+    - Include a 1-2 line concept explainer.
+
+    See \`CONTRIBUTING.md\` to get started!" \
+    --label "hacktoberfest" --label "machine learning"
+  sleep 2
+fi
+
+if ! gh issue list --search "in:title Model Checkpoint" | grep -q "Model Checkpoint"; then
+  gh issue create \
+    --title "Add an icon for Model Checkpoint" \
+    --body "We need an icon representing a Model Checkpoint saved during training.
+
+    ## Requirements
+    - Must have outline, filled, and duotone variants.
+    - Follow the style guide in \`STYLE_GUIDE.md\`.
+    - Include a 1-2 line concept explainer.
+
+    See \`CONTRIBUTING.md\` to get started!" \
+    --label "good first issue" --label "UI"
+  sleep 2
+fi
+
+if ! gh issue list --search "in:title AI Hallucination" | grep -q "AI Hallucination"; then
+  gh issue create \
+    --title "Add an icon for AI Hallucination" \
+    --body "We need an icon representing an AI Hallucination or an incorrect confident response.
+
+    ## Requirements
+    - Must have outline, filled, and duotone variants.
+    - Follow the style guide in \`STYLE_GUIDE.md\`.
+    - Include a 1-2 line concept explainer.
+
+    See \`CONTRIBUTING.md\` to get started!" \
+    --label "good first issue" --label "open source"
+  sleep 2
+fi
+
+if ! gh issue list --search "in:title MLOps" | grep -q "MLOps"; then
+  gh issue create \
+    --title "Add an icon for MLOps" \
+    --body "We need an icon representing MLOps (Machine Learning Operations) workflows.
+
+    ## Requirements
+    - Must have outline, filled, and duotone variants.
+    - Follow the style guide in \`STYLE_GUIDE.md\`.
+    - Include a 1-2 line concept explainer.
+
+    See \`CONTRIBUTING.md\` to get started!" \
+    --label "open source" --label "contribution"
+  sleep 2
+fi
+
+if ! gh issue list --search "in:title Zero-Shot Learning" | grep -q "Zero-Shot Learning"; then
+  gh issue create \
+    --title "Add an icon for Zero-Shot Learning" \
+    --body "We need an icon representing Zero-Shot Learning for AI models.
+
+    ## Requirements
+    - Must have outline, filled, and duotone variants.
+    - Follow the style guide in \`STYLE_GUIDE.md\`.
+    - Include a 1-2 line concept explainer.
+
+    See \`CONTRIBUTING.md\` to get started!" \
+    --label "good first issue" --label "UI"
+  sleep 2
+fi
+
+if ! gh issue list --search "in:title Transfer Learning" | grep -q "Transfer Learning"; then
+  gh issue create \
+    --title "Add an icon for Transfer Learning" \
+    --body "We need an icon representing the concept of Transfer Learning (transferring weights from one model to another).
+
+    ## Requirements
+    - Must have outline, filled, and duotone variants.
+    - Follow the style guide in \`STYLE_GUIDE.md\`.
+    - Include a 1-2 line concept explainer.
+
+    See \`CONTRIBUTING.md\` to get started!" \
+    --label "mentorship-available" --label "contribution"
+  sleep 2
+fi
+
+if ! gh issue list --search "in:title Computer Vision" | grep -q "Computer Vision"; then
+  gh issue create \
+    --title "Add an icon for Computer Vision" \
+    --body "We need an icon representing Computer Vision tasks or CNN architectures.
+
+    ## Requirements
+    - Must have outline, filled, and duotone variants.
+    - Follow the style guide in \`STYLE_GUIDE.md\`.
+    - Include a 1-2 line concept explainer.
+
+    See \`CONTRIBUTING.md\` to get started!" \
+    --label "good first issue" --label "UI"
+  sleep 2
+fi
+
+if ! gh issue list --search "in:title NLP" | grep -q "NLP"; then
+  gh issue create \
+    --title "Add an icon for NLP (Natural Language Processing)" \
+    --body "We need an icon representing NLP tasks (Natural Language Processing).
+
+    ## Requirements
+    - Must have outline, filled, and duotone variants.
+    - Follow the style guide in \`STYLE_GUIDE.md\`.
+    - Include a 1-2 line concept explainer.
+
+    See \`CONTRIBUTING.md\` to get started!" \
+    --label "hacktoberfest" --label "machine learning"
+  sleep 2
+fi
+
+if ! gh issue list --search "in:title Model Weights" | grep -q "Model Weights"; then
+  gh issue create \
+    --title "Add an icon for Model Weights" \
+    --body "We need an icon representing Model Weights or Parameters.
+
+    ## Requirements
+    - Must have outline, filled, and duotone variants.
+    - Follow the style guide in \`STYLE_GUIDE.md\`.
+    - Include a 1-2 line concept explainer.
+
+    See \`CONTRIBUTING.md\` to get started!" \
+    --label "UI" --label "contribution"
+  sleep 2
+fi
+
+if ! gh issue list --search "in:title Activation Function" | grep -q "Activation Function"; then
+  gh issue create \
+    --title "Add an icon for Activation Function" \
+    --body "We need an icon representing an Activation Function (like ReLU, Sigmoid).
+
+    ## Requirements
+    - Must have outline, filled, and duotone variants.
+    - Follow the style guide in \`STYLE_GUIDE.md\`.
+    - Include a 1-2 line concept explainer.
+
+    See \`CONTRIBUTING.md\` to get started!" \
+    --label "mentorship-available" --label "contribution"
+  sleep 2
+fi
+
+if ! gh issue list --search "in:title Gradient Descent" | grep -q "Gradient Descent"; then
+  gh issue create \
+    --title "Add an icon for Gradient Descent" \
+    --body "We need an icon representing the concept of Gradient Descent or loss minimization.
+
+    ## Requirements
+    - Must have outline, filled, and duotone variants.
+    - Follow the style guide in \`STYLE_GUIDE.md\`.
+    - Include a 1-2 line concept explainer.
+
+    See \`CONTRIBUTING.md\` to get started!" \
+    --label "help wanted" --label "machine learning"
+  sleep 2
+fi
+
+if ! gh issue list --search "in:title Epoch" | grep -q "Epoch"; then
+  gh issue create \
+    --title "Add an icon for Epoch" \
+    --body "We need an icon representing an Epoch (training cycle).
+
+    ## Requirements
+    - Must have outline, filled, and duotone variants.
+    - Follow the style guide in \`STYLE_GUIDE.md\`.
+    - Include a 1-2 line concept explainer.
+
+    See \`CONTRIBUTING.md\` to get started!" \
+    --label "open source" --label "contribution"
+  sleep 2
+fi
+
+if ! gh issue list --search "in:title Model Deployment" | grep -q "Model Deployment"; then
+  gh issue create \
+    --title "Add an icon for Model Deployment" \
+    --body "We need an icon representing the deployment of a machine learning model to production.
+
+    ## Requirements
+    - Must have outline, filled, and duotone variants.
+    - Follow the style guide in \`STYLE_GUIDE.md\`.
+    - Include a 1-2 line concept explainer.
+
+    See \`CONTRIBUTING.md\` to get started!" \
+    --label "hacktoberfest" --label "machine learning" --label "open source"
+  sleep 2
+fi
+
+if ! gh issue list --search "in:title Data Drift" | grep -q "Data Drift"; then
+  gh issue create \
+    --title "Add an icon for Data Drift" \
+    --body "We need an icon representing the concept of Data Drift (when the distribution of data changes over time).
+
+    ## Requirements
+    - Must have outline, filled, and duotone variants.
+    - Follow the style guide in \`STYLE_GUIDE.md\`.
+    - Include a 1-2 line concept explainer.
+
+    See \`CONTRIBUTING.md\` to get started!" \
+    --label "machine learning" --label "contribution"
+  sleep 2
+fi
+
+if ! gh issue list --search "in:title Overfitting" | grep -q "Overfitting"; then
+  gh issue create \
+    --title "Add an icon for Overfitting" \
+    --body "We need an icon representing Overfitting in a machine learning model.
+
+    ## Requirements
+    - Must have outline, filled, and duotone variants.
+    - Follow the style guide in \`STYLE_GUIDE.md\`.
+    - Include a 1-2 line concept explainer.
+
+    See \`CONTRIBUTING.md\` to get started!" \
+    --label "mentorship-available" --label "open source"
+  sleep 2
+fi
+
+if ! gh issue list --search "in:title Implement WebGL Renderer" | grep -q "Implement WebGL Renderer"; then
+  gh issue create \
+    --title "Implement WebGL Renderer for Icon Gallery" \
+    --body "The current icon gallery can get slow when rendering thousands of SVG nodes. We need a WebGL-based renderer (e.g., using PixiJS or Three.js) to virtualize and render icons at 60fps. This is a complex architecture task.
+
+    See \\`CONTRIBUTING.md\\` to get started!" \
+    --label "hard" --label "optimization" --label "architecture"
+  sleep 2
+fi
+
+if ! gh issue list --search "in:title CLI tool for bulk SVG optimization" | grep -q "CLI tool for bulk SVG optimization"; then
+  gh issue create \
+    --title "Add a CLI tool for bulk SVG optimization" \
+    --body "We need a Node.js CLI tool that runs SVGO with custom plugins to optimize all icons in the \\`icons/\\` directory, ensuring consistent stroke widths and removing redundant paths. Must include unit tests.
+
+    See \\`CONTRIBUTING.md\\` to get started!" \
+    --label "hard" --label "tooling" --label "hacktoberfest"
+  sleep 2
+fi
+
+if ! gh issue list --search "in:title Implement Figma Plugin" | grep -q "Implement Figma Plugin"; then
+  gh issue create \
+    --title "Implement Figma Plugin for Iconary" \
+    --body "Designers need a way to drag and drop Iconary icons directly into their Figma files. Create a Figma Plugin using their API that fetches icons from our repository and inserts them as vector nodes.
+
+    See \\`CONTRIBUTING.md\\` to get started!" \
+    --label "hard" --label "UI" --label "open source"
+  sleep 2
+fi
+
+if ! gh issue list --search "in:title Create a VS Code Extension" | grep -q "Create a VS Code Extension"; then
+  gh issue create \
+    --title "Create a VS Code Extension for Iconary" \
+    --body "Build a VS Code extension that provides autocomplete for Iconary icon names and renders a preview of the icon on hover. This requires deep knowledge of the VS Code Extension API.
+
+    See \\`CONTRIBUTING.md\\` to get started!" \
+    --label "hard" --label "tooling" --label "mentorship-available"
+  sleep 2
+fi
+
+if ! gh issue list --search "in:title animated SVG variants" | grep -q "animated SVG variants"; then
+  gh issue create \
+    --title "Add support for animated SVG variants" \
+    --body "We want to introduce a new 'animated' variant for core icons (e.g., a spinning loader, a pulsing heart). Define the animation standards and implement the first 10 animated icons using CSS/SMIL.
+
+    See \\`CONTRIBUTING.md\\` to get started!" \
+    --label "hard" --label "UI" --label "architecture"
+  sleep 2
+fi
+
+if ! gh issue list --search "in:title Migrate documentation to Next.js App Router" | grep -q "Migrate documentation to Next.js App Router"; then
+  gh issue create \
+    --title "Migrate documentation to Next.js App Router" \
+    --body "Our current documentation site needs to be migrated to the Next.js App Router to take advantage of React Server Components and improved routing patterns. This is a major refactor.
+
+    See \\`CONTRIBUTING.md\\` to get started!" \
+    --label "hard" --label "architecture" --label "hacktoberfest"
+  sleep 2
+fi
+
+if ! gh issue list --search "in:title Implement an Icon Font generator" | grep -q "Implement an Icon Font generator"; then
+  gh issue create \
+    --title "Implement an Icon Font generator" \
+    --body "While SVGs are preferred, many users still want an icon font (.woff2). Implement a build step that automatically generates an icon font and corresponding CSS classes from our SVG assets.
+
+    See \\`CONTRIBUTING.md\\` to get started!" \
+    --label "hard" --label "tooling" --label "mentorship-available"
+  sleep 2
+fi
+
+if ! gh issue list --search "in:title robust E2E testing with Playwright" | grep -q "robust E2E testing with Playwright"; then
+  gh issue create \
+    --title "Add robust E2E testing with Playwright" \
+    --body "Set up a full End-to-End testing suite using Playwright for the Iconary web platform. Cover all critical user flows: browsing, searching, modal interactions, and downloading.
+
+    See \\`CONTRIBUTING.md\\` to get started!" \
+    --label "hard" --label "testing" --label "open source"
+  sleep 2
+fi
+
+if ! gh issue list --search "in:title semantic search with vector embeddings" | grep -q "semantic search with vector embeddings"; then
+  gh issue create \
+    --title "Implement semantic search with vector embeddings" \
+    --body "Instead of just keyword search, we want semantic search for icons (e.g., searching 'robot' should return the 'AI' icon). Use a lightweight embeddings model and a vector store to power the search.
+
+    See \\`CONTRIBUTING.md\\` to get started!" \
+    --label "hard" --label "machine learning" --label "architecture"
+  sleep 2
+fi
+
+if ! gh issue list --search "in:title automated Accessibility" | grep -q "automated Accessibility"; then
+  gh issue create \
+    --title "Build an automated Accessibility (a11y) linter" \
+    --body "Write a custom script that validates all SVG files in the repository to ensure they have proper \\`<title>\\` tags, \\`aria-hidden\\` attributes where appropriate, and pass standard accessibility checks.
+
+    See \\`CONTRIBUTING.md\\` to get started!" \
+    --label "hard" --label "tooling" --label "up-for-grabs"
+  sleep 2
+fi
+
+if ! gh issue list --search "in:title Implement SVGR integration" | grep -q "Implement SVGR integration"; then
+  gh issue create \
+    --title "Implement SVGR integration for React components" \
+    --body "Instead of manually building React components, we should use SVGR to automate the transformation of SVGs into React components during our build step. This will make maintaining the React package much easier.
+
+    See \`CONTRIBUTING.md\` to get started!" \
+    --label "tooling" --label "UI"
+  sleep 2
+fi
+
+if ! gh issue list --search "in:title automatic release notes" | grep -q "automatic release notes"; then
+  gh issue create \
+    --title "Add a GitHub Action for automatic release notes" \
+    --body "We need a GitHub Action that automatically generates comprehensive release notes based on PR labels (e.g., feature, bugfix, documentation) whenever a new tag is pushed.
+
+    See \`CONTRIBUTING.md\` to get started!" \
+    --label "tooling" --label "automation"
+  sleep 2
+fi
+
+if ! gh issue list --search "in:title Monorepo using Turborepo" | grep -q "Monorepo using Turborepo"; then
+  gh issue create \
+    --title "Migrate Iconary to a Monorepo using Turborepo" \
+    --body "As we add more framework packages (Vue, Angular, Svelte), the repository structure needs to be migrated to a proper monorepo using Turborepo for optimized build caching and task orchestration.
+
+    See \`CONTRIBUTING.md\` to get started!" \
+    --label "hard" --label "architecture" --label "tooling"
+  sleep 2
+fi
+
+if ! gh issue list --search "in:title Design a new logo" | grep -q "Design a new logo"; then
+  gh issue create \
+    --title "Design a new logo for Iconary" \
+    --body "The project needs a distinct and memorable logo. We are looking for something clean, modern, and related to vectors, AI, or geometric primitives. Open to all design contributions!
+
+    See \`CONTRIBUTING.md\` to get started!" \
+    --label "design" --label "UI" --label "up-for-grabs"
+  sleep 2
+fi
+
+if ! gh issue list --search "in:title generic <Icon> wrapper with React.Suspense" | grep -q "generic <Icon> wrapper with React.Suspense"; then
+  gh issue create \
+    --title "Implement a generic <Icon> wrapper with React.Suspense" \
+    --body "To improve initial load times, we should build a generic \\`<Icon>\\` wrapper component that lazy-loads specific SVG paths on demand using React.lazy and Suspense.
+
+    See \`CONTRIBUTING.md\` to get started!" \
+    --label "hard" --label "architecture" --label "optimization"
+  sleep 2
+fi
+
+if ! gh issue list --search "in:title Algolia integration" | grep -q "Algolia integration"; then
+  gh issue create \
+    --title "Add a search indexer for Algolia integration" \
+    --body "We want to integrate Algolia for lightning-fast search on the docs site. Build a Node.js script that parses all icon metadata and pushes the index to Algolia on every release.
+
+    See \`CONTRIBUTING.md\` to get started!" \
+    --label "tooling" --label "backend"
+  sleep 2
+fi
+
+if ! gh issue list --search "in:title offline caching via Service Workers" | grep -q "offline caching via Service Workers"; then
+  gh issue create \
+    --title "Implement offline caching via Service Workers" \
+    --body "The Iconary browse site should work entirely offline. Implement a Service Worker strategy (using Workbox) to cache the application shell and all SVG assets.
+
+    See \`CONTRIBUTING.md\` to get started!" \
+    --label "hard" --label "PWA" --label "optimization"
+  sleep 2
+fi
+
+if ! gh issue list --search "in:title Angular adapter" | grep -q "Angular adapter"; then
+  gh issue create \
+    --title "Create an Angular adapter for the Iconary core" \
+    --body "We have packages for React and Vue, but we need native Angular components. Create the build pipeline and component templates to export Angular-compatible icons.
+
+    See \`CONTRIBUTING.md\` to get started!" \
+    --label "architecture" --label "contribution"
+  sleep 2
+fi
+
+if ! gh issue list --search "in:title design system to Storybook" | grep -q "design system to Storybook"; then
+  gh issue create \
+    --title "Publish Iconary's design system to Storybook" \
+    --body "Set up Storybook to document our internal UI components (modals, buttons, dropdowns) used on the website. This will make it easier for contributors to build new pages.
+
+    See \`CONTRIBUTING.md\` to get started!" \
+    --label "UI" --label "tooling" --label "up-for-grabs"
+  sleep 2
+fi
+
+if ! gh issue list --search "in:title integration tests for SVGO" | grep -q "integration tests for SVGO"; then
+  gh issue create \
+    --title "Add integration tests for SVGO compression rates" \
+    --body "Write a test suite that runs our SVGO pipeline on a set of benchmark icons and fails the CI build if the compression rate drops below an acceptable threshold or if visual regressions occur.
+
+    See \`CONTRIBUTING.md\` to get started!" \
+    --label "testing" --label "hard"
+  sleep 2
+fi
+
+if ! gh issue list --search "in:title interactive 'Icon Builder' playground" | grep -q "interactive 'Icon Builder' playground"; then
+  gh issue create \
+    --title "Implement an interactive 'Icon Builder' playground" \
+    --body "Create a new page on the web app where users can dynamically mix and match geometric shapes to generate their own custom SVG icons and export them.
+
+    See \`CONTRIBUTING.md\` to get started!" \
+    --label "UI" --label "hard" --label "mentorship-available"
+  sleep 2
+fi
+
+if ! gh issue list --search "in:title reduce tailwind.css bundle size" | grep -q "reduce tailwind.css bundle size"; then
+  gh issue create \
+    --title "Audit and reduce tailwind.css bundle size" \
+    --body "Our production CSS bundle is slightly larger than necessary. Audit the Tailwind configuration, remove unused generic utilities, and implement strict purge paths.
+
+    See \`CONTRIBUTING.md\` to get started!" \
+    --label "optimization" --label "UI"
+  sleep 2
+fi
+
+if ! gh issue list --search "in:title custom icon bundles CLI" | grep -q "custom icon bundles CLI"; then
+  gh issue create \
+    --title "Create a CLI to generate custom icon bundles" \
+    --body "Provide a CLI tool (e.g. \\`npx create-iconary-bundle\\`) that allows developers to select exactly which icons they want and generates a tiny, optimized file just for those icons.
+
+    See \`CONTRIBUTING.md\` to get started!" \
+    --label "tooling" --label "hard"
+  sleep 2
+fi
+
+if ! gh issue list --search "in:title agnostic Web Components" | grep -q "agnostic Web Components"; then
+  gh issue create \
+    --title "Support generic framework-agnostic Web Components" \
+    --body "Using Lit or standard web APIs, wrap our SVGs into generic Web Components (\\`<iconary-icon>\\`) so they can be dropped into any tech stack without a specific framework wrapper.
+
+    See \`CONTRIBUTING.md\` to get started!" \
+    --label "architecture" --label "open source"
+  sleep 2
+fi
+
+if ! gh issue list --search "in:title internationalization (i18n)" | grep -q "internationalization (i18n)"; then
+  gh issue create \
+    --title "Add internationalization (i18n) for icon tags and descriptions" \
+    --body "To support a global community, we need to translate our icon search tags and concept descriptions into multiple languages (starting with Spanish and French). Set up the i18n infrastructure.
+
+    See \`CONTRIBUTING.md\` to get started!" \
+    --label "contribution" --label "UI"
+  sleep 2
+fi
