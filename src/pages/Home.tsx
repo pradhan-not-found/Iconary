@@ -103,10 +103,9 @@ export function Home() {
               <p className="mt-6 max-w-2xl text-lg leading-relaxed text-[#a3a3a3]">
                 Open source icons for AI, ML & data tooling — every icon ships in outline, filled, and duotone, and comes with a plain-English explanation of the concept it represents. MIT licensed, framework-ready, and always growing.
               </p>
-              <div className="mt-8 flex flex-wrap gap-px">
+              <div className="mt-8 flex flex-wrap gap-3">
                 <Link to="/browse" className="bg-white text-black px-6 py-3 text-sm font-bold border border-[#333] transition-colors hover:bg-[#e5e5e5]">Browse icons</Link>
                 <a href="#docs" className="bg-transparent text-white px-6 py-3 text-sm font-bold border border-[#333] transition-colors hover:bg-[#222]">Read the docs</a>
-                <a href="#faq" className="bg-transparent text-[#a3a3a3] px-6 py-3 text-sm font-bold border border-[#333] transition-colors hover:bg-[#222] hover:text-white">FAQ</a>
               </div>
             </div>
 
