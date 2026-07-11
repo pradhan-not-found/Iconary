@@ -4,6 +4,42 @@ First off, thank you for considering contributing to Iconary! It's people like y
 
 Iconary welcomes contributors of all skill levels. We have issues ranging from `easy` (fixing typos) to `hard` (building WebGL renderers).
 
+## <img src="https://api.iconify.design/lucide/sprout.svg?color=white" width="20" style="vertical-align: text-bottom;" /> First-Time Contributor Flowchart
+
+If you are new to open-source or Git, follow this step-by-step process:
+
+<br />
+
+1. **<kbd><img src="https://api.iconify.design/lucide/git-fork.svg?color=white" width="16" style="vertical-align: middle;" /></kbd> Fork it**  
+Click "Fork" at the top right of the repository to copy it to your account.
+
+↓
+
+2. **<kbd><img src="https://api.iconify.design/lucide/download-cloud.svg?color=white" width="16" style="vertical-align: middle;" /></kbd> Clone & Install**  
+Clone your forked repository locally (`git clone https://github.com/YOUR_NAME/Iconary.git`) and run `npm install`.
+
+↓
+
+3. **<kbd><img src="https://api.iconify.design/lucide/git-branch.svg?color=white" width="16" style="vertical-align: middle;" /></kbd> Create a Branch**  
+Create a new branch for your work (`git checkout -b feature/my-new-icon`).
+
+↓
+
+4. **<kbd><img src="https://api.iconify.design/lucide/code.svg?color=white" width="16" style="vertical-align: middle;" /></kbd> Make Changes**  
+Write code, design an icon, or fix a typo! Test locally by running `npm run dev`.
+
+↓
+
+5. **<kbd><img src="https://api.iconify.design/lucide/upload-cloud.svg?color=white" width="16" style="vertical-align: middle;" /></kbd> Commit & Push**  
+Save your changes (`git commit -m "add my new icon"`) and push to your fork (`git push origin feature/my-new-icon`).
+
+↓
+
+6. **<kbd><img src="https://api.iconify.design/lucide/git-pull-request.svg?color=white" width="16" style="vertical-align: middle;" /></kbd> Open a Pull Request**  
+Go to the original repository and click "New Pull Request".
+
+<br />
+
 ## 🛠 Tech Stack
 
 Iconary's website and core tooling are built with:
@@ -68,8 +104,13 @@ There are many ways you can contribute to Iconary:
 5. Open a Pull Request. Provide a clear description and attach screenshots or screen recordings if you changed the UI.
 6. A maintainer will review your PR, suggest changes if needed, and merge it!
 
-## 💬 Need Help?
+## 👑 Official Maintainer
 
-If you get stuck or have questions about the architecture, feel free to open a Discussion on GitHub or tag `@pradhan-not-found` in your Pull Request. We provide mentorship for our `mentorship-available` issues and love helping first-time contributors!
+Iconary is proudly maintained and curated by:
+- **Name:** Souradeep Pradhan
+- **GitHub:** [@pradhan-not-found](https://github.com/pradhan-not-found)
+- **Website:** [souradeep.me](https://souradeep.me)
+
+If you get stuck or have questions about the architecture, feel free to open a Discussion on GitHub or tag the maintainer in your Pull Request. We provide mentorship for our `mentorship-available` issues and love helping first-time contributors!
 
 Thank you for building Iconary with us! 🖤
