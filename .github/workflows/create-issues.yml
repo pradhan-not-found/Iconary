@@ -1293,3 +1293,133 @@ jobs:
               --label "icon-request" --label "design" --label "easy"
             sleep 2
           fi
+
+          if ! gh issue list --search "in:title Design an 'Agentic Loop' Icon" | grep -q "Design an 'Agentic Loop' Icon"; then
+            gh issue create \
+              --title "Design an 'Agentic Loop / Autonomous Loop' Icon" \
+              --body "We need a highly specific icon for autonomous AI agents. An 'Agentic Loop' represents the Observe-Reason-Act cycle (like OODA loops). This doesn't exist in standard icon sets!
+
+              Check out \\`STYLE_GUIDE.md\\` before you start designing!" \
+              --label "icon-request" --label "design" --label "medium"
+            sleep 2
+          fi
+
+          if ! gh issue list --search "in:title Design a 'Function Calling' Icon" | grep -q "Design a 'Function Calling' Icon"; then
+            gh issue create \
+              --title "Design a 'Function Calling / Tool Use' Icon" \
+              --body "LLMs use tools (Function Calling) to interact with the outside world. We need an icon that represents an AI model reaching out to use a tool (maybe a robot arm with a wrench, or an API socket).
+
+              Check out \\`STYLE_GUIDE.md\\` before you start designing!" \
+              --label "icon-request" --label "design" --label "medium"
+            sleep 2
+          fi
+
+          if ! gh issue list --search "in:title Design a 'System Prompt' Icon" | grep -q "Design a 'System Prompt' Icon"; then
+            gh issue create \
+              --title "Design a 'System Prompt / Metaprompt' Icon" \
+              --body "A System Prompt is the foundational instruction set for an LLM. We need an icon that distinguishes a 'System Prompt' from a regular user chat message (perhaps a terminal prompt with a crown or gear).
+
+              Check out \\`STYLE_GUIDE.md\\` before you start designing!" \
+              --label "icon-request" --label "design" --label "easy"
+            sleep 2
+          fi
+
+          if ! gh issue list --search "in:title Design a 'Context Window' Icon" | grep -q "Design a 'Context Window' Icon"; then
+            gh issue create \
+              --title "Design a 'Context Window' Icon" \
+              --body "We need an icon to represent an LLM's 'Context Window' or 'Context Limit'. This could be a document expanding, a memory buffer, or a framed boundary.
+
+              Check out \\`STYLE_GUIDE.md\\` before you start designing!" \
+              --label "icon-request" --label "design" --label "medium"
+            sleep 2
+          fi
+
+          if ! gh issue list --search "in:title Design a 'Multi-Agent System' Icon" | grep -q "Design a 'Multi-Agent System' Icon"; then
+            gh issue create \
+              --title "Design a 'Multi-Agent System' Icon" \
+              --body "Represent a Swarm or Multi-Agent System where several AI agents communicate and collaborate. (e.g., connected robot nodes).
+
+              Check out \\`STYLE_GUIDE.md\\` before you start designing!" \
+              --label "icon-request" --label "design" --label "hard"
+            sleep 2
+          fi
+
+          if ! gh issue list --search "in:title Design a 'Chain of Thought' Icon" | grep -q "Design a 'Chain of Thought' Icon"; then
+            gh issue create \
+              --title "Design a 'Chain of Thought / Reasoning' Icon" \
+              --body "We need an icon for Chain-of-Thought (CoT) reasoning. This represents the step-by-step logic an LLM takes before answering. (e.g., connected thought bubbles or a logical sequence).
+
+              Check out \\`STYLE_GUIDE.md\\` before you start designing!" \
+              --label "icon-request" --label "design" --label "medium"
+            sleep 2
+          fi
+
+          if ! gh issue list --search "in:title Design a 'Model Hallucination' Icon" | grep -q "Design a 'Model Hallucination' Icon"; then
+            gh issue create \
+              --title "Design a 'Model Hallucination' Icon" \
+              --body "A very rare icon request! We need an icon to represent AI 'Hallucinations' (when a model confidently states false information). Maybe a distorted robot or a mirage/glitch effect.
+
+              Check out \\`STYLE_GUIDE.md\\` before you start designing!" \
+              --label "icon-request" --label "design" --label "hard"
+            sleep 2
+          fi
+
+          if ! gh issue list --search "in:title Design a 'Tokenization' Icon" | grep -q "Design a 'Tokenization' Icon"; then
+            gh issue create \
+              --title "Design a 'Tokenization / Token Limit' Icon" \
+              --body "Design an icon that represents text being broken down into LLM tokens (e.g., a word being sliced into geometric blocks).
+
+              Check out \\`STYLE_GUIDE.md\\` before you start designing!" \
+              --label "icon-request" --label "design" --label "medium"
+            sleep 2
+          fi
+
+          if ! gh issue list --search "in:title Design a 'Zero-Shot Prompting' Icon" | grep -q "Design a 'Zero-Shot Prompting' Icon"; then
+            gh issue create \
+              --title "Design a 'Zero-Shot Prompting' Icon" \
+              --body "Design an icon for Zero-Shot prompting (asking a model to do a task without giving it any examples). 
+
+              Check out \\`STYLE_GUIDE.md\\` before you start designing!" \
+              --label "icon-request" --label "design" --label "hard"
+            sleep 2
+          fi
+
+          if ! gh issue list --search "in:title Design an 'Agentic Sandbox' Icon" | grep -q "Design an 'Agentic Sandbox' Icon"; then
+            gh issue create \
+              --title "Design an 'Agentic Sandbox' Icon" \
+              --body "AI coding agents (like Devin or Antigravity) run code in secure Sandboxes. We need an icon representing a secure execution environment or isolated terminal sandbox.
+
+              Check out \\`STYLE_GUIDE.md\\` before you start designing!" \
+              --label "icon-request" --label "design" --label "medium"
+            sleep 2
+          fi
+
+          if ! gh issue list --search "in:title Design an 'AI Self-Reflection' Icon" | grep -q "Design an 'AI Self-Reflection' Icon"; then
+            gh issue create \
+              --title "Design an 'AI Self-Reflection / Eval' Icon" \
+              --body "Advanced agents use self-reflection to evaluate their own output and correct mistakes. We need an icon for an AI reviewing or looking at itself (a robot looking in a mirror?).
+
+              Check out \\`STYLE_GUIDE.md\\` before you start designing!" \
+              --label "icon-request" --label "design" --label "hard"
+            sleep 2
+          fi
+
+          if ! gh issue list --search "in:title Design a 'LoRA / Fine-Tuning' Icon" | grep -q "Design a 'LoRA / Fine-Tuning' Icon"; then
+            gh issue create \
+              --title "Design a 'LoRA / Low-Rank Adaptation' Icon" \
+              --body "Fine-tuning models using LoRA (Low-Rank Adaptation) is huge right now. We need an icon representing attaching a small, lightweight adapter to a massive foundational model.
+
+              Check out \\`STYLE_GUIDE.md\\` before you start designing!" \
+              --label "icon-request" --label "design" --label "hard"
+            sleep 2
+          fi
+
+          if ! gh issue list --search "in:title Design a 'Vector Embedding Space' Icon" | grep -q "Design a 'Vector Embedding Space' Icon"; then
+            gh issue create \
+              --title "Design a 'Vector Embedding Space' Icon" \
+              --body "Design an icon visualizing a high-dimensional vector space (often used in RAG and semantic search). Think 3D scatter plots or constellation meshes.
+
+              Check out \\`STYLE_GUIDE.md\\` before you start designing!" \
+              --label "icon-request" --label "design" --label "medium"
+            sleep 2
+          fi
