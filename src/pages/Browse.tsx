@@ -7,11 +7,20 @@ export function Browse() {
   const [search, setSearch] = useState('');
   const [category, setCategory] = useState<string | null>(null);
   const [showFilters, setShowFilters] = useState(false);
+  const [selectedIcon, setSelectedIcon] = useState<{id: string, name: string, icon: any} | null>(null);
+  const [activeTab, setActiveTab] = useState<'React' | 'Vue' | 'SVG'>('React');
 
   const handleCopy = (iconId: string) => {
-    const code = `import { ${iconId} } from "@hugeicons/react";\n\n<${iconId} />`;
+    let code = '';
+    if (activeTab === 'React') {
+      code = `import { ${iconId} } from "@iconary/react";\n\n<${iconId} size={24} />`;
+    } else if (activeTab === 'Vue') {
+      code = `import { ${iconId} } from "iconary-vue";\n\n<${iconId} :size="24" />`;
+    } else {
+      code = `<svg width="24" height="24" viewBox="0 0 24 24" fill="none"\n  stroke="currentColor" strokeWidth="1.5"\n  strokeLinecap="round" strokeLinejoin="round">\n  <!-- paths... -->\n</svg>`;
+    }
     navigator.clipboard.writeText(code);
-    toast.success(`Copied code for ${iconId}`);
+    toast.success(`Copied ${activeTab} code for ${iconId}`);
   };
 
   // Extract exactly 1500 unique icons from the library
@@ -106,14 +115,15 @@ export function Browse() {
             {displayIcons.map((item) => (
             <div 
               key={item.id} 
-              onClick={() => handleCopy(item.id)}
-              title="Copy React component"
+              onClick={() => setSelectedIcon(item)}
+              title="View icon details"
               className="aspect-square flex flex-col items-center justify-center p-4 gap-3 border-r border-b border-[#333] bg-transparent hover:bg-[#1a1a1a] transition-all duration-200 cursor-pointer group relative"
             >
               <div className="absolute top-3 right-3 opacity-0 group-hover:opacity-100 transition-opacity duration-200">
                 <svg viewBox="0 0 24 24" className="w-[14px] h-[14px] stroke-[#888] group-hover:stroke-white fill-none stroke-[2px]" strokeLinecap="round" strokeLinejoin="round">
-                  <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
-                  <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+                  <path d="M15 3h6v6"></path>
+                  <path d="M10 14L21 3"></path>
+                  <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
                 </svg>
               </div>
               <HugeiconsIcon icon={item.icon} size={36} className="text-[#a3a3a3] group-hover:text-white group-hover:-translate-y-1 transition-all duration-300" />
@@ -127,6 +137,66 @@ export function Browse() {
           </div>
         </div>
       </div>
+
+      {selectedIcon && (
+        <div className="fixed inset-0 z-[100] flex items-center justify-center bg-black/60 backdrop-blur-sm p-4" onClick={() => setSelectedIcon(null)}>
+          <div className="bg-[#1a1a1a] border border-[#333] rounded-2xl shadow-2xl max-w-3xl w-full overflow-hidden" onClick={e => e.stopPropagation()}>
+            <div className="flex items-center justify-between px-6 py-4 border-b border-[#333]">
+              <div className="flex items-center gap-3">
+                <h3 className="text-xl font-display font-medium text-white">{selectedIcon.id}</h3>
+                <span className="bg-[#333] text-[#e5e5e5] text-[0.65rem] font-bold uppercase tracking-widest px-2 py-0.5 rounded-full">v1.0.0</span>
+              </div>
+              <button onClick={() => setSelectedIcon(null)} className="text-[#888] hover:text-white transition-colors p-1 rounded-md hover:bg-[#333]">
+                <svg viewBox="0 0 24 24" width="20" height="20" stroke="currentColor" strokeWidth="2" fill="none"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+              </button>
+            </div>
+            
+            <div className="p-8 flex flex-col md:flex-row gap-8">
+              <div className="flex-shrink-0 bg-[#0a0a0a] border border-[#333] rounded-xl w-48 h-48 flex items-center justify-center">
+                 <HugeiconsIcon icon={selectedIcon.icon} size={80} className="text-white" />
+              </div>
+              
+              <div className="flex flex-col flex-1">
+                <div className="flex items-center gap-1 border-b border-[#333] mb-5">
+                  {(['React', 'Vue', 'SVG'] as const).map(tab => (
+                    <button 
+                      key={tab}
+                      onClick={() => setActiveTab(tab)}
+                      className={`px-6 py-2.5 text-[0.85rem] font-medium transition-colors border-b-2 -mb-px ${activeTab === tab ? 'border-white text-white' : 'border-transparent text-[#888] hover:text-[#bbb]'}`}
+                    >
+                      {tab}
+                    </button>
+                  ))}
+                </div>
+                
+                <div className="bg-[#0a0a0a] border border-[#333] rounded-lg overflow-hidden">
+                  <div className="flex items-center justify-between px-4 py-2 border-b border-[#333] bg-[#111]">
+                    <span className="text-[0.65rem] uppercase tracking-widest text-[#606060] font-bold">Code snippet</span>
+                    <button onClick={() => handleCopy(selectedIcon.id)} className="flex items-center gap-1.5 text-[0.75rem] font-bold text-[#a3a3a3] hover:text-white transition-colors">
+                      <svg viewBox="0 0 24 24" width="14" height="14" stroke="currentColor" strokeWidth="2" fill="none" strokeLinecap="round" strokeLinejoin="round"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
+                      Copy
+                    </button>
+                  </div>
+                  <div className="p-4 overflow-x-auto">
+                    <code className="text-[0.85rem] text-[#e5e5e5] font-mono whitespace-pre">
+                      {activeTab === 'React' && `import { ${selectedIcon.id} } from "@iconary/react";\n\n<${selectedIcon.id} size={24} />`}
+                      {activeTab === 'Vue' && `import { ${selectedIcon.id} } from "iconary-vue";\n\n<${selectedIcon.id} :size="24" />`}
+                      {activeTab === 'SVG' && `<svg width="24" height="24" viewBox="0 0 24 24" fill="none"\n  stroke="currentColor" strokeWidth="1.5"\n  strokeLinecap="round" strokeLinejoin="round">\n  <!-- paths... -->\n</svg>`}
+                    </code>
+                  </div>
+                </div>
+                
+                <button 
+                  onClick={() => handleCopy(selectedIcon.id)}
+                  className="mt-5 w-full py-3 bg-white text-black font-bold text-[0.9rem] rounded-lg hover:bg-[#e5e5e5] transition-colors"
+                >
+                  Copy {activeTab} Code
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      )}
     </div>
   );
 }
