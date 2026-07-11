@@ -1,4 +1,5 @@
 import React, { useState, useEffect, useMemo } from 'react';
+import { Link } from 'react-router-dom';
 import { HugeiconsIcon } from "@hugeicons/react";
 import * as AllIcons from "@hugeicons/core-free-icons";
 
@@ -103,7 +104,7 @@ export function Home() {
                 Open source icons for AI, ML & data tooling — every icon ships in outline, filled, and duotone, and comes with a plain-English explanation of the concept it represents. MIT licensed, framework-ready, and always growing.
               </p>
               <div className="mt-8 flex flex-wrap gap-px">
-                <a href="#browse" className="bg-white text-black px-6 py-3 text-sm font-bold border border-[#333] transition-colors hover:bg-[#e5e5e5]">Browse icons</a>
+                <Link to="/browse" className="bg-white text-black px-6 py-3 text-sm font-bold border border-[#333] transition-colors hover:bg-[#e5e5e5]">Browse icons</Link>
                 <a href="#docs" className="bg-transparent text-white px-6 py-3 text-sm font-bold border border-[#333] transition-colors hover:bg-[#222]">Read the docs</a>
                 <a href="#faq" className="bg-transparent text-[#a3a3a3] px-6 py-3 text-sm font-bold border border-[#333] transition-colors hover:bg-[#222] hover:text-white">FAQ</a>
               </div>
@@ -184,7 +185,7 @@ export function Home() {
             </p>
           </div>
           <div className="px-6 md:px-12 py-16 border-t border-[#333]">
-            <div className="flex items-center gap-3 mb-8">
+            <div className="flex items-center gap-3 mb-8 flex-wrap">
               <div className="flex items-center justify-center w-10 h-10 bg-gradient-to-b from-white/10 to-white/5 border border-white/10 rounded-lg backdrop-blur-md shadow-lg relative overflow-hidden group">
                 <div className="absolute inset-0 bg-white/5 opacity-0 group-hover:opacity-100 transition-opacity"></div>
                 <img src={`${import.meta.env.BASE_URL}logo/react.png`} alt="React" className="w-5 h-5 object-contain drop-shadow-md" />
@@ -197,11 +198,19 @@ export function Home() {
                 <div className="absolute inset-0 bg-white/5 opacity-0 group-hover:opacity-100 transition-opacity"></div>
                 <img src={`${import.meta.env.BASE_URL}logo/Svelte.png`} alt="Svelte" className="w-5 h-5 object-contain drop-shadow-md" />
               </div>
+              <div className="flex items-center justify-center w-10 h-10 bg-gradient-to-b from-white/10 to-white/5 border border-white/10 rounded-lg backdrop-blur-md shadow-lg relative overflow-hidden group">
+                <div className="absolute inset-0 bg-white/5 opacity-0 group-hover:opacity-100 transition-opacity"></div>
+                <img src={`${import.meta.env.BASE_URL}logo/angular.png`} alt="Angular" className="w-5 h-5 object-contain drop-shadow-md" />
+              </div>
+              <div className="flex items-center justify-center w-10 h-10 bg-gradient-to-b from-white/10 to-white/5 border border-white/10 rounded-lg backdrop-blur-md shadow-lg relative overflow-hidden group">
+                <div className="absolute inset-0 bg-white/5 opacity-0 group-hover:opacity-100 transition-opacity"></div>
+                <img src={`${import.meta.env.BASE_URL}logo/flutter.png`} alt="Flutter" className="w-6 h-6 object-contain drop-shadow-md" />
+              </div>
             </div>
             <span className="text-[#606060] uppercase tracking-widest text-xs font-normal font-display block mb-2">FRAMEWORK READY</span>
             <h3 className="text-xl font-normal font-display text-white mb-2">Drop into your stack</h3>
             <p className="text-[0.95rem] leading-relaxed text-[#a3a3a3]">
-              Published as packages for React, Vue, and Svelte, with raw SVG and a Figma library available for design work.
+              Published as packages for React, Vue, Svelte, Angular, and Flutter — with raw SVG and a Figma library available for design work.
             </p>
           </div>
         </div>
