@@ -1,6 +1,6 @@
 import { useState } from "react"
 import { toast } from "sonner"
-import { HugeiconsIcon } from "@hugeicons/react"
+import { IconaryIcon } from "./IconaryIcon"
 import { Copy01Icon, Search01Icon } from "@hugeicons/core-free-icons"
 
 interface IconRegistryEntry {
@@ -20,7 +20,7 @@ export function IconGallery({ initialIcons }: { initialIcons: IconRegistryEntry[
   )
 
   const copyToClipboard = (iconName: string) => {
-    const reactSnippet = `<HugeiconsIcon icon={${iconName}} />`
+    const reactSnippet = `<IconaryIcon icon={${iconName}} />`
     navigator.clipboard.writeText(reactSnippet)
     toast.success(`Copied React snippet for ${iconName}`)
   }
@@ -29,7 +29,7 @@ export function IconGallery({ initialIcons }: { initialIcons: IconRegistryEntry[
     <div className="w-full flex flex-col gap-8 animate-fade-in-up" style={{ animationDelay: '300ms' }}>
       <div className="relative w-full max-w-xl mx-auto">
         <div className="absolute inset-y-0 left-4 flex items-center pointer-events-none">
-          <HugeiconsIcon icon={Search01Icon} className="text-[#606060]" />
+          <IconaryIcon icon={Search01Icon} className="text-[#606060]" />
         </div>
         <input
           type="text"
@@ -54,7 +54,7 @@ export function IconGallery({ initialIcons }: { initialIcons: IconRegistryEntry[
               {icon.name}
             </span>
             <div className="absolute top-2 right-2 opacity-0 group-hover:opacity-100 transition-opacity">
-              <HugeiconsIcon icon={Copy01Icon} size={16} className="text-[#606060]" />
+              <IconaryIcon icon={Copy01Icon} size={16} className="text-[#606060]" />
             </div>
           </div>
         ))}
@@ -63,7 +63,7 @@ export function IconGallery({ initialIcons }: { initialIcons: IconRegistryEntry[
       {filteredIcons.length === 0 && (
         <div className="py-20 text-center flex flex-col items-center gap-4">
           <div className="w-16 h-16 rounded-2xl bg-[#111111] flex items-center justify-center text-[#606060]">
-            <HugeiconsIcon icon={Search01Icon} size={32} />
+            <IconaryIcon icon={Search01Icon} size={32} />
           </div>
           <p className="text-[#a0a0a0]">No icons found for "{search}"</p>
         </div>

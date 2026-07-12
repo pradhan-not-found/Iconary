@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useMemo } from 'react';
 import { Link } from 'react-router-dom';
-import { HugeiconsIcon } from "@hugeicons/react";
+import { IconaryIcon } from '../components/IconaryIcon';
 import * as AllIcons from "@hugeicons/core-free-icons";
 
 const ICONS = [
@@ -140,7 +140,7 @@ export function Home() {
             {LABELS.map((label, index) => (
               <div key={label} className="bg-[#1a1a1a] aspect-square flex flex-col gap-4 items-center justify-center transition-all duration-500">
                 <div className="w-12 h-12 flex items-center justify-center">
-                  <HugeiconsIcon icon={displayedIcons[index] || displayedIcons[0]} size={42} className="text-white transition-opacity duration-300" />
+                  <IconaryIcon icon={displayedIcons[index] || displayedIcons[0]} size={42} className="text-white transition-opacity duration-300" variant={style} />
                 </div>
                 <span className="text-[0.7rem] uppercase tracking-[0.15em] text-[#606060] font-display font-medium">{label}</span>
               </div>

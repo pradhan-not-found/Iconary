@@ -1,5 +1,5 @@
 import React, { useState, useMemo } from 'react';
-import { HugeiconsIcon } from "@hugeicons/react";
+import { IconaryIcon } from '../components/IconaryIcon';
 import * as AllIcons from "@hugeicons/core-free-icons";
 import { toast } from 'sonner';
 import { IconModal, type IconDef } from '../components/IconModal';
@@ -133,7 +133,7 @@ export function Browse() {
                   <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
                 </svg>
               </div>
-              <HugeiconsIcon icon={item.icon} size={36} className="text-[#a3a3a3] group-hover:text-white group-hover:-translate-y-1 transition-all duration-300" />
+              <IconaryIcon icon={item.icon} size={36} className="text-[#a3a3a3] group-hover:text-white group-hover:-translate-y-1 transition-all duration-300" variant={iconStyle} />
               <span 
                 className="text-[0.6rem] uppercase tracking-widest text-[#606060] text-center px-2 group-hover:text-white transition-colors line-clamp-2" 
               >
