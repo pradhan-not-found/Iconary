@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://iconary.ai/sitemap.xml
+Sitemap: https://pradhan-not-found.github.io/Iconary/sitemap.xml
