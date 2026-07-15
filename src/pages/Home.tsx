@@ -140,7 +140,7 @@ export function Home() {
             {LABELS.map((label, index) => (
               <div key={label} className="bg-[#1a1a1a] aspect-square flex flex-col gap-4 items-center justify-center transition-all duration-500">
                 <div className="w-12 h-12 flex items-center justify-center">
-                  <IconaryIcon icon={displayedIcons[index] || displayedIcons[0]} size={42} className="text-white transition-opacity duration-300" variant={style} />
+                  <IconaryIcon icon={displayedIcons[index] || displayedIcons[0]} size={42} className="text-white transition-opacity duration-300" variant={style === 'outline' ? 'stroke' : style === 'filled' ? 'solid' : 'duotone'} />
                 </div>
                 <span className="text-[0.7rem] uppercase tracking-[0.15em] text-[#606060] font-display font-medium">{label}</span>
               </div>
