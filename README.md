@@ -50,8 +50,8 @@ export default function App() {
   return (
     <div style={{ display: "flex", gap: "1.5rem" }}>
       <Agent size={28} />
-      <VectorDatabase style="duotone" size={28} />
-      <FineTuning style="filled" size={28} color="#2f81f7" />
+      <VectorDatabase iconStyle="duotone" size={28} />
+      <FineTuning iconStyle="filled" size={28} color="#2f81f7" />
     </div>
   );
 }
