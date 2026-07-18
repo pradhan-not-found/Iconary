@@ -13,7 +13,7 @@
 
 <br />
 
-Iconary is the ultimate open-source icon library for Artificial Intelligence (AI), Machine Learning (ML), and Data Science. Whether you are building an LLM dashboard, a generative AI product, or visualizing data pipelines, Iconary provides highly scalable, semantic vector icons designed exclusively for complex tech concepts.
+Iconary is the ultimate open-source icon library for Artificial Intelligence (AI), Machine Learning (ML), and Data Science. Whether you are building an LLM dashboard, building a generative AI product, or visualizing data pipelines, Iconary provides highly scalable, semantic vector icons designed exclusively for complex tech concepts.
 
 Available natively for **React**, **Vue**, and plain **HTML/CSS**. Every icon ships with **outline**, **filled**, and **duotone** variants. We also include short plain-English concept explainers with every icon, making this library perfect for frontend engineers, UI/UX designers, and anyone looking to learn AI terminology.
 
