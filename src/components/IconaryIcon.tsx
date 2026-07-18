@@ -24,11 +24,21 @@ export function IconaryIcon({ icon, size = 24, className = '', variant = 'stroke
         const elAttrs = { ...attrs };
         if ('key' in elAttrs) delete elAttrs.key;
         
+        let isClosed = true;
+        if (Tag === 'path' && elAttrs.d) {
+          isClosed = /[zZ]\s*$/.test(elAttrs.d.trim());
+        }
+
         if (variant === 'solid') {
           if (elAttrs.stroke === 'currentColor') {
             elAttrs.stroke = 'var(--iconary-bg, #1a1a1a)';
+            elAttrs.strokeWidth = 2; // Thicker cutouts for better visibility
           }
-          elAttrs.fill = 'currentColor';
+          if (isClosed) {
+            elAttrs.fill = 'currentColor';
+          } else {
+            elAttrs.fill = 'none';
+          }
         } else if (variant === 'duotone') {
           elAttrs.fill = 'currentColor';
           elAttrs.fillOpacity = 0.2;
