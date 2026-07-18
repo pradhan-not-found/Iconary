@@ -270,8 +270,8 @@ export function Home() {
         <div className="px-6 md:px-12 py-16">
           <span className="text-[#606060] uppercase tracking-[0.2em] text-[0.8rem] block font-display font-normal mb-3">03 — STYLE</span>
           <h3 className="text-[1.1rem] font-normal font-display text-white mb-2">Pick a style</h3>
-          <p className="text-[0.9rem] leading-relaxed text-[#a3a3a3]">Pass a style prop to switch between outline, filled, and duotone.</p>
-          <pre className="mt-3 bg-[#111] border border-[#333] px-3 py-2 text-[0.75rem] text-[#a3a3a3] overflow-x-auto">&lt;Agent style="duotone" size=&#123;24&#125; /&gt;</pre>
+          <p className="text-[0.9rem] leading-relaxed text-[#a3a3a3]">Pass an iconStyle prop to switch between outline, filled, and duotone.</p>
+          <pre className="mt-3 bg-[#111] border border-[#333] px-3 py-2 text-[0.75rem] text-[#a3a3a3] overflow-x-auto">&lt;Agent iconStyle="duotone" size=&#123;24&#125; /&gt;</pre>
         </div>
         </div>
       </section>
@@ -296,6 +296,7 @@ export function Home() {
               {[
                 "https://avatars.githubusercontent.com/github",
                 "contributors/founder.jpeg",
+                "https://github.com/emre155.png",
                 "https://avatars.githubusercontent.com/u/9919?v=4",
                 "https://avatars.githubusercontent.com/u/810438?v=4",
                 "https://avatars.githubusercontent.com/u/6820?v=4",
