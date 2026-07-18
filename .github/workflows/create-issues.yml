@@ -1803,3 +1803,339 @@ jobs:
               --label "icon-request" --label "design" --label "medium"
             sleep 2
           fi
+
+          if ! gh issue list --search "in:title Mixture of Experts" | grep -q "Mixture of Experts"; then
+            gh issue create \
+              --title "Icon Request: Mixture of Experts (MoE)" \
+              --body "**Concept:** Mixture of Experts (MoE)
+
+              **Description:** An AI architecture where multiple specialized sub-models (experts) are dynamically selected to process specific parts of the input, vastly improving efficiency and scale.
+
+              **Requirements:**
+              - Must have Outline, Filled, and Duotone variants
+              - Follow the Iconary style guide
+
+              *This is a great issue for first-time contributors!*" \
+              --label "icon-request" --label "good first issue" --label "help wanted"
+            sleep 2
+          fi
+
+          if ! gh issue list --search "in:title Large Action Model" | grep -q "Large Action Model"; then
+            gh issue create \
+              --title "Icon Request: Large Action Model (LAM)" \
+              --body "**Concept:** Large Action Model (LAM)
+
+              **Description:** AI models designed not just to process text or images, but to execute actions, use interfaces, and interact with software environments autonomously.
+
+              **Requirements:**
+              - Must have Outline, Filled, and Duotone variants
+              - Follow the Iconary style guide
+
+              *This is a great issue for first-time contributors!*" \
+              --label "icon-request" --label "good first issue" --label "help wanted"
+            sleep 2
+          fi
+
+          if ! gh issue list --search "in:title Multi-Agent Framework" | grep -q "Multi-Agent Framework"; then
+            gh issue create \
+              --title "Icon Request: Multi-Agent Framework" \
+              --body "**Concept:** Multi-Agent Framework
+
+              **Description:** Systems where multiple autonomous AI agents collaborate, debate, or divide tasks to achieve complex goals.
+
+              **Requirements:**
+              - Must have Outline, Filled, and Duotone variants
+              - Follow the Iconary style guide
+
+              *This is a great issue for first-time contributors!*" \
+              --label "icon-request" --label "good first issue" --label "help wanted"
+            sleep 2
+          fi
+
+          if ! gh issue list --search "in:title Prompt Injection" | grep -q "Prompt Injection"; then
+            gh issue create \
+              --title "Icon Request: Prompt Injection / Jailbreak" \
+              --body "**Concept:** Prompt Injection / Jailbreak
+
+              **Description:** A cybersecurity threat in AI where malicious inputs are designed to manipulate the model into ignoring safety guardrails or leaking data.
+
+              **Requirements:**
+              - Must have Outline, Filled, and Duotone variants
+              - Follow the Iconary style guide
+
+              *This is a great issue for first-time contributors!*" \
+              --label "icon-request" --label "good first issue" --label "help wanted"
+            sleep 2
+          fi
+
+          if ! gh issue list --search "in:title Model Quantization" | grep -q "Model Quantization"; then
+            gh issue create \
+              --title "Icon Request: Model Quantization" \
+              --body "**Concept:** Model Quantization
+
+              **Description:** The process of reducing the precision of a model's weights (e.g., from 16-bit to 4-bit) to drastically lower memory usage and speed up inference without heavily sacrificing performance.
+
+              **Requirements:**
+              - Must have Outline, Filled, and Duotone variants
+              - Follow the Iconary style guide
+
+              *This is a great issue for first-time contributors!*" \
+              --label "icon-request" --label "good first issue" --label "help wanted"
+            sleep 2
+          fi
+
+          if ! gh issue list --search "in:title KV Cache" | grep -q "KV Cache"; then
+            gh issue create \
+              --title "Icon Request: KV Cache" \
+              --body "**Concept:** Key-Value Cache (KV Cache)
+
+              **Description:** A memory optimization technique used during transformer inference that stores past key and value tensors to prevent redundant recalculations during text generation.
+
+              **Requirements:**
+              - Must have Outline, Filled, and Duotone variants
+              - Follow the Iconary style guide
+
+              *This is a great issue for first-time contributors!*" \
+              --label "icon-request" --label "good first issue" --label "help wanted"
+            sleep 2
+          fi
+
+          if ! gh issue list --search "in:title RLHF" | grep -q "RLHF"; then
+            gh issue create \
+              --title "Icon Request: RLHF (Reinforcement Learning from Human Feedback)" \
+              --body "**Concept:** RLHF
+
+              **Description:** A training method that incorporates human evaluations and preferences into the reward loop to align an AI model's output with human values.
+
+              **Requirements:**
+              - Must have Outline, Filled, and Duotone variants
+              - Follow the Iconary style guide
+
+              *This is a great issue for first-time contributors!*" \
+              --label "icon-request" --label "good first issue" --label "help wanted"
+            sleep 2
+          fi
+
+          if ! gh issue list --search "in:title Direct Preference Optimization" | grep -q "Direct Preference Optimization"; then
+            gh issue create \
+              --title "Icon Request: DPO (Direct Preference Optimization)" \
+              --body "**Concept:** Direct Preference Optimization (DPO)
+
+              **Description:** A more efficient alternative to RLHF that optimizes AI models directly on human preference data without needing a separate reward model.
+
+              **Requirements:**
+              - Must have Outline, Filled, and Duotone variants
+              - Follow the Iconary style guide
+
+              *This is a great issue for first-time contributors!*" \
+              --label "icon-request" --label "good first issue" --label "help wanted"
+            sleep 2
+          fi
+
+          if ! gh issue list --search "in:title Vision-Language Model" | grep -q "Vision-Language Model"; then
+            gh issue create \
+              --title "Icon Request: Vision-Language Model (VLM)" \
+              --body "**Concept:** Vision-Language Model (VLM)
+
+              **Description:** Multimodal AI models capable of simultaneously understanding and generating both visual and textual information.
+
+              **Requirements:**
+              - Must have Outline, Filled, and Duotone variants
+              - Follow the Iconary style guide
+
+              *This is a great issue for first-time contributors!*" \
+              --label "icon-request" --label "good first issue" --label "help wanted"
+            sleep 2
+          fi
+
+          if ! gh issue list --search "in:title Context Window" | grep -q "Context Window"; then
+            gh issue create \
+              --title "Icon Request: Context Window" \
+              --body "**Concept:** Context Window
+
+              **Description:** The maximum amount of text or tokens an AI model can 'remember' and process at one time during a single interaction.
+
+              **Requirements:**
+              - Must have Outline, Filled, and Duotone variants
+              - Follow the Iconary style guide
+
+              *This is a great issue for first-time contributors!*" \
+              --label "icon-request" --label "good first issue" --label "help wanted"
+            sleep 2
+          fi
+
+          if ! gh issue list --search "in:title State Space Model" | grep -q "State Space Model"; then
+            gh issue create \
+              --title "Icon Request: State Space Model (SSM / Mamba)" \
+              --body "**Concept:** State Space Model (SSM)
+
+              **Description:** An emerging alternative architecture to transformers (like Mamba) that scales linearly with sequence length, making it highly efficient for infinite context.
+
+              **Requirements:**
+              - Must have Outline, Filled, and Duotone variants
+              - Follow the Iconary style guide
+
+              *This is a great issue for first-time contributors!*" \
+              --label "icon-request" --label "good first issue" --label "help wanted"
+            sleep 2
+          fi
+
+          if ! gh issue list --search "in:title Model Weights" | grep -q "Model Weights"; then
+            gh issue create \
+              --title "Icon Request: Model Weights / Safetensors" \
+              --body "**Concept:** Model Weights / Safetensors
+
+              **Description:** The massive, serialized files (often stored as Safetensors) containing the trained parameters that physically define the capabilities of the model.
+
+              **Requirements:**
+              - Must have Outline, Filled, and Duotone variants
+              - Follow the Iconary style guide
+
+              *This is a great issue for first-time contributors!*" \
+              --label "icon-request" --label "good first issue" --label "help wanted"
+            sleep 2
+          fi
+
+          if ! gh issue list --search "in:title AI Alignment" | grep -q "AI Alignment"; then
+            gh issue create \
+              --title "Icon Request: AI Alignment & Safety" \
+              --body "**Concept:** AI Alignment & Safety
+
+              **Description:** The field of research ensuring AI models are robust, safe, and their objectives are aligned with human intent.
+
+              **Requirements:**
+              - Must have Outline, Filled, and Duotone variants
+              - Follow the Iconary style guide
+
+              *This is a great issue for first-time contributors!*" \
+              --label "icon-request" --label "good first issue" --label "help wanted"
+            sleep 2
+          fi
+
+          if ! gh issue list --search "in:title Speculative Decoding" | grep -q "Speculative Decoding"; then
+            gh issue create \
+              --title "Icon Request: Speculative Decoding" \
+              --body "**Concept:** Speculative Decoding
+
+              **Description:** An inference optimization where a smaller, faster 'draft' model predicts the next few tokens, and a larger 'target' model verifies them simultaneously, drastically speeding up generation.
+
+              **Requirements:**
+              - Must have Outline, Filled, and Duotone variants
+              - Follow the Iconary style guide
+
+              *This is a great issue for first-time contributors!*" \
+              --label "icon-request" --label "good first issue" --label "help wanted"
+            sleep 2
+          fi
+
+          if ! gh issue list --search "in:title Constitutional AI" | grep -q "Constitutional AI"; then
+            gh issue create \
+              --title "Icon Request: Constitutional AI" \
+              --body "**Concept:** Constitutional AI
+
+              **Description:** A methodology where an AI is trained to self-correct its behavior and critique its own outputs based on a predefined set of rules or a 'constitution'.
+
+              **Requirements:**
+              - Must have Outline, Filled, and Duotone variants
+              - Follow the Iconary style guide
+
+              *This is a great issue for first-time contributors!*" \
+              --label "icon-request" --label "good first issue" --label "help wanted"
+            sleep 2
+          fi
+
+          if ! gh issue list --search "in:title GitHub Actions" | grep -q "GitHub Actions"; then
+            gh issue create \
+              --title "Icon Request: GitHub Actions" \
+              --body "**Concept:** GitHub Actions
+
+              **Description:** The standard logo/icon for GitHub Actions, representing CI/CD workflows and automation.
+
+              **Requirements:**
+              - Must have Outline, Filled, and Duotone variants
+              - Follow the Iconary style guide
+
+              *This is a great issue for first-time contributors!*" \
+              --label "icon-request" --label "good first issue" --label "easy"
+            sleep 2
+          fi
+
+          if ! gh issue list --search "in:title Pull Request" | grep -q "Pull Request"; then
+            gh issue create \
+              --title "Icon Request: Pull Request" \
+              --body "**Concept:** Pull Request
+
+              **Description:** The classic branching and merging symbol that represents a Git Pull Request.
+
+              **Requirements:**
+              - Must have Outline, Filled, and Duotone variants
+              - Follow the Iconary style guide
+
+              *This is a great issue for first-time contributors!*" \
+              --label "icon-request" --label "good first issue" --label "easy"
+            sleep 2
+          fi
+
+          if ! gh issue list --search "in:title Fork Repository" | grep -q "Fork Repository"; then
+            gh issue create \
+              --title "Icon Request: Fork Repository" \
+              --body "**Concept:** Fork Repository
+
+              **Description:** The standard branching symbol that represents forking a repository.
+
+              **Requirements:**
+              - Must have Outline, Filled, and Duotone variants
+              - Follow the Iconary style guide
+
+              *This is a great issue for first-time contributors!*" \
+              --label "icon-request" --label "good first issue" --label "easy"
+            sleep 2
+          fi
+
+          if ! gh issue list --search "in:title Merge Commit" | grep -q "Merge Commit"; then
+            gh issue create \
+              --title "Icon Request: Merge Commit" \
+              --body "**Concept:** Merge Commit
+
+              **Description:** A Git symbol indicating two branches converging into a single commit.
+
+              **Requirements:**
+              - Must have Outline, Filled, and Duotone variants
+              - Follow the Iconary style guide
+
+              *This is a great issue for first-time contributors!*" \
+              --label "icon-request" --label "good first issue" --label "easy"
+            sleep 2
+          fi
+
+          if ! gh issue list --search "in:title Code Repository" | grep -q "Code Repository"; then
+            gh issue create \
+              --title "Icon Request: Code Repository" \
+              --body "**Concept:** Code Repository
+
+              **Description:** A book or database symbol with a badge or git icon, representing a code repository.
+
+              **Requirements:**
+              - Must have Outline, Filled, and Duotone variants
+              - Follow the Iconary style guide
+
+              *This is a great issue for first-time contributors!*" \
+              --label "icon-request" --label "good first issue" --label "easy"
+            sleep 2
+          fi
+
+          if ! gh issue list --search "in:title User Profile" | grep -q "User Profile"; then
+            gh issue create \
+              --title "Icon Request: User Profile" \
+              --body "**Concept:** User Profile
+
+              **Description:** A simple, clean avatar or user icon representing a developer profile.
+
+              **Requirements:**
+              - Must have Outline, Filled, and Duotone variants
+              - Follow the Iconary style guide
+
+              *This is a great issue for first-time contributors!*" \
+              --label "icon-request" --label "good first issue" --label "easy"
+            sleep 2
+          fi
