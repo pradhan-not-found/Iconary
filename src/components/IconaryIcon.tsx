@@ -25,7 +25,9 @@ export function IconaryIcon({ icon, size = 24, className = '', variant = 'stroke
         if ('key' in elAttrs) delete elAttrs.key;
         
         if (variant === 'solid') {
-          if (elAttrs.stroke === 'currentColor') elAttrs.stroke = 'none';
+          if (elAttrs.stroke === 'currentColor') {
+            elAttrs.stroke = 'var(--iconary-bg, #1a1a1a)';
+          }
           elAttrs.fill = 'currentColor';
         } else if (variant === 'duotone') {
           elAttrs.fill = 'currentColor';
