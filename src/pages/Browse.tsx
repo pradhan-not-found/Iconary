@@ -106,17 +106,7 @@ export function Browse() {
       </div>
 
       <div className="w-full">
-        <style>{`
-          .icon-variant-solid svg path, .icon-variant-solid svg rect, .icon-variant-solid svg circle, .icon-variant-solid svg polygon {
-            fill: currentColor !important;
-            stroke: none !important;
-          }
-          .icon-variant-duotone svg path, .icon-variant-duotone svg rect, .icon-variant-duotone svg circle, .icon-variant-duotone svg polygon {
-            fill: currentColor !important;
-            fill-opacity: 0.2 !important;
-            stroke: currentColor !important;
-          }
-        `}</style>
+
         <div className="max-w-6xl mx-auto px-6 md:px-12 py-8">
           <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 xl:grid-cols-8 border-l border-t border-[#333]">
             {displayIcons.map((item) => (
