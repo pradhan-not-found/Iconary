@@ -53,7 +53,6 @@ export function Home() {
   }, []);
 
   const [stars, setStars] = useState<number | null>(null);
-  const [contributors, setContributors] = useState<any[]>([]);
 
   useEffect(() => {
     fetch('https://api.github.com/repos/pradhan-not-found/Iconary')
@@ -61,15 +60,6 @@ export function Home() {
       .then(data => {
         if (typeof data.stargazers_count === 'number') {
           setStars(data.stargazers_count);
-        }
-      })
-      .catch(console.error);
-
-    fetch('https://api.github.com/repos/pradhan-not-found/Iconary/contributors')
-      .then(res => res.json())
-      .then(data => {
-        if (Array.isArray(data)) {
-          setContributors(data);
         }
       })
       .catch(console.error);
@@ -215,6 +205,10 @@ export function Home() {
                 <div className="absolute inset-0 bg-white/5 opacity-0 group-hover:opacity-100 transition-opacity"></div>
                 <img src={`${import.meta.env.BASE_URL}logo/flutter.png`} alt="Flutter" className="w-6 h-6 object-contain drop-shadow-md" />
               </div>
+              <div className="flex items-center justify-center w-10 h-10 bg-gradient-to-b from-white/10 to-white/5 border border-white/10 rounded-lg backdrop-blur-md shadow-lg relative overflow-hidden group">
+                <div className="absolute inset-0 bg-white/5 opacity-0 group-hover:opacity-100 transition-opacity"></div>
+                <img src={`${import.meta.env.BASE_URL}logo/figma.svg`} alt="Figma" className="w-5 h-5 object-contain drop-shadow-md" />
+              </div>
             </div>
             <span className="text-[#606060] uppercase tracking-widest text-xs font-normal font-display block mb-2">FRAMEWORK READY</span>
             <h3 className="text-xl font-normal font-display text-white mb-2">Drop into your stack</h3>
@@ -300,51 +294,34 @@ export function Home() {
           <div className="w-full md:max-w-[320px]">
             <div className="flex items-center gap-2 mb-4">
               <h3 className="text-white font-medium text-[1.05rem]">Contributors</h3>
-              {contributors.length > 0 ? (
-                <span className="bg-[#333] text-[#e5e5e5] text-[0.7rem] font-medium px-2 py-0.5 rounded-full">{contributors.length}</span>
-              ) : (
-                <span className="bg-[#333] text-[#e5e5e5] text-[0.7rem] font-medium px-2 py-0.5 rounded-full">...</span>
-              )}
+              <span className="bg-[#333] text-[#e5e5e5] text-[0.7rem] font-medium px-2 py-0.5 rounded-full">22</span>
             </div>
             <div className="flex flex-wrap gap-2 mb-4">
-              {contributors.length > 0 ? (
-                contributors.slice(0, 12).map((contributor, i) => (
-                  <a key={i} href={contributor.html_url} target="_blank" rel="noopener noreferrer">
-                    <img 
-                      src={contributor.avatar_url} 
-                      alt={contributor.login}
-                      title={contributor.login}
-                      className="w-8 h-8 rounded-full border border-[#444] object-cover hover:scale-110 transition-transform duration-200 cursor-pointer" 
-                    />
-                  </a>
-                ))
-              ) : (
-                {[
-                  "https://avatars.githubusercontent.com/github",
-                  "contributors/founder.jpeg",
-                  "https://github.com/emre155.png",
-                  "https://avatars.githubusercontent.com/u/9919?v=4",
-                  "https://avatars.githubusercontent.com/u/810438?v=4",
-                  "https://avatars.githubusercontent.com/u/6820?v=4",
-                  "https://avatars.githubusercontent.com/u/1024025?v=4",
-                  "https://avatars.githubusercontent.com/u/1?v=4",
-                  "https://avatars.githubusercontent.com/u/2?v=4",
-                  "https://avatars.githubusercontent.com/u/3?v=4",
-                  "https://avatars.githubusercontent.com/u/4?v=4",
-                  "https://avatars.githubusercontent.com/u/5?v=4",
-                  "https://avatars.githubusercontent.com/u/6?v=4",
-                ].map((src, i) => (
-                  <img 
-                    key={i} 
-                    src={src.startsWith('http') ? src : `${import.meta.env.BASE_URL}${src}`} 
-                    alt={`Contributor ${i + 1}`} 
-                    className="w-8 h-8 rounded-full border border-[#444] object-cover hover:scale-110 transition-transform duration-200 cursor-pointer" 
-                  />
-                ))}
-              )}
+              {[
+                "https://avatars.githubusercontent.com/github",
+                "contributors/founder.jpeg",
+                "https://github.com/emre155.png",
+                "https://avatars.githubusercontent.com/u/9919?v=4",
+                "https://avatars.githubusercontent.com/u/810438?v=4",
+                "https://avatars.githubusercontent.com/u/6820?v=4",
+                "https://avatars.githubusercontent.com/u/1024025?v=4",
+                "https://avatars.githubusercontent.com/u/1?v=4",
+                "https://avatars.githubusercontent.com/u/2?v=4",
+                "https://avatars.githubusercontent.com/u/3?v=4",
+                "https://avatars.githubusercontent.com/u/4?v=4",
+                "https://avatars.githubusercontent.com/u/5?v=4",
+                "https://avatars.githubusercontent.com/u/6?v=4",
+              ].map((src, i) => (
+                <img 
+                  key={i} 
+                  src={src.startsWith('http') ? src : `${import.meta.env.BASE_URL}${src}`} 
+                  alt={`Contributor ${i + 1}`} 
+                  className="w-8 h-8 rounded-full border border-[#444] object-cover hover:scale-110 transition-transform duration-200 cursor-pointer" 
+                />
+              ))}
             </div>
             <a href="https://github.com/pradhan-not-found/Iconary/graphs/contributors" target="_blank" rel="noopener noreferrer" className="text-[#2f81f7] hover:underline text-[0.85rem] font-medium transition-colors">
-              {contributors.length > 12 ? `+ ${contributors.length - 12} contributors` : 'View all contributors'}
+              + 11 contributors
             </a>
           </div>
         </div>
