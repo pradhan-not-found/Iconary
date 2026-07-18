@@ -7,37 +7,37 @@ const ICONS = [
   {
     name: 'Agent',
     outline: <><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4 3.5-7 8-7s8 3 8 7"/></>,
-    filled: <><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4 3.5-7 8-7s8 3 8 7z" className="fill-white stroke-none"/></>,
+    filled: <><circle cx="12" cy="8" r="4" className="fill-white stroke-none"/><path d="M4 21c0-4 3.5-7 8-7s8 3 8 7z" className="fill-white stroke-none"/></>,
     duotone: <><circle cx="12" cy="8" r="4" className="fill-white opacity-20 stroke-none"/><path d="M4 21c0-4 3.5-7 8-7s8 3 8 7z" className="fill-white opacity-20 stroke-none"/><circle cx="12" cy="8" r="4" className="fill-none stroke-white stroke-[1.5px]"/><path d="M4 21c0-4 3.5-7 8-7s8 3 8 7" className="fill-none stroke-white stroke-[1.5px]"/></>
   },
   {
     name: 'Model',
     outline: <><rect x="4" y="4" width="16" height="16" rx="2"/><circle cx="9" cy="10" r="1.5"/><circle cx="15" cy="10" r="1.5"/><path d="M8 16c1.5 1.5 6.5 1.5 8 0"/></>,
-    filled: <rect x="4" y="4" width="16" height="16" rx="2" className="fill-white stroke-none"/>,
+    filled: <><mask id="model-mask"><rect width="24" height="24" fill="white"/><circle cx="9" cy="10" r="2" fill="black"/><circle cx="15" cy="10" r="2" fill="black"/><path d="M8 16c1.5 2 6.5 2 8 0" fill="none" stroke="black" strokeWidth="2.5" strokeLinecap="round"/></mask><rect x="4" y="4" width="16" height="16" rx="3" className="fill-white stroke-none" mask="url(#model-mask)"/></>,
     duotone: <><rect x="4" y="4" width="16" height="16" rx="2" className="fill-white opacity-20 stroke-none"/><rect x="4" y="4" width="16" height="16" rx="2" className="fill-none stroke-white stroke-[1.5px]"/><circle cx="9" cy="10" r="1.5" className="fill-[#1a1a1a] stroke-white stroke-[1.5px]"/><circle cx="15" cy="10" r="1.5" className="fill-[#1a1a1a] stroke-white stroke-[1.5px]"/><path d="M8 16c1.5 1.5 6.5 1.5 8 0" className="fill-none stroke-white stroke-[1.5px]"/></>
   },
   {
     name: 'Pipeline',
     outline: <><path d="M4 6h16M4 12h10M4 18h13"/></>,
-    filled: <><rect x="4" y="5" width="16" height="2" className="fill-white stroke-none"/><rect x="4" y="11" width="10" height="2" className="fill-white stroke-none"/><rect x="4" y="17" width="13" height="2" className="fill-white stroke-none"/></>,
+    filled: <><rect x="4" y="4.5" width="16" height="3" rx="1.5" className="fill-white stroke-none"/><rect x="4" y="10.5" width="10" height="3" rx="1.5" className="fill-white stroke-none"/><rect x="4" y="16.5" width="13" height="3" rx="1.5" className="fill-white stroke-none"/></>,
     duotone: <><rect x="4" y="5" width="16" height="14" className="fill-white opacity-20 stroke-none"/><path d="M4 6h16M4 12h10M4 18h13" className="fill-none stroke-white stroke-[1.5px]"/></>
   },
   {
     name: 'Embedding',
     outline: <><circle cx="6" cy="6" r="2"/><circle cx="18" cy="6" r="2"/><circle cx="12" cy="18" r="2"/><path d="M6 8v3a3 3 0 003 3h0a3 3 0 003-3V8M18 8v3a3 3 0 01-3 3"/></>,
-    filled: <><circle cx="6" cy="6" r="2.5" className="fill-white stroke-none"/><circle cx="18" cy="6" r="2.5" className="fill-white stroke-none"/><circle cx="12" cy="18" r="2.5" className="fill-white stroke-none"/></>,
+    filled: <><circle cx="6" cy="6" r="3" className="fill-white stroke-none"/><circle cx="18" cy="6" r="3" className="fill-white stroke-none"/><circle cx="12" cy="18" r="3" className="fill-white stroke-none"/><path d="M6 8v3a3 3 0 003 3h0a3 3 0 003-3V8M18 8v3a3 3 0 01-3 3" className="fill-none stroke-white stroke-[2.5px]"/></>,
     duotone: <><circle cx="12" cy="10" r="8" className="fill-white opacity-20 stroke-none"/><circle cx="6" cy="6" r="2" className="fill-none stroke-white stroke-[1.5px]"/><circle cx="18" cy="6" r="2" className="fill-none stroke-white stroke-[1.5px]"/><circle cx="12" cy="18" r="2" className="fill-none stroke-white stroke-[1.5px]"/><path d="M6 8v3a3 3 0 003 3h0a3 3 0 003-3V8M18 8v3a3 3 0 01-3 3" className="fill-none stroke-white stroke-[1.5px]"/></>
   },
   {
     name: 'Fine-tuning',
     outline: <><path d="M12 3v4M12 17v4M3 12h4M17 12h4"/><circle cx="12" cy="12" r="5"/></>,
-    filled: <><circle cx="12" cy="12" r="6" className="fill-white stroke-none"/><rect x="11" y="1" width="2" height="4" className="fill-white stroke-none"/><rect x="11" y="19" width="2" height="4" className="fill-white stroke-none"/><rect x="1" y="11" width="4" height="2" className="fill-white stroke-none"/><rect x="19" y="11" width="4" height="2" className="fill-white stroke-none"/></>,
+    filled: <><mask id="ft-mask"><rect width="24" height="24" fill="white"/><circle cx="12" cy="12" r="2.5" fill="black"/></mask><circle cx="12" cy="12" r="6.5" className="fill-white stroke-none" mask="url(#ft-mask)"/><path d="M12 2v4M12 18v4M2 12h4M18 12h4" className="fill-none stroke-white stroke-[3px]" strokeLinecap="round"/></>,
     duotone: <><circle cx="12" cy="12" r="8" className="fill-white opacity-20 stroke-none"/><circle cx="12" cy="12" r="5" className="fill-none stroke-white stroke-[1.5px]"/><path d="M12 3v4M12 17v4M3 12h4M17 12h4" className="fill-none stroke-white stroke-[1.5px]"/></>
   },
   {
     name: 'RAG',
     outline: <><path d="M4 12a8 8 0 0114.93-4M20 12a8 8 0 01-14.93 4"/><path d="M18.5 4v4h-4M5.5 20v-4h4"/></>,
-    filled: <path d="M4 12a8 8 0 0114.93-4M20 12a8 8 0 01-14.93 4" stroke="white" strokeWidth="3" fill="none"/>,
+    filled: <><path d="M4 12a8 8 0 0114.93-4M20 12a8 8 0 01-14.93 4" className="fill-none stroke-white stroke-[2.5px]" strokeLinecap="round"/><polygon points="19.5,3 22,8.5 15,7.5" className="fill-white stroke-none"/><polygon points="4.5,21 2,15.5 9,16.5" className="fill-white stroke-none"/></>,
     duotone: <><circle cx="12" cy="12" r="9" className="fill-white opacity-20 stroke-none"/><path d="M4 12a8 8 0 0114.93-4M20 12a8 8 0 01-14.93 4" className="fill-none stroke-white stroke-[1.5px]"/><path d="M18.5 4v4h-4M5.5 20v-4h4" className="fill-none stroke-white stroke-[1.5px]"/></>
   }
 ];
