@@ -18,33 +18,35 @@ export function IconaryIcon({ icon, size = 24, className = '', variant = 'stroke
       viewBox="0 0 24 24"
       fill="none"
       className={className}
+      style={{ overflow: 'visible' }}
     >
       {icon.map(([tag, attrs]: any, i: number) => {
         const Tag = tag;
         const elAttrs = { ...attrs };
         if ('key' in elAttrs) delete elAttrs.key;
         
-        let isClosed = true;
-        if (Tag === 'path' && elAttrs.d) {
-          isClosed = /[zZ]\s*$/.test(elAttrs.d.trim());
+        // Apply universal stroke width if the element has a stroke
+        if (elAttrs.stroke && elAttrs.stroke !== 'none') {
+          elAttrs.strokeWidth = strokeWidth;
         }
 
-        if (variant === 'solid') {
-          if (isClosed) {
-            elAttrs.fill = 'currentColor';
-            if (elAttrs.stroke === 'currentColor') {
-              elAttrs.stroke = 'var(--iconary-bg, #1a1a1a)';
-              elAttrs.strokeWidth = 2; // Thicker cutouts for better visibility
-            }
-          } else {
-            elAttrs.fill = 'none';
-            // Leave stroke as is (currentColor) so open paths remain visible
+        if (variant === 'stroke') {
+          elAttrs.fill = 'none';
+        } else if (variant === 'solid') {
+          // Professional Solid Variant
+          // We fill the shapes and use the background color for the stroke to create clear cutouts.
+          elAttrs.fill = 'currentColor';
+          if (elAttrs.stroke && elAttrs.stroke !== 'none') {
+             elAttrs.stroke = 'var(--bg-background, #111111)';
+             elAttrs.strokeWidth = Number(strokeWidth) + 0.5;
+             elAttrs.strokeLinejoin = 'round';
           }
         } else if (variant === 'duotone') {
+          // Professional Duotone Variant
+          // Keep the crisp stroke, but add a tinted, semi-transparent fill for depth
           elAttrs.fill = 'currentColor';
           elAttrs.fillOpacity = 0.2;
-        } else {
-          elAttrs.fill = 'none';
+          // the stroke remains currentColor as defined by the original icon
         }
 
         if (elAttrs.strokeWidth) elAttrs.strokeWidth = strokeWidth;
