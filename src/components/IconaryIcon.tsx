@@ -30,14 +30,15 @@ export function IconaryIcon({ icon, size = 24, className = '', variant = 'stroke
         }
 
         if (variant === 'solid') {
-          if (elAttrs.stroke === 'currentColor') {
-            elAttrs.stroke = 'var(--iconary-bg, #1a1a1a)';
-            elAttrs.strokeWidth = 2; // Thicker cutouts for better visibility
-          }
           if (isClosed) {
             elAttrs.fill = 'currentColor';
+            if (elAttrs.stroke === 'currentColor') {
+              elAttrs.stroke = 'var(--iconary-bg, #1a1a1a)';
+              elAttrs.strokeWidth = 2; // Thicker cutouts for better visibility
+            }
           } else {
             elAttrs.fill = 'none';
+            // Leave stroke as is (currentColor) so open paths remain visible
           }
         } else if (variant === 'duotone') {
           elAttrs.fill = 'currentColor';
