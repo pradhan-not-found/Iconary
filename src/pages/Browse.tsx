@@ -4,6 +4,24 @@ import * as AllIcons from "@hugeicons/core-free-icons";
 import { toast } from 'sonner';
 import { IconModal, type IconDef } from '../components/IconModal';
 
+// ─── Iconary-native icons (from packages/react/src/icons/) ───────────────────
+// These are encoded in the same [tag, attrs][] tuple format that IconaryIcon
+// understands, so they render identically to the Hugeicons entries.
+// Add new Iconary icons here as the library grows.
+const ICONARY_ICONS: (IconDef & { isIconary: true })[] = [
+  {
+    id: 'UserProfile',
+    name: 'User Profile',
+    isIconary: true,
+    // Outline variant paths — circle head + shoulder arc + card frame
+    icon: [
+      ['rect',   { x: '3', y: '3', width: '18', height: '18', rx: '3', stroke: 'currentColor', fill: 'none' }],
+      ['circle', { cx: '12', cy: '9', r: '3.5', stroke: 'currentColor', fill: 'none' }],
+      ['path',   { d: 'M5 21c0-3.866 3.134-7 7-7s7 3.134 7 7', stroke: 'currentColor', fill: 'none' }],
+    ],
+  },
+];
+
 export function Browse() {
   const [search, setSearch] = useState('');
   const [category, setCategory] = useState<string | null>(null);
@@ -13,16 +31,20 @@ export function Browse() {
 
 
 
-  // Extract exactly 1500 unique icons from the library
+  // Extract exactly 1500 unique icons from the Hugeicons library,
+  // then prepend our own Iconary-native icons so they appear first.
   const icons = useMemo(() => {
-    return Object.entries(AllIcons)
+    const hugeIcons = Object.entries(AllIcons)
       .filter(([key, value]) => key.endsWith('Icon') && typeof value === 'object')
       .slice(0, 1500)
-      .map(([key, value]) => ({ 
-        id: key, 
-        name: key.replace('Icon', '').replace(/([A-Z])/g, ' $1').trim(), // Format name
-        icon: value as any
+      .map(([key, value]) => ({
+        id: key,
+        name: key.replace('Icon', '').replace(/([A-Z])/g, ' $1').trim(),
+        icon: value as any,
+        isIconary: false as const,
       }));
+    // Iconary-native icons are pinned at the top of the list
+    return [...ICONARY_ICONS, ...hugeIcons];
   }, []);
 
   // Show a subset to prevent DOM freezing when not searching
@@ -114,8 +136,16 @@ export function Browse() {
               key={item.id} 
               onClick={() => setSelectedIcon(item)}
               title="View icon details"
-              className={`aspect-square flex flex-col items-center justify-center p-4 gap-3 border-r border-b border-[#333] bg-transparent hover:bg-[#1a1a1a] transition-all duration-200 cursor-pointer group relative icon-variant-${iconStyle}`}
+              className={`aspect-square flex flex-col items-center justify-center p-4 gap-3 border-r border-b ${
+                (item as any).isIconary ? 'border-[#2a2a1a] bg-[#1a1a0e]' : 'border-[#333] bg-transparent'
+              } hover:bg-[#1a1a1a] transition-all duration-200 cursor-pointer group relative icon-variant-${iconStyle}`}
             >
+              {/* Iconary-native badge */}
+              {(item as any).isIconary && (
+                <span className="absolute top-2 left-2 text-[0.45rem] uppercase tracking-widest font-bold text-[#a3a020] opacity-70 group-hover:opacity-100 transition-opacity">
+                  Iconary
+                </span>
+              )}
               <div className="absolute top-3 right-3 opacity-0 group-hover:opacity-100 transition-opacity duration-200">
                 <svg viewBox="0 0 24 24" className="w-[14px] h-[14px] stroke-[#888] group-hover:stroke-white fill-none stroke-[2px]" strokeLinecap="round" strokeLinejoin="round">
                   <path d="M15 3h6v6"></path>
