@@ -5,9 +5,10 @@ export function ScrollToTop() {
   const { pathname, hash } = useLocation();
 
   useEffect(() => {
+    let timeoutid: ReturnType<typeof setTimeout> | undefined;
     // If there is a hash, we scroll to that element.
     if (hash) {
-      setTimeout(() => {
+      timeoutid = setTimeout(() => {
         const element = document.getElementById(hash.replace('#', ''));
         if (element) {
           element.scrollIntoView({ behavior: 'smooth' });
@@ -17,6 +18,9 @@ export function ScrollToTop() {
       // Otherwise, scroll to top on route change.
       window.scrollTo(0, 0);
     }
+    return () => {
+      clearTimeout(timeoutid);
+    };
   }, [pathname, hash]);
 
   return null;

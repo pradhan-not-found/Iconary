@@ -1,5 +1,5 @@
 import React, { useRef } from 'react';
-import { motion, useInView } from 'framer-motion';
+import { motion, useInView, useReducedMotion } from 'framer-motion';
 
 interface ScrollRevealProps {
   children: React.ReactNode;
@@ -10,6 +10,13 @@ interface ScrollRevealProps {
 export function ScrollReveal({ children, delay = 0, className = '' }: ScrollRevealProps) {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: "-40px" });
+  const prefersReducedMotion = useReducedMotion();
+
+  // If the user has requested reduced motion, skip the animation entirely
+  // and immediately render the content at full opacity with no offset.
+  if (prefersReducedMotion) {
+    return <div ref={ref} className={className}>{children}</div>;
+  }
 
   return (
     <motion.div
