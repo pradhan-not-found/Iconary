@@ -30,6 +30,13 @@
       "tags": ["user", "profile", "avatar", "developer", "account", "identity"],
       "description": "A developer profile card icon representing a user account or identity — used in auth flows, settings pages, and contributor lists.",
       "author": "santanujana12"
+    },
+    {
+      "name": "neural-network",
+      "category": "ai",
+      "tags": ["neural", "network", "deep-learning", "ai", "machine-learning"],
+      "description": "A neural network icon representing deep learning models.",
+      "author": "Iconary Team"
     }
   ]
 }

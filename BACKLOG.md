@@ -4,7 +4,7 @@ This is the master list of icons that need to be designed and added to the libra
 
 ## Tech & AI
 
-- [ ] **Neural Network** - Needs Outline, Filled, and Duotone variants.
+- [x] **Neural Network** - Needs Outline, Filled, and Duotone variants.
 - [ ] **Vector Database** - Needs Outline, Filled, and Duotone variants.
 - [ ] **Large Language Model** - Needs Outline, Filled, and Duotone variants.
 - [ ] **RAG Architecture** - Needs Outline, Filled, and Duotone variants.
