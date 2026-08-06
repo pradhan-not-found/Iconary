@@ -4,4 +4,7 @@ export { Pipeline } from './icons/Pipeline';
 export { Embedding } from './icons/Embedding';
 export { FineTuning } from './icons/FineTuning';
 export { RAG } from './icons/RAG';
+export { Epoch } from './icons/Epoch';
+export { NPU } from './icons/NPU';
+export { LoRA } from './icons/LoRA';
 export type { IconProps, IconStyle } from './types';

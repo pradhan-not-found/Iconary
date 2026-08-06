@@ -30,6 +30,27 @@
       "tags": ["user", "profile", "avatar", "developer", "account", "identity"],
       "description": "A developer profile card icon representing a user account or identity — used in auth flows, settings pages, and contributor lists.",
       "author": "santanujana12"
+    },
+    {
+      "name": "epoch",
+      "category": "ai",
+      "tags": ["epoch", "training", "cycle", "loop", "ai"],
+      "description": "An epoch or training cycle icon representing iterations during model training.",
+      "author": "Iconary Team"
+    },
+    {
+      "name": "npu",
+      "category": "hardware",
+      "tags": ["npu", "chip", "processor", "neural-processing-unit", "hardware"],
+      "description": "A Neural Processing Unit (NPU) icon representing AI-specific hardware acceleration.",
+      "author": "Iconary Team"
+    },
+    {
+      "name": "lora",
+      "category": "ai",
+      "tags": ["lora", "low-rank-adaptation", "matrices", "fine-tuning", "peft"],
+      "description": "A Low-Rank Adaptation (LoRA) icon visually representing matrix decomposition.",
+      "author": "Iconary Team"
     }
   ]
 }
