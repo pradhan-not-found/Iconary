@@ -6,4 +6,7 @@ export { FineTuning } from './icons/FineTuning';
 export { RAG } from './icons/RAG';
 export { UserProfile } from './icons/UserProfile';
 export { NeuralNetwork } from './icons/NeuralNetwork';
+export { Epoch } from './icons/Epoch';
+export { NPU } from './icons/NPU';
+export { LoRA } from './icons/LoRA';
 
