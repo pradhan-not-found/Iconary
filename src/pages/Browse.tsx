@@ -1,4 +1,4 @@
-import React, { useState, useMemo } from 'react';
+import React, { useState, useMemo, useEffect } from 'react';
 import { IconaryIcon } from '../components/IconaryIcon';
 import * as AllIcons from "@hugeicons/core-free-icons";
 import { toast } from 'sonner';
@@ -28,6 +28,14 @@ export function Browse() {
   const [showFilters, setShowFilters] = useState(false);
   const [selectedIcon, setSelectedIcon] = useState<IconDef | null>(null);
   const [iconStyle, setIconStyle] = useState<'stroke' | 'solid' | 'duotone'>('stroke');
+  const [showScrollTop, setShowScrollTop] = useState(false);
+
+  useEffect(() => {
+    const onScroll = () => setShowScrollTop(window.scrollY > 600);
+    onScroll();
+    window.addEventListener('scroll', onScroll, { passive: true });
+    return () => window.removeEventListener('scroll', onScroll);
+  }, []);
 
 
 
@@ -164,6 +172,17 @@ export function Browse() {
           </div>
         </div>
       </div>
+
+      {showScrollTop && (
+        <button
+          onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
+          aria-label="Scroll to top"
+          title="Back to top"
+          className="fixed bottom-6 right-6 z-40 w-11 h-11 flex items-center justify-center rounded-full bg-[#1a1a1a] border border-[#333] text-[#a3a3a3] hover:text-white hover:border-[#555] shadow-lg transition-colors"
+        >
+          <svg viewBox="0 0 24 24" className="w-[18px] h-[18px] stroke-current fill-none stroke-[2px]" strokeLinecap="round" strokeLinejoin="round"><polyline points="18 15 12 9 6 15"></polyline></svg>
+        </button>
+      )}
 
       <IconModal icon={selectedIcon} initialVariant={iconStyle} onClose={() => setSelectedIcon(null)} />
     </div>
