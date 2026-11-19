@@ -321,6 +321,7 @@ export function IconModal({ icon, initialVariant, onClose }: IconModalProps) {
   const [activeTab, setActiveTab] = useState<Framework>('React');
   const [visible, setVisible] = useState(false);
   const [copied, setCopied] = useState(false);
+  const copySvgRef = useRef<() => void>(() => {});
 
   useEffect(() => {
     if (icon) {
@@ -340,6 +341,19 @@ export function IconModal({ icon, initialVariant, onClose }: IconModalProps) {
     window.addEventListener('keydown', handler);
     return () => window.removeEventListener('keydown', handler);
   }, [handleClose]);
+
+  // Ctrl/Cmd + Shift + C copies the SVG while the modal is open
+  useEffect(() => {
+    if (!icon) return;
+    const handler = (e: KeyboardEvent) => {
+      if ((e.ctrlKey || e.metaKey) && e.shiftKey && e.key.toLowerCase() === 'c') {
+        e.preventDefault();
+        copySvgRef.current();
+      }
+    };
+    window.addEventListener('keydown', handler);
+    return () => window.removeEventListener('keydown', handler);
+  }, [icon]);
 
   if (!icon) return null;
 
@@ -415,6 +429,7 @@ ${elements}
     const svgString = generateSvgString();
     navigator.clipboard.writeText(svgString).then(() => toast.success('SVG copied to clipboard!'));
   };
+  copySvgRef.current = handleCopySVG;
 
   return (
     <div
