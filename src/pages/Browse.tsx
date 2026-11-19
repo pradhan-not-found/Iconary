@@ -92,6 +92,18 @@ export function Browse() {
                 className="w-full bg-[#111] border border-[#222] text-[#e5e5e5] placeholder-[#888] pl-11 pr-4 py-3.5 rounded-lg focus:outline-none focus:border-[#444] transition-colors text-[0.95rem]"
               />
             </div>
+            <button
+              onClick={() => {
+                const pool = displayIcons.length > 0 ? displayIcons : icons;
+                setSelectedIcon(pool[Math.floor(Math.random() * pool.length)]);
+              }}
+              aria-label="Open a random icon"
+              title="Random icon"
+              className="flex items-center justify-center gap-2 px-5 py-3.5 bg-transparent border border-[#222] rounded-lg text-[#888] hover:text-[#bbb] hover:border-[#444] transition-colors font-bold uppercase tracking-widest text-[0.65rem]"
+            >
+              <svg viewBox="0 0 24 24" className="w-[16px] h-[16px] stroke-current fill-none stroke-[2px]" strokeLinecap="round" strokeLinejoin="round"><rect x="3" y="3" width="18" height="18" rx="3"></rect><circle cx="8.5" cy="8.5" r="1"></circle><circle cx="15.5" cy="8.5" r="1"></circle><circle cx="12" cy="12" r="1"></circle><circle cx="8.5" cy="15.5" r="1"></circle><circle cx="15.5" cy="15.5" r="1"></circle></svg>
+              Random
+            </button>
             <button 
               onClick={() => setShowFilters(!showFilters)}
               className={`flex items-center justify-center gap-2 px-6 py-3.5 bg-transparent border rounded-lg transition-colors font-bold uppercase tracking-widest text-[0.65rem] ${showFilters ? 'border-[#666] text-white' : 'border-[#222] text-[#888] hover:text-[#bbb] hover:border-[#444]'}`}
